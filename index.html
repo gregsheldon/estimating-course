@@ -6,8 +6,8 @@
   <link rel="icon" type="image/png" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
   <link rel="shortcut icon" type="image/png" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
   <link rel="apple-touch-icon" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
-  <title>Fabrication Estimating Course | Metal Fabrication Power Tools</title>
-  <meta name="description" content="A practical metal fabrication estimating course with locked medium-size YouTube lessons, module worksheets, transcripts, shop-floor drills, notes, and progress tracking." />
+  <title>Metal Fabrication Estimating Course | Student Portal</title>
+  <meta name="description" content="Student portal for Greg Sheldon's practical metal fabrication estimating course. Watch each module, complete the worksheet, review the transcript, and build better quotes." />
   <style>
     :root {
       --slate-950: #020617;
@@ -107,17 +107,6 @@
       width: auto;
       max-width: 340px;
       object-fit: contain;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(234, 88, 12, .28);
-      font-weight: 950;
     }
 
     .brand small {
@@ -821,7 +810,6 @@
     @media (max-width: 760px) {
       .nav { display: none; }
       .header-inner { min-height: 66px; }
-      .brand-logo { height: 46px; max-width: 245px; }
       .hero { padding-top: 42px; }
       .mini-grid,
       .content-grid,
@@ -856,12 +844,12 @@
   </style>
 </head>
 <body>
-  <div class="top-strip">Fabrication Estimating Training • <strong>Watch the lesson, do the drill, download the tools, build the quote tighter.</strong></div>
+  <div class="top-strip">Metal Fabrication Estimating Course • <strong>Watch the lesson, complete the worksheet, review the transcript, and build tighter quotes.</strong></div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Course home">
-        <img class="brand-logo" src="https://gregsheldon.github.io/estimating-course/estimating-course-logo.png" alt="Fabrication Estimating Course" />
+        <img class="brand-logo" src="https://gregsheldon.github.io/estimating-course/estimating-course-logo.png" alt="Metal Fabrication Estimating Course" />
       </a>
       <nav class="nav" aria-label="Course navigation">
         <a href="#course">Course</a>
@@ -876,12 +864,12 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Shop-floor estimating system</span>
-          <h1>Build quotes that protect the job before steel hits the floor.</h1>
-          <p class="hero-lede">A course platform page for your fabrication estimating training. Each module has a medium-size locked YouTube video, a practical lesson breakdown, an action drill, saved notes, progress tracking, and two focused downloads: the worksheet and transcript.</p>
+          <span class="eyebrow">Student course portal</span>
+          <h1>Learn to estimate fabrication work the way it actually gets built.</h1>
+          <p class="hero-lede">This course is built for estimators, shop owners, project managers, and fabricators who want to price work with more confidence. Work through the modules in order, watch the lesson video, complete the worksheet, review the transcript, and use the drills on real quotes.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#course">Start Module</a>
-            <a class="btn btn-light" href="#downloads">View Downloads</a>
+            <a class="btn btn-primary" href="#course">Start The Course</a>
+            <a class="btn btn-light" href="#downloads">Get Course Downloads</a>
           </div>
         </div>
 
@@ -897,7 +885,7 @@
             </div>
             <div class="mini-grid">
               <div class="mini-stat"><span>Modules</span><strong>9 Lessons</strong></div>
-              <div class="mini-stat"><span>Downloads</span><strong>18 Files</strong></div>
+              <div class="mini-stat"><span>Downloads</span><strong>18 Module Files</strong></div>
               <div class="mini-stat"><span>Current Module</span><strong id="heroModule">01</strong></div>
               <div class="mini-stat"><span>Next Action</span><strong>Do the drill</strong></div>
             </div>
@@ -910,7 +898,7 @@
       <aside class="sidebar">
         <div class="sidebar-head">
           <h2>Course Modules</h2>
-          <p style="color:var(--slate-300); margin:0; font-weight:700;">Progress saves in this browser.</p>
+          <p style="color:var(--slate-300); margin:0; font-weight:700;">Progress, notes, and checklists save in this browser.</p>
           <div class="progress-track" aria-label="Course progress"><div class="progress-fill" id="progressFill"></div></div>
         </div>
         <div class="module-list" id="moduleList"></div>
@@ -921,7 +909,7 @@
           <div>
             <span class="eyebrow" id="lessonEyebrow">Module 01</span>
             <h2 id="lessonTitle">The Real Role of an Estimator</h2>
-            <p id="lessonSummary">Loading lesson...</p>
+            <p id="lessonSummary">Select a module to begin.</p>
           </div>
           <div class="lesson-meta">
             <div class="meta-pill"><span>Video</span><strong id="lessonLength">18 min</strong></div>
@@ -935,14 +923,15 @@
           <div class="lesson-primary">
             <div class="media-lock" aria-label="Lesson video area">
               <div class="video-frame" id="videoFrame">
+                <video id="lessonVideo" controls controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture playsinline preload="metadata"></video>
                 <iframe id="lessonEmbed" class="hidden" title="Lesson video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 <div id="videoPlaceholder" class="video-placeholder">
                   <div class="play-icon">▶</div>
-                  <strong>Paste the YouTube video ID for this module.</strong>
-                  <span>The YouTube player is intentionally medium sized and configured without fullscreen permissions.</span>
+                  <strong id="videoPlaceholderTitle">Lesson Video</strong>
+                  <span id="videoPlaceholderText">Watch the module, complete the worksheet, and review the transcript.</span>
                 </div>
               </div>
-              <p class="embed-note"><span>YouTube fullscreen blocked by design.</span><span>Paste YouTube IDs in the courseModules array. Do not add allowfullscreen.</span></p>
+              <p class="embed-note"><span>Medium lesson player. Fullscreen is intentionally unavailable.</span><span>Use the worksheet and transcript beside the video.</span></p>
             </div>
 
             <div class="content-grid">
@@ -973,7 +962,7 @@
 
             <div class="side-box">
               <h3>Downloads for this lesson</h3>
-              <p>Each module includes exactly two downloads: the worksheet and the transcript. Worksheet links are live now.</p>
+              <p>Each module includes exactly two downloads: the student worksheet and the lesson transcript.</p>
             </div>
             <div class="download-list" id="downloadsList"></div>
 
@@ -986,7 +975,7 @@
             <div class="side-box">
               <h3>My notes</h3>
               <p style="margin-bottom:.75rem;">Notes save automatically in this browser.</p>
-              <textarea class="note-area" id="notesArea" placeholder="Write your takeaways, shop questions, or quote reminders here..."></textarea>
+              <textarea class="note-area" id="notesArea" placeholder="Write your takeaways, shop questions, quote reminders, or items to check on your next estimate..."></textarea>
             </div>
 
             <div class="side-actions">
@@ -1002,8 +991,8 @@
     <section id="downloads" class="resources-section">
       <div class="container">
         <div class="section-heading">
-          <h2>Downloads by module.</h2>
-          <p>Each module has exactly two downloads: a worksheet and a transcript. The worksheet links are live, and the transcript links are placeholders until the transcript files are uploaded.</p>
+          <h2>Course downloads.</h2>
+          <p>Each module includes two student resources: a worksheet for applying the lesson and a transcript for review. Use the combined pack if you want all worksheets in one file.</p>
         </div>
         <div class="resource-grid" id="resourceGrid"></div>
       </div>
@@ -1012,8 +1001,8 @@
     <section class="container">
       <div class="cta-band">
         <div>
-          <h2>Keep the training practical.</h2>
-          <p>Each module should move the student from watching, to thinking, to applying, to using the worksheet and reviewing the transcript when they build the next quote.</p>
+          <h2>Use the course on real quotes.</h2>
+          <p>The fastest way to get value is to apply each module to a real job: review the drawing, break down the scope, build the labour, price the material, protect the risk, and write a cleaner quote.</p>
         </div>
         <a class="btn btn-primary" href="mailto:gregwsheldon@gmail.com?subject=Course%20Portal%20Question">Ask Greg A Question</a>
       </div>
@@ -1021,203 +1010,378 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Metal Fabrication Power Tools. Built for practical estimating training.</p>
+    <p>© <span id="year"></span> Metal Fabrication Power Tools. Practical estimating training for fabrication shops.</p>
     <p><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></p>
   </footer>
 
   <script>
     /*
-      HOW TO USE:
-      1) Worksheet PDF links are already added from the hosted estimating-course folder.
-      2) Replace the transcript placeholder href values once transcript PDFs are uploaded.
-      3) Paste each YouTube video ID into the youtubeId field below.
-         Example: for https://www.youtube.com/watch?v=abc123XYZ00, use youtubeId: "abc123XYZ00".
-      4) Keep fs=0 in the embed builder and do not add allowfullscreen to the iframe.
-      5) Each module is intentionally limited to two downloads: Worksheet and Transcript.
+      YOUTUBE VIDEO SETUP:
+      Paste each private/unlisted YouTube video ID into the youtubeId field below.
+      The iframe uses fs=0, no allowfullscreen attribute, restricted permissions, sandboxing,
+      and fullscreen exit blocking. This blocks the embedded player from going fullscreen.
+      Browser-level fullscreen shortcuts cannot be fully controlled by page code.
     */
 
     const courseModules = [
       {
-        id: 1,
-        title: "The Real Role of an Estimator",
-        length: "18 min",
-        level: "Foundation",
-        drillShort: "Estimator filter",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "The estimator is not just building a number. The estimator is protecting the shop, the margin, the schedule, and the handoff before the work ever hits the floor.",
-        body: "Students learn how to stop treating estimating like a guessing exercise and start treating it like the first stage of production planning.",
-        takeaways: ["Understand what the estimator is really responsible for.", "Separate price pressure from scope reality.", "Build quotes that help the shop execute, not just win work."],
-        why: ["A bad estimate becomes a shop problem later.", "Missed scope usually starts before production begins.", "The best estimators think like fabricators, installers, and owners at the same time."],
-        fieldNote: "A winning quote is not just the cheapest number. It is the clearest promise you can actually build profitably.",
-        drill: "Take one recent quote and write down what the shop needed to know after the quote was won. Anything that was unclear belongs in your estimating process earlier.",
-        checklist: ["Watch the full lesson.", "Write your definition of a good estimator.", "List three things your shop usually finds out too late."],
-        downloads: [
-          { title: "Module 01 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-01-The-Real-Role-of-an-Estimator-Student-Download.pdf" },
-          { title: "Module 01 Transcript", type: "PDF", href: "transcripts/module-01-the-real-role-of-an-estimator-transcript.pdf", needsLink: true }
-        ]
+            "id": 1,
+            "title": "The Real Role of an Estimator",
+            "length": "7:12",
+            "level": "Foundation",
+            "drillShort": "Think like a gatekeeper",
+            "youtubeId": "",
+            "summary": "Start here. This module reframes estimating as one of the highest-leverage roles in a fabrication business: part pricing, part planning, part risk control, and part margin protection.",
+            "body": "You will learn why the quote is the first version of the job plan. Instead of pricing only the obvious steel, you will begin looking at the actions required to create, finish, deliver, and install the work. Greg introduces the core estimating mindset used throughout the course: define the scope, document assumptions, break the job down, and decide whether each risk gets priced, qualified, or excluded.",
+            "takeaways": [
+                  "A real estimate is more than material plus weld time; it has to account for the work path and the risk path.",
+                  "Good estimators price the actions required to create the object, not just the object shown on the drawing.",
+                  "Every quote should separate base scope, probable extras, and controlled exclusions before the number goes out."
+            ],
+            "why": [
+                  "Many jobs start losing money at the estimator's desk before the shop ever touches the material.",
+                  "Vague assumptions turn into rework, delay, unpaid extras, and arguments after award.",
+                  "A clear estimate gives the shop a plan and gives the company a defensible basis for changes."
+            ],
+            "fieldNote": "You are not just a pricing clerk. You are the financial gatekeeper who can stop a bad assumption before it becomes lost margin.",
+            "drill": "Pull up one recent quote and divide it into three buckets: base scope, probable extras, and controlled exclusions. Anything that does not clearly fit should become a question, qualification, allowance, or priced risk item.",
+            "checklist": [
+                  "Identify what was clearly included in the quote.",
+                  "List what could reasonably show up after award.",
+                  "Write the exclusions or qualifications that would protect the shop."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 01 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-01-The-Real-Role-of-an-Estimator-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 01 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-01-The-Real-Role-of-an-Estimator-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 2,
-        title: "How to Read Drawings Like a Fabricator",
-        length: "24 min",
-        level: "Core Skill",
-        drillShort: "Drawing sweep",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "Students learn to read drawings for what will actually have to be fabricated, handled, finished, delivered, and installed.",
-        body: "This module trains the student to move beyond counting lines on drawings and start seeing material, labour, risk, sequencing, and install constraints.",
-        takeaways: ["Read notes, sections, details, elevations, and specs together.", "Spot hidden labour inside details.", "Turn drawing review into an estimating checklist."],
-        why: ["Drawings rarely explain the job in one place.", "Missed notes create missed cost.", "A fabricator reads for buildability, not just quantity."],
-        fieldNote: "The detail you skip is usually the detail that eats the margin.",
-        drill: "Open one set of drawings and do a three-pass review: scope pass, connection/detail pass, and install/access pass. Write down what changed after each pass.",
-        checklist: ["Review general notes.", "Check sections and details against plans.", "Write three RFIs or clarifying questions."],
-        downloads: [
-          { title: "Module 02 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-02-How-to-Read-Drawings-Like-a-Fabricator-Student-Download.pdf" },
-          { title: "Module 02 Transcript", type: "PDF", href: "transcripts/module-02-how-to-read-drawings-like-a-fabricator-transcript.pdf", needsLink: true }
-        ]
+            "id": 2,
+            "title": "How to Read Drawings Like a Fabricator",
+            "length": "4:26",
+            "level": "Drawing Review",
+            "drillShort": "Read the white space",
+            "youtubeId": "",
+            "summary": "This module teaches students to stop reading drawings only as finished objects and start reading them as fabrication, handling, finish, shipping, and installation paths.",
+            "body": "Engineers show the finished condition. Fabricators pay for everything it takes to get there. In this lesson, you learn how to read the white space: the moves, lifts, flips, bracing, access, laydown, finish requirements, notes, tolerances, and site conditions that may not be obvious in the main view but still create real cost.",
+            "takeaways": [
+                  "Ask five questions for every major assembly: how do we build it, move it, lift it, ship it, and install it?",
+                  "General notes, finish notes, exceptions, tolerances, and inspection requirements can change the estimate as much as the drawing views.",
+                  "A drawing review is not complete until the estimator has followed the work from shop handling to field installation."
+            ],
+            "why": [
+                  "The drawing may show the final condition, but it rarely shows every labour event needed to get there.",
+                  "Bad access, poor laydown, hoisting challenges, finish requirements, and site readiness can turn a clean-looking job into a margin problem.",
+                  "Reading only the big view makes it easy to miss the small notes that drive labour, quality control, and schedule pressure."
+            ],
+            "fieldNote": "If you cannot explain how the part gets built, moved, lifted, shipped, and installed, you are not done estimating.",
+            "drill": "Choose one assembly from a drawing set and write a five-line work path: build, move, lift, ship, install. Add every drawing note or site condition that could change labour or risk.",
+            "checklist": [
+                  "Review the general notes and finish notes.",
+                  "Write the five-question work path for one assembly.",
+                  "Flag any missing information that should become an RFI or qualification."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 02 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-02-How-to-Read-Drawings-Like-a-Fabricator-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 02 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-02-How-to-Read-Drawings-Like-a-Fabricator-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 3,
-        title: "Scope Breakdown System",
-        length: "22 min",
-        level: "System",
-        drillShort: "Scope map",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "This module shows students how to break a project into clean estimating buckets so nothing important gets buried or forgotten.",
-        body: "Students build a repeatable scope map for material, fabrication, finishing, install, subcontractors, rentals, shipping, safety, and exclusions.",
-        takeaways: ["Break scope into quoteable sections.", "Separate included, excluded, assumed, and unknown items.", "Make the final proposal easier to defend."],
-        why: ["Loose scope creates loose pricing.", "The customer may assume more than you included.", "Clean scope makes change orders easier later."],
-        fieldNote: "If you cannot explain what is included, the customer will decide for you after the job starts.",
-        drill: "Take a project and create four columns: included, excluded, assumed, and needs clarification. Fill them before pricing anything.",
-        checklist: ["Build a scope breakdown before pricing.", "Create an exclusions list.", "Identify unknowns before final quote."],
-        downloads: [
-          { title: "Module 03 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-03-Scope-Breakdown-System-Student-Download.pdf" },
-          { title: "Module 03 Transcript", type: "PDF", href: "transcripts/module-03-scope-breakdown-system-transcript.pdf", needsLink: true }
-        ]
+            "id": 3,
+            "title": "Scope Breakdown System",
+            "length": "6:32",
+            "level": "Scope Control",
+            "drillShort": "Five buckets",
+            "youtubeId": "",
+            "summary": "This module gives students a repeatable five-bucket system for breaking each deliverable into the real work required before, during, and after fabrication.",
+            "body": "Instead of staring at one giant drawing package and trying to create one giant number, students learn to run each deliverable through the same five buckets: preparation, fabrication, finishing, assembly and quality control, and logistics and field readiness. This turns estimating from a guess into a checklist-driven system that catches the items most shops forget.",
+            "takeaways": [
+                  "Break down each deliverable separately instead of pricing the whole project as one blur.",
+                  "Preparation includes drawing review, RFIs, approvals, material buyout, receiving, sorting, and programming.",
+                  "Finishing, quality control, logistics, freight, loading, delivery, and field readiness are real scope items, not afterthoughts."
+            ],
+            "why": [
+                  "Jobs rarely lose money because the shop rate was slightly off; they lose money because something real was missed.",
+                  "Crane time, paint, bolts, freight, trial fit, rigging, second deliveries, and PM time can quietly destroy margin.",
+                  "A repeatable scope system keeps the estimator from relying on memory under pressure."
+            ],
+            "fieldNote": "The drawing shows the finished object. The estimator has to see the work required to make that object real.",
+            "drill": "Pick one stair, rail package, frame, or mezzanine and run it through the five buckets. Write at least three cost items under each bucket before you price it.",
+            "checklist": [
+                  "Break one deliverable into the five buckets.",
+                  "Add hidden prep, QA, finishing, and logistics items.",
+                  "Decide what is priced, qualified, excluded, or sent as an RFI."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 03 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-03-Scope-Breakdown-System-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 03 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-03-Scope-Breakdown-System-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 4,
-        title: "Labour Estimating",
-        length: "31 min",
-        level: "Core Pricing",
-        drillShort: "Labour build",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "Students learn how labour really behaves in a fabrication shop and on site, and how to estimate for more than just ideal cutting and welding time.",
-        body: "This lesson covers handling, layout, fit-up, welding, grinding, movement, setup, supervision, rework risk, install access, weather, and crew productivity.",
-        takeaways: ["Separate shop labour from field labour.", "Price setup, handling, fit-up, welding, finishing, and movement.", "Use questions when you do not know what the job will really take."],
-        why: ["Most jobs do not lose money on the obvious labour.", "The hidden time is often in handling, fitting, waiting, moving, and fixing.", "Field work needs different thinking than shop work."],
-        fieldNote: "Labour is where confidence can become dangerous. Slow down and price the reality, not the perfect version of the job.",
-        drill: "Pick one fabricated item and break labour into steps: receive, handle, lay out, cut, drill, fit, weld, clean, finish, load, ship, install. Assign hours to each step.",
-        checklist: ["Build labour by operation.", "Add handling and setup.", "Check shop versus field assumptions."],
-        downloads: [
-          { title: "Module 04 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-04-Labour-Estimating-Student-Download.pdf" },
-          { title: "Module 04 Transcript", type: "PDF", href: "transcripts/module-04-labour-estimating-transcript.pdf", needsLink: true }
-        ]
+            "id": 4,
+            "title": "Labour Estimating",
+            "length": "23:45",
+            "level": "Labour Build-Up",
+            "drillShort": "Predict the work",
+            "youtubeId": "",
+            "summary": "This is the deep labour module. Students learn why labour is where fabrication jobs are often won or lost, and how to estimate the full human process instead of only weld time.",
+            "body": "Material can usually be counted. Labour has to be understood. This module teaches students to picture the job as a sequence of labour events: review, pull, move, cut, drill, deburr, lay out, fit, tack, check, flip, weld, clean, inspect, straighten, finish, load, install, and touch up. Students also learn the difference between wage rate, loaded cost rate, and sell rate, and why billable hours matter when building shop rates.",
+            "takeaways": [
+                  "Do not estimate only the time the arc is on; estimate the full process around the weld.",
+                  "Break labour into events such as moves, setups, layouts, fit-ups, flips, inspections, and touch-ups.",
+                  "Use realistic shop and field conditions instead of assuming perfect access, perfect drawings, and perfect flow."
+            ],
+            "why": [
+                  "Labour moves with access, sequence, drawings, people, equipment, fatigue, rework, and site conditions.",
+                  "One missed setup, one extra move, or one bad field condition can erase the profit on a clean-looking item.",
+                  "A low labour number may win the job but still set the crew up to lose money."
+            ],
+            "fieldNote": "Material is math. Labour is weather. Do not ask only how long it takes to weld. Ask how the job actually happens.",
+            "drill": "Take one item from a quote and write the labour path from drawing review to final touch-up. Add time for every move, setup, fit, flip, inspection, field delay, and handoff you would normally forget.",
+            "checklist": [
+                  "Separate fabrication labour from install labour.",
+                  "List setup, handling, fit-up, weld, clean-up, inspection, and rework risk.",
+                  "Check the labour rate against loaded cost, overhead, and sell rate."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 04 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-04-Labour-Estimating-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 04 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-04-Labour-Estimating-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 5,
-        title: "Material & Costing Strategy",
-        length: "26 min",
-        level: "Cost Control",
-        drillShort: "Material logic",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "This module helps students price material with waste, sourcing, volatility, freight, cut sizes, minimum buys, and real purchasing constraints in mind.",
-        body: "Students learn how to think through stock lengths, plate yield, buyouts, freight, supplier quotes, substitutions, and pricing windows.",
-        takeaways: ["Price what you actually need to buy.", "Account for waste, drops, minimums, freight, and volatility.", "Use supplier confirmation when risk is high."],
-        why: ["The takeoff may be correct while the purchase cost is still wrong.", "Small material misses stack up quickly.", "Supplier lead time can become schedule risk."],
-        fieldNote: "Material cost is not just pounds times a number. It is purchasing reality plus waste plus timing plus risk.",
-        drill: "Take one material list and mark each item as stock, special order, supplier quote required, volatile price, or substitution possible.",
-        checklist: ["Check waste and minimum buys.", "Add freight and handling.", "Verify high-risk material pricing."],
-        downloads: [
-          { title: "Module 05 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-05-Material-&-Costing-Strategy-Student-Download.pdf" },
-          { title: "Module 05 Transcript", type: "PDF", href: "transcripts/module-05-material-costing-strategy-transcript.pdf", needsLink: true }
-        ]
+            "id": 5,
+            "title": "Material & Costing Strategy",
+            "length": "13:22",
+            "level": "Material Control",
+            "drillShort": "Price the buy",
+            "youtubeId": "",
+            "summary": "This module teaches students to price material the way it is actually bought, cut, stored, wasted, moved, and exposed to market change.",
+            "body": "A frame may only use part of a length, but the shop may need to buy the full stick, carry drop, pay freight, manage minimum order quantities, and absorb price changes. Students learn how to think through full purchase length, usable drops, cut loss, supplier validity, freight, finish impact, alternates, and material risk before locking in the quote.",
+            "takeaways": [
+                  "Do not price only the theoretical length on the drawing; price what the shop actually has to buy and handle.",
+                  "Account for drops, waste, cut loss, minimums, freight, storage, and whether leftover material can truly be reused.",
+                  "Control material risk with quote validity, supplier assumptions, approved alternates, and clear exclusions."
+            ],
+            "why": [
+                  "A small material assumption can become a large cost problem across many cuts, many parts, or many jobs.",
+                  "Steel pricing, availability, lead times, and release delays can change the number after the estimate is built.",
+                  "If the material spec, grade, finish, or size is assumed wrong, the job can be wrong before fabrication starts."
+            ],
+            "fieldNote": "There is a difference between quoting steel and estimating a job. Material has to be priced around purchase reality, not drawing theory.",
+            "drill": "Choose one material item and compare the drawing requirement against the actual buy: stock length, drop, waste, supplier quote, freight, validity date, lead time, and alternate options.",
+            "checklist": [
+                  "Check grade, size, finish, and quantity against the drawings and specs.",
+                  "Include buy length, waste, freight, minimums, and usable drop logic.",
+                  "Document supplier validity, lead time, and material assumptions."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 05 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-05-Material-&-Costing-Strategy-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 05 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-05-Material-and-Costing-Strategy-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 6,
-        title: "Subcontractors & Outsourced Work",
-        length: "21 min",
-        level: "Coordination",
-        drillShort: "Sub review",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "Students learn how to protect the quote when outside vendors, finishers, erectors, engineers, trucking, rental companies, and specialty suppliers are involved.",
-        body: "This module explains how to review sub quotes, compare apples to apples, catch exclusions, and add coordination time.",
-        takeaways: ["Never pass through a sub number without reviewing scope.", "Look for exclusions, lead times, access needs, and schedule limits.", "Add coordination, markup, risk, and management time."],
-        why: ["A subcontractor miss becomes your customer problem.", "The lowest sub quote may be missing the most scope.", "Coordination takes real time and should be priced."],
-        fieldNote: "A sub quote is not a finished number until you know what is missing from it.",
-        drill: "Review one subcontractor quote and highlight included scope, excluded scope, assumptions, validity date, lead time, and risk items.",
-        checklist: ["Review sub quote exclusions.", "Check schedule and lead time.", "Add coordination and markup."],
-        downloads: [
-          { title: "Module 06 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-06-Subcontractors-&-Outsourced-Work-Student-Download.pdf" },
-          { title: "Module 06 Transcript", type: "PDF", href: "transcripts/module-06-subcontractors-outsourced-work-transcript.pdf", needsLink: true }
-        ]
+            "id": 6,
+            "title": "Subcontractors & Outsourced Work",
+            "length": "7:05",
+            "level": "Vendor Scope",
+            "drillShort": "Manage the pass-through",
+            "youtubeId": "",
+            "summary": "This module shows why outsourced work is not just a vendor invoice. Students learn to price the managed scope around galvanizing, coating, machining, freight, QA, and recovery risk.",
+            "body": "The vendor quote is only one layer of the cost. Students learn to add the internal labour before and after outsourcing: prep, vent and drain checks, disassembly, chasing threads, loading, freight, receiving, inspection, sorting, rework, schedule impact, and customer responsibility. The lesson also covers why duplex systems and specialty finishing require process-chain thinking, not simple pass-through pricing.",
+            "takeaways": [
+                  "Price outsourced work as managed scope, not as a clean pass-through.",
+                  "Add prep labour, freight both ways, handling, inspection, schedule risk, vendor clarification, and recovery time.",
+                  "Clarify what the vendor includes and what your shop still owns before you send the quote."
+            ],
+            "why": [
+                  "The steel may leave your shop, but the responsibility usually stays with you.",
+                  "Galvanizing, coating, machining, and specialty services create handling, quality, schedule, and rework risk.",
+                  "A cheap vendor number can become an underpriced scope once prep, freight, QA, and margin are added."
+            ],
+            "fieldNote": "When the customer buys a finished part from you, they are not buying your vendor. They are buying your promise.",
+            "drill": "Take one subcontractor quote and add the missing layers: prep, packaging, freight out, vendor clarification, return freight, receiving, inspection, repair risk, admin time, and margin.",
+            "checklist": [
+                  "Confirm vendor scope, exclusions, validity, and lead time.",
+                  "Add internal prep, handling, freight, inspection, and recovery labour.",
+                  "Decide whether to carry allowance, fixed price, qualification, or exclusion."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 06 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-06-Subcontractors-&-Outsourced-Work-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 06 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-06-Subcontractors-and-Outsourced-Work-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 7,
-        title: "Risk, Unknowns, and Margin Protection",
-        length: "29 min",
-        level: "Margin Protection",
-        drillShort: "Risk register",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "This module teaches students how to identify what can hurt the job, price uncertainty intelligently, and protect margin without just throwing random money at the quote.",
-        body: "Students build a risk register and learn how to separate normal cost, contingency, allowance, qualification, and exclusion.",
-        takeaways: ["Identify risk before final pricing.", "Use allowances, exclusions, clarifications, or contingency correctly.", "Protect margin without making the quote messy."],
-        why: ["Unknowns do not disappear after the job is won.", "Risk either gets priced, qualified, or absorbed.", "Clear wording protects the relationship and the margin."],
-        fieldNote: "Hope is not a margin strategy. If the risk is real, deal with it before the quote goes out.",
-        drill: "Create a risk register for one current job with columns for risk, likelihood, impact, pricing response, and proposal wording.",
-        checklist: ["List risk items.", "Choose allowance, exclusion, clarification, or contingency.", "Review wording before sending the quote."],
-        downloads: [
-          { title: "Module 07 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-07-Risk,-Unknowns,-and-Margin-Protection-Student-Download.pdf" },
-          { title: "Module 07 Transcript", type: "PDF", href: "transcripts/module-07-risk-unknowns-margin-protection-transcript.pdf", needsLink: true }
-        ]
+            "id": 7,
+            "title": "Risk, Unknowns, and Margin Protection",
+            "length": "26:56",
+            "level": "Risk Control",
+            "drillShort": "Name the risk",
+            "youtubeId": "",
+            "summary": "This module teaches students to stop hiding risk inside hope, contingency, or vague language, and start making risk visible, priced, qualified, excluded, transferred, or reserved.",
+            "body": "A professional estimate is not only a cost calculation. It is a risk decision. Students learn to identify the cause, trigger, owner, cost, and schedule impact of risk before it eats the margin. The module covers drawing risk, site risk, material risk, coating risk, crane and rigging risk, schedule risk, customer-controlled unknowns, assumptions, exclusions, allowances, reserves, and quote language that protects the business.",
+            "takeaways": [
+                  "Do not hide risk. Name it so it can be priced, qualified, excluded, transferred, or reserved for.",
+                  "Separate known cost, known risk, unknown risk, and customer-owned risk instead of blending everything into one vague number.",
+                  "Protect margin with clear assumptions, exclusions, allowances, contingency logic, and final quote checks."
+            ],
+            "why": [
+                  "If the quote only works when everything goes perfectly, it is not an estimate; it is a wish.",
+                  "Hidden risk hides inside profit until real life exposes it during fabrication or installation.",
+                  "The earlier a risk is found, the cheaper it is to control. The later it appears, the more expensive it gets."
+            ],
+            "fieldNote": "Hope is not a business strategy. Real estimators protect the business by deciding who owns the risk before the job starts.",
+            "drill": "Build a risk register for one active or recent quote. For each risk, write the cause, trigger, owner, possible cost, schedule impact, and your response: price, qualify, exclude, transfer, or reserve.",
+            "checklist": [
+                  "List drawing, site, material, vendor, schedule, and customer-controlled risks.",
+                  "Assign each risk an owner and a response strategy.",
+                  "Add margin protection language before the quote is sent."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 07 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-07-Risk,-Unknowns,-and-Margin-Protection-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 07 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-07-Risk-Unknowns-and-Margin-Protection-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 8,
-        title: "Building the Final Price",
-        length: "25 min",
-        level: "Final Pricing",
-        drillShort: "Final price",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "Students learn the difference between markup and margin, how to roll up costs, and how to build a final sell price that actually produces the intended gross margin.",
-        body: "This module walks through material, labour, subs, rentals, freight, overhead recovery, markup, gross margin, tax, and final review.",
-        takeaways: ["Understand markup versus margin.", "Roll up all cost buckets cleanly.", "Check final sell price before proposal."],
-        why: ["A 20% markup is not a 20% margin.", "Small formula mistakes can erase profit.", "Final price needs a sanity check before it leaves the shop."],
-        fieldNote: "The final price is not done when the spreadsheet gives a number. It is done when the number makes sense, protects the job, and can be explained.",
-        drill: "Take one completed estimate and calculate both markup percentage and gross margin percentage. Compare what you thought you were making to what the math says.",
-        checklist: ["Verify all costs are included.", "Check markup versus margin.", "Do a final quote sanity review."],
-        downloads: [
-          { title: "Module 08 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-08-Building-the-Final-Price-Student-Download.pdf" },
-          { title: "Module 08 Transcript", type: "PDF", href: "transcripts/module-08-building-the-final-price-transcript.pdf", needsLink: true }
-        ]
+            "id": 8,
+            "title": "Building the Final Price",
+            "length": "21:53",
+            "level": "Final Pricing",
+            "drillShort": "Build the number",
+            "youtubeId": "",
+            "summary": "This module teaches students how to turn cost into a final selling price that covers true cost, protects against risk, and produces the margin the company needs.",
+            "body": "Students learn the difference between markup and margin, why a 20% markup is not a 20% margin, and how low labour rates, poor overhead recovery, missed risk, and last-minute price cutting damage profit. The module walks through final price structure: direct costs, labour, overhead, equipment, freight, subcontractors, contingency or reserve, markup, target margin, quote checks, and confidence before sending.",
+            "takeaways": [
+                  "Markup is added to cost; margin is what you keep from the selling price. They are not the same thing.",
+                  "The final price must cover true labour cost, overhead, non-billable time, equipment, freight, subcontractors, and risk.",
+                  "A good estimator checks the number before sending: margin, blended rate, scope gaps, risk, exclusions, and proposal language."
+            ],
+            "why": [
+                  "A job won at a loss is not a win; it is unpaid stress with a purchase order attached to it.",
+                  "Using the wrong labour rate or confusing markup with margin quietly damages profit over and over again.",
+                  "Cutting price at the end without knowing what you gave away can remove the exact protection the job needed."
+            ],
+            "fieldNote": "The final price is not just the number that wins the job. It has to be a number the company can build, deliver, invoice, and profit from.",
+            "drill": "Run one estimate through a final-price review. Calculate cost, markup, actual gross margin, loaded labour recovery, risk reserve, and the final selling price before and after any discount.",
+            "checklist": [
+                  "Confirm markup versus margin math.",
+                  "Check labour rate, overhead, risk reserve, and subcontractor markups.",
+                  "Review the final price against scope, exclusions, and proposal wording."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 08 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-08-Building-the-Final-Price-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 08 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-08-Building-the-Final-Price-Transcript.txt"
+                  }
+            ]
       },
       {
-        id: 9,
-        title: "Writing a Winning Quote",
-        length: "27 min",
-        level: "Proposal",
-        drillShort: "Quote letter",
-        youtubeId: "",
-        youtubeUrl: "",
-        summary: "Students learn how to turn the estimate into a clear, professional proposal that sells the value, defines the scope, and protects the company.",
-        body: "This module covers proposal structure, scope wording, assumptions, exclusions, alternates, allowances, schedule notes, payment terms, and how to make the quote easy to accept.",
-        takeaways: ["Write clear included and excluded scope.", "Use proposal language that reduces confusion.", "Make the quote professional without hiding the important details."],
-        why: ["A confusing quote creates disputes later.", "The proposal is part sales document and part protection document.", "Clear wording helps customers say yes with fewer assumptions."],
-        fieldNote: "A winning quote should be easy to understand, hard to misunderstand, and strong enough to protect the shop after the job starts.",
-        drill: "Rewrite one old proposal using clear headings: scope, price, assumptions, exclusions, schedule, terms, and acceptance.",
-        checklist: ["Write included scope clearly.", "Add assumptions and exclusions.", "Check the quote from the customer's point of view."],
-        downloads: [
-          { title: "Module 09 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-09-Writing-a-Winning-Quote-Student-Download.pdf" },
-          { title: "Module 09 Transcript", type: "PDF", href: "transcripts/module-09-writing-a-winning-quote-transcript.pdf", needsLink: true }
-        ]
+            "id": 9,
+            "title": "Writing a Winning Quote",
+            "length": "11:27",
+            "level": "Proposal Writing",
+            "drillShort": "Build the fence",
+            "youtubeId": "",
+            "summary": "This final module teaches students to write quotes that sell the work, define the scope, protect the margin, and create a clean handoff after award.",
+            "body": "A quote is a sales tool, a production plan, and a risk-control document. Students learn how to write clear scope, assumptions, exclusions, alternates, allowances, schedule notes, commercial terms, and customer-friendly proposal language. The goal is a quote that is easy to understand, hard to misunderstand, and strong enough to protect the shop after the customer says yes.",
+            "takeaways": [
+                  "A strong quote lets the customer compare competence, not just price.",
+                  "Clear included scope, assumptions, exclusions, alternates, and terms create a fence around the job.",
+                  "The quote has to survive the purchase order, contract, shop handoff, field work, and any dispute later."
+            ],
+            "why": [
+                  "A vague quote invites scope creep, unpaid extras, customer assumptions, and margin loss.",
+                  "If the quote only says a number, the customer can only compare you on price.",
+                  "Professional quote structure builds trust and protects the shop at the same time."
+            ],
+            "fieldNote": "The quote is the fence around the job. If the fence is blurry, people will walk all over it.",
+            "drill": "Rewrite one old quote using clean headings: scope of work, price, inclusions, assumptions, exclusions, alternates, schedule, payment terms, and acceptance.",
+            "checklist": [
+                  "Write what is included in plain language.",
+                  "Add assumptions, exclusions, alternates, schedule notes, and terms.",
+                  "Read the quote as if you were the customer and the project manager."
+            ],
+            "downloads": [
+                  {
+                        "title": "Module 09 Worksheet",
+                        "type": "PDF",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-09-Writing-a-Winning-Quote-Student-Download.pdf"
+                  },
+                  {
+                        "title": "Module 09 Transcript",
+                        "type": "TXT",
+                        "href": "https://gregsheldon.github.io/estimating-course/Module-09-Writing-a-Winning-Quote-Transcript.txt"
+                  }
+            ]
       }
-    ];
+];
+
+    const combinedDownload = {
+      title: "All Module Student Downloads Combined Pack",
+      type: "PDF",
+      href: "https://gregsheldon.github.io/estimating-course/All-Module-Student-Downloads-Combined-Pack.pdf"
+    };
 
     const storageKey = "mfpt_course_progress_v1";
     const notesKey = "mfpt_course_notes_v1";
@@ -1237,16 +1401,11 @@
     }
 
     function downloadCard(item) {
-      const pending = item.needsLink || !item.href || item.href === "#";
-      const href = pending ? "#" : item.href;
-      const attrs = pending ? 'aria-disabled="true" onclick="return false;"' : "download";
-      const subtext = pending ? "Transcript link placeholder" : `${item.type} download`;
-      const action = pending ? "Link Needed" : "Download";
       return `
-        <a class="download-card ${pending ? "pending-download" : ""}" href="${htmlEscape(href)}" ${attrs}>
+        <a class="download-card" href="${htmlEscape(item.href)}" download>
           <span class="download-icon">${htmlEscape(item.type)}</span>
-          <span><strong>${htmlEscape(item.title)}</strong><span>${htmlEscape(subtext)}</span></span>
-          <span class="download-action">${htmlEscape(action)}</span>
+          <span><strong>${htmlEscape(item.title)}</strong><span>${htmlEscape(item.type)} download</span></span>
+          <span class="download-action">Download</span>
         </a>
       `;
     }
@@ -1269,55 +1428,41 @@
       });
     }
 
-    function extractYouTubeId(urlOrId) {
-      if (!urlOrId) return "";
-      const clean = String(urlOrId).trim();
-      if (/^[a-zA-Z0-9_-]{11}$/.test(clean)) return clean;
-
-      try {
-        const parsed = new URL(clean);
-        if (parsed.hostname.includes("youtu.be")) return parsed.pathname.replace("/", "").slice(0, 11);
-        if (parsed.hostname.includes("youtube.com") || parsed.hostname.includes("youtube-nocookie.com")) {
-          if (parsed.pathname.includes("/embed/")) return parsed.pathname.split("/embed/")[1].split(/[/?#]/)[0].slice(0, 11);
-          return parsed.searchParams.get("v") || "";
-        }
-      } catch (error) {
-        return "";
-      }
-      return "";
-    }
-
-    function buildLockedYouTubeEmbed(module) {
-      const id = extractYouTubeId(module.youtubeId || module.youtubeUrl);
-      if (!id) return "";
-      const params = new URLSearchParams({
-        rel: "0",
-        modestbranding: "1",
-        fs: "0",
-        playsinline: "1",
-        controls: "1",
-        disablekb: "1",
-        iv_load_policy: "3"
-      });
-      return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${params.toString()}`;
+    function buildYouTubeEmbedUrl(youtubeId) {
+      if (!youtubeId) return "";
+      const cleanId = String(youtubeId).trim();
+      if (!cleanId) return "";
+      const url = new URL(`https://www.youtube.com/embed/${encodeURIComponent(cleanId)}`);
+      url.searchParams.set("rel", "0");
+      url.searchParams.set("modestbranding", "1");
+      url.searchParams.set("fs", "0");
+      url.searchParams.set("playsinline", "1");
+      url.searchParams.set("controls", "1");
+      return url.toString();
     }
 
     function renderVideo(module) {
+      const video = $("lessonVideo");
       const embed = $("lessonEmbed");
       const placeholder = $("videoPlaceholder");
+      const placeholderTitle = $("videoPlaceholderTitle");
+      const placeholderText = $("videoPlaceholderText");
 
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+      video.classList.add("hidden");
       embed.classList.add("hidden");
       embed.removeAttribute("src");
-      embed.removeAttribute("allowfullscreen");
-      embed.allowFullscreen = false;
       placeholder.classList.remove("hidden");
+      placeholderTitle.textContent = `Module ${pad(module.id)} Video`;
+      placeholderText.textContent = `${module.title} • Watch the lesson, complete the worksheet, and review the transcript.`;
 
-      const lockedEmbedUrl = buildLockedYouTubeEmbed(module);
-      if (lockedEmbedUrl) {
-        embed.src = lockedEmbedUrl;
-        // Important: no fullscreen permission is granted here.
+      const embedUrl = buildYouTubeEmbedUrl(module.youtubeId);
+      if (embedUrl) {
+        embed.src = embedUrl;
         embed.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
-        embed.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups");
+        embed.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox");
         embed.classList.remove("hidden");
         placeholder.classList.add("hidden");
       }
@@ -1367,31 +1512,24 @@
     }
 
     function renderResources() {
-      const combinedPack = "https://gregsheldon.github.io/estimating-course/All-Module-Student-Downloads-Combined-Pack.pdf";
-      const moduleCards = courseModules.map(module => `
-        <div class="resource-module">
-          <span class="eyebrow" style="margin-bottom:0;">Module ${pad(module.id)}</span>
-          <h3>${htmlEscape(module.title)}</h3>
-          <div class="resource-links">
-            ${module.downloads.map(item => {
-              const pending = item.needsLink || !item.href || item.href === "#";
-              return pending
-                ? `<a href="#" aria-disabled="true" onclick="return false;">↳ ${htmlEscape(item.title)} · link needed</a>`
-                : `<a href="${htmlEscape(item.href)}" download>↳ ${htmlEscape(item.title)}</a>`;
-            }).join("")}
-          </div>
-        </div>
-      `).join("");
-
       $("resourceGrid").innerHTML = `
-        <div class="resource-module" style="border:2px solid var(--orange-600); background:var(--orange-50);">
+        <div class="resource-module">
           <span class="eyebrow" style="margin-bottom:0;">Full Course Pack</span>
-          <h3>All Module Student Downloads</h3>
+          <h3>${htmlEscape(combinedDownload.title)}</h3>
+          <p style="color:var(--slate-600); font-weight:700; margin-bottom:1rem;">One PDF containing all student worksheet downloads for the full course.</p>
           <div class="resource-links">
-            <a href="${combinedPack}" download>↳ Download the combined worksheet pack</a>
+            <a href="${htmlEscape(combinedDownload.href)}" download>↳ Download complete worksheet pack</a>
           </div>
         </div>
-        ${moduleCards}
+        ${courseModules.map(module => `
+          <div class="resource-module">
+            <span class="eyebrow" style="margin-bottom:0;">Module ${pad(module.id)}</span>
+            <h3>${htmlEscape(module.title)}</h3>
+            <div class="resource-links">
+              ${module.downloads.map(item => `<a href="${htmlEscape(item.href)}" download>↳ ${htmlEscape(item.title)}</a>`).join("")}
+            </div>
+          </div>
+        `).join("")}
       `;
     }
 
@@ -1425,6 +1563,9 @@
     document.addEventListener("mozfullscreenchange", blockFullscreen);
     document.addEventListener("MSFullscreenChange", blockFullscreen);
 
+    $("lessonVideo").addEventListener("webkitbeginfullscreen", function () {
+      if (this.webkitExitFullscreen) this.webkitExitFullscreen();
+    });
 
     $("notesArea").addEventListener("input", saveNote);
 
