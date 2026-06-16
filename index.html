@@ -101,12 +101,24 @@
       color: var(--slate-950);
     }
 
+
     .brand-logo {
       display: block;
       height: 54px;
       width: auto;
       max-width: 340px;
       object-fit: contain;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, .28);
+      font-weight: 950;
     }
 
     .brand small {
@@ -848,7 +860,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-            <a class="brand" href="#top" aria-label="Course home">
+      <a class="brand" href="#top" aria-label="Course home">
         <img class="brand-logo" src="https://gregsheldon.github.io/estimating-course/estimating-course-logo.png" alt="Metal Fabrication Estimating Course" />
       </a>
       <nav class="nav" aria-label="Course navigation">
