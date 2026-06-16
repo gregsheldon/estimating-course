@@ -1,0 +1,42 @@
+Module 06 - Subcontractors & Outsourced Work
+============================================
+
+Most shops make one huge mistake with outsourced work. The painter says two grand. The galvanizer says five grand.
+
+The machine shop says twelve hundred.
+
+And the estimator copies that number into the quote like it is the full cost.
+
+It is not.
+
+That vendor quote is only the ticket price. It is like airfare. The ticket looks cheap until you add baggage, seat selection, airport parking, and the missed connection. Outsourced work is exactly like that. The steel leaves your shop, but the responsibility does not. And that is the first thing you need to understand in this module.
+
+AISC separates core fabrication from post-fabrication coating and galvanizing for a reason. Fabrication is one process. Finishing, coating, galvanizing, machining, and specialty services are separate processes with their own handling, schedule, quality control, and risk. AISC’s certification program also pushes documented procedures and error prevention across the whole job, not just the work you physically do in-house. So if you send the steel out, the risk did not disappear. It changed shape. That means you do not price outsourced work as a pass-through. You price it as a managed scope. And managed scope has layers.
+
+First, there is the vendor’s invoice. Then there is everything you have to do before the vendor can even touch the part. If it is galvanizing, did you check vent holes and drain holes? Because if a hollow section traps liquid and it flashes to steam, the pressure can get high enough to rupture the part. Did you check kettle size? Because the average galvanizing kettle in North America is about 40 feet, and many are 50 to 60 feet, which means your “one-piece assembly” might really be a two-piece assembly or a progressive dip problem. Did you check the return-freight weight? Because galvanizing can add enough weight to push a legal load over the line. If it is a long light assembly, did you allow for temporary braces?
+
+If it is a big ugly frame, did you allow for lifting points? Because the galvanizer is moving that part with cranes, chains, racks, and fixtures. If you do not build in good lifting points, they will still move it, but you may get chain marks, extra handling, or touch-up work you did not price. If it is threaded, did you price it like threaded galvanized work? Because galvanizing and threads do not magically play nice. AGA recommends sending threaded assemblies disassembled, and the usual practice is to chase or tap after galvanizing. Nuts are often re-tapped oversize. So if your estimate carried only “galvanize anchor rods,” but not disassembly, chase, reassembly, and fit check, you are light.
+
+Now let’s talk about duplex systems, because this is where a lot of shops donate margin. A job says galvanized and powder coated. An amateur sees two vendor quotes. A professional sees a process chain.
+
+If galvanized steel is going to be powder coated, the galvanizer needs to know that before galvanizing. Why? Because post-treatments can interfere with adhesion, and surface issues that may be acceptable on bare galvanized steel can become coating problems once you add powder. Then the part has to be cleaned, profiled, baked to prevent outgassing, powder coated, and cured. AGA even gives specifics: the pre-bake should be about 30 degrees Celsius above cure temperature, and the part should stay there until it reaches temperature or for at least an hour. That is not one outsourced step. That is a whole sequence. Same thing with paint over galvanizing. If it is getting painted after galvanizing, that is not just “send it to the painter.” That is surface prep per ASTM D6386, control of post-treatments, cleaning, profiling, and tight timing from prep to paint. AGA says once the part is cleaned and dried, the time to painting should be kept very short, no more than 12 hours, to avoid the surface changing again. So now you have a logistics problem and a schedule problem, not just a painting problem. Here is the estimating rule I want you to use:
+
+Do not buy outside work by the invoice. Buy it by the touches. Every time the part changes hands, count the touch. Review it. Prep it. Tag it. Load it. Ship it. Coordinate it. Receive it. Inspect it. Restage it.
+
+That is already nine touches before the installer ever sees it. And each touch costs labor. Here is the formula: Vendor quote plus prep labor plus outbound freight plus return freight plus special fabrication for the process plus receiving and inspection plus admin and coordination plus risk reserve plus your margin
+
+That is how you build the real number. Let me give you a simple example. Say a galvanizer quotes you $5,800. Most bad estimates stop there.
+
+A real estimate asks: How many hours to review venting, threads, lifting, and braces? How many hours to tag and stage the job? What does trucking cost both ways? How many hours to receive it back, inspect it, sort it, and chase problems? What happens if one part comes back warped or one threaded item needs cleanup? What if the finish is for duplex and now the powder coater needs sample approval? By the time you add the real shop touches, freight, QA, and reserve, that “$5,800 subcontract” may need to sell for $9,000 or more to be healthy. That is not greed.
+
+That is reality. Now here is how you stay competitive without cutting your own throat. Do not compete by swallowing risk. Compete by removing risk early.
+
+Call the galvanizer before bid day. Ask about kettle size, expected turnaround, chemistry concerns, thread strategy, duplex prep, and freight limits. If you see a bad detail, fix it before award. If the client wants duplex on a part that does not need it, offer an alternate.
+
+If the job is too long for the local kettle, offer modularization before someone else figures it out. If the finish is appearance-critical, include a sample piece so the customer sees what “acceptable” means before the full batch is coated. AGA even recommends powder-coating a sample piece first to verify the final appearance. That is how you become the shop that solves problems instead of the shop that sends change orders after the damage is done. And here is another small detail that saves real money. Inspect outsourced work at the vendor when possible.
+
+AGA says galvanizing inspection is most efficient at the galvanizing facility, where questions can be answered quickly. They also point out that some appearance differences are not cause for rejection. That means if you wait until the truck comes back to decide whether the finish is acceptable, you may pay to haul home a problem or reject something the spec already allows. Both are expensive mistakes. Even your tags matter. If you mark galvanized parts with grease pencil, oil marker, or the wrong paint, you can block zinc from forming in that area. AGA recommends detachable metal tags, water-soluble markers, or permanent mechanical marks instead. It sounds tiny, but outsourced work is full of tiny things that become expensive when multiplied across a whole project. So the big lesson in this module is simple.
+
+Outsourced work is not outside your estimate. It is inside your risk. Price the spec. Price the touches. Price the freight. Price the recovery. Then add your margin. Because when the customer buys a finished part from you, they are not buying your vendor. They are buying your promise.
+
+And that promise has to be priced properly.

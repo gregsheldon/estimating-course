@@ -1,0 +1,74 @@
+Module 05 - Material & Costing Strategy
+=======================================
+
+Let me ask you a serious question. A customer needs a frame that uses 14 feet of HSS. What do you charge them for?
+
+If your answer is “14 feet,” that sounds clean on paper.
+
+But in real life, it can be dead wrong.
+
+Because the shop does not buy drawings.
+
+The shop buys steel.
+
+And steel comes in the lengths, sheets, plates, bundles, minimums, and delivery rules your supplier actually sells.
+
+Not in the perfect little pieces the drawing happens to use.
+
+That is the first mindset shift in material costing.
+
+Do not price only what the part uses.
+
+Price what the job forces the shop to buy.
+
+Here is why this matters.
+
+The drawing shows the finished condition.
+
+It shows the part after all the waste, all the cutting, all the handling, all the offcuts, all the purchasing decisions, and all the supplier limitations are already invisible.
+
+But the estimator has to see what happens before that finished part exists.
+
+The shop has to order the material.
+
+Receive it.
+
+Unload it.
+
+Store it. Cut it. Handle the drop. Track the leftover. Pay the supplier. And carry the cash cost until the customer pays. That is why material costing can quietly hurt a shop. Not because the estimator cannot read a tape measure. But because the estimator prices the finished piece instead of the real purchase. A frame might use 14 feet. But if the supplier sells that HSS in 24-foot lengths, the job may force you to buy 24 feet. A plate detail might only use a small rectangle. But if the job forces a full sheet, full plate, minimum order, or special buy, that cost still has to land somewhere. And if you do not put it in the estimate, it lands on your profit. Think of it like groceries. If a recipe needs 7 eggs, but the store sells eggs by the dozen, your kitchen cost is a dozen unless you already have a real plan for the other 5. Steel works the same way. The leftover might have value. But only if that value is real.
+
+Not hoped for. Not imagined. Not “we wi ll probably use it someday.” Real. So the first estimating question is not: “How much steel does the finished part contain?” The better question is: “What does this job force me to buy?” That means you look at the finished part, then convert it into the real purchase. Ask: What stock length is available? What sheet or plate size must be purchased? Is there a minimum order? Is the grade common or special? Is the supplier carrying it, or is it a mill item? Is freight included or separate? Will this require a special delivery? Can the leftover be used on a released job? That is how you move from drawing quantity to buy quantity.
+
+And buy quantity is where the real cost starts. Now let’s talk about drops. This is where a lot of shops fool themselves. They say: “Yeah, but we still have the drop.” Maybe. But what is that drop actually worth? Not what you paid for it. Not what you wish it was worth. What is it actually worth to the shop? This matters because a bad drop-credit habit makes every job look more profitable than it really is. You mentally give the job credit for leftover steel. Then the leftover sits in the rack. Then it gets moved. Then it gets buried behind other drops. Then nobody knows the grade. Then it rusts. Then it gets cut wrong. Then it goes to scrap.
+
+And the estimate looked good only because you gave value to something that never turned back into money. So use a three-value system. First, purchase value. That is what you paid to get the material into the shop. That matters because it affects cash flow right now. The supplier does not bill you for the perfect little piece. The supplier bills you for the material you bought. Second, shop value. That is what the leftover is worth only if there is another real, released job that can use that exact size, grade, finish, and condition. Same shape. Same thickness. Same grade. Same finish. Same certification requirement. Same practical length. A drop does not have strong shop value just because someone says: “We might use it someday.” Hope is not a material plan. Third, scrap value. That is what the leftover is worth if it sits around, gets mixed into the rack, loses traceability, or ends up in the scrap bin.
+
+And scrap value is not new-material value. That is the part shops need to be honest about. Random leftover steel is usually worth far less than people tell themselves. So here is the estimating rule: If the drop is already assigned to a released job, give it shop value. If the drop might be useful but has no real home, give it partial value or scrap value. If the drop is awkward, uncertified, too short, damaged, oddball, or unlikely to be used, give it little to no credit. That is not being negative. That is being honest. The job gets charged for what it forces the shop to buy. The leftover only gets credit when the reuse is real. Now let’s talk about loss. Loss is one of the quietest material killers in the shop. Saw kerf. Torch trim. Plate nesting. Edge cleanup. Bad layout. Wrong stock width.
+
+Cutting mistakes. Unusable remnants. Every one of those turns purchased material into something you cannot sell. And this happens because fabrication is not a perfect drawing exercise. Every cut has width. Every blade removes steel. Every plasma or torch path consumes material. Every plate layout needs spacing. Every sheet needs trim. Every saw setup needs room. Every part needs enough material around it to actually be made. Saw kerf is the easiest one to understand. If your saw removes 1/8 inch every cut, then 96 cuts burns one full foot of steel. That is not padding. That is math. And the more parts you have, the more that matters. One cut does not scare anybody. Ten cuts may not feel like much. But 100 cuts, 300 cuts, 500 cuts? Now loss is real money.
+
+So estimate it on purpose. For saw-cut work: Count the cuts. Multiply by the blade kerf. Add that to the required length. For plate work: Think about nesting. Think about trim. Think about spacing. Think about cut path. Think about lead-ins. Think about unusable remnants. For torch, plasma, or laser work: Allow for cut path, pierce points, edge conditions, and layout loss. Do not just calculate the finished part weight and pretend the process is free. The process consumes material. If you do not price that loss, the shop pays for it. Now here is another major mistake: Mixing raw material and finish into one blurry number.
+
+That is dangerous. Because finish is not just paint. Finish changes the job. Galvanizing changes the job. Blast and paint changes the job. Powder coating changes the job. Special coating changes the job. Now you are not just buying steel and fabricating it. You are adding another vendor. Another freight move. Another loading step. Another unloading step. Another schedule risk. Another damage risk. Another touch-up risk. Another inspection point. Another chance for delay. So do not bury finish inside one steel number. Separate it. Steel cost.
+
+Fabrication cost. Outside processing. Freight to the coater. Freight back. Loading and unloading. Packaging. Protection. Touch-up. Coordination time. Schedule risk. That is how you keep the estimate clean. Because if everything is buried in one number, you will not know where the money went when the job slips. Was the steel too high? Was the coating underpriced? Was freight missed? Was damage repaired for free? Was handling forgotten? Was the schedule compressed? You will not know. And if you do not know, you cannot fix the system.
+
+A clear estimate creates clear accountability. A blurry estimate creates blurry losses. Now let’s talk about material type. Not all steel is just “steel.” This is where estimators get burned when they price from the sketch in their head instead of the callout on the drawing. A beam is not just a beam. HSS is not just tube. Plate is not just plate. The grade matters. The shape matters. The thickness matters. The finish matters. The certification matters. The availability matters. The lead time matters. The minimum order matters. Wide-flange shapes, HSS, stainless, aluminum, weathering steel, galvanized material, blast-and-paint material, certified material — they do not all price the same. They do not all source the same. They do not all cut the same.
+
+They do not all finish the same. They do not all carry the same risk. This happens because drawings often make material look simple. A line on a page can represent a common piece of steel. Or it can represent a special grade, a hard-to-find section, a finish requirement, or a certification requirement that changes the entire buy. So never price from memory alone. Price from the actual callout. Check: Grade. Shape. Size. Thickness. Finish. Certification. Traceability. Availability. Lead time. Minimum order. Substitution rules. And when something is uncommon, do not guess.
+
+Get a supplier quote. Fast formulas are useful for checking. Supplier quotes are what make the number real. Now let’s talk about quick math. You still need fast estimating tools. You cannot call the supplier for every tiny check in the early stage. So use formulas to catch mistakes. For carbon steel plate, a useful rule is: 40.8 times thickness in inches equals pounds per square foot. So 1/4-inch plate is about 10.2 pounds per square foot. 3/8-inch plate is about 15.3 pounds per square foot. 1/2-inch plate is about 20.4 pounds per square foot. That helps you quickly check whether a material number makes sense. But do not confuse fast math with final pricing. Fast math helps you estimate. Supplier pricing confirms the buy. Use formulas for speed. Use supplier quotes for truth. That combination makes you faster and safer.
+
+Now let’s talk about market movement. This is the part most shops ignore until it hurts them. Material pricing is not frozen. There can be weeks or months between quote day and purchase day. You might quote today. The customer might approve three weeks from now. Drawings might change. The job might get delayed. The release might come two months later. And by the time you actually buy the steel, the supplier price may have changed. That is why quote validity matters. That is why escalation language matters. That is why updated supplier pricing matters. If your quote stays open for 60 or 90 days with no protection, you are taking market risk onto your own back. That is not customer service. That is a donation. And this happens because shops want to be easy to deal with. They do not want to scare the customer. They do not want to add conditions.
+
+They want to win the work. But winning work with no protection can become a trap. If steel goes up, freight goes up, tariffs change, or availability tightens, now you have two bad choices. Go back to the customer and look unprepared. Or absorb the increase and lose margin. Neither is good. So estimate the risk before it becomes a problem. For short-turn jobs, use a short quote-validity window. For larger jobs, delayed-release jobs, or volatile material buys, use an escalation clause tied to updated supplier pricing or a relevant index. That is not being difficult. That is being professional. Professional estimating does not pretend the market stands still. Now one more thing. Do not call old yard stock free. This one can become expensive fast. If the stock is verified, usable, the right grade, the right condition, the right size, and allowed for the job, great. It may help you win. But if it is mystery metal, bent, rusty, damaged, uncertified, the wrong grade, or sitting there because nobody else wanted it, it is not free inventory. It is risk wearing a disguise.
+
+This happens because old stock feels like savings. It is already there. Nobody has to order it. Nobody has to wait for delivery. Nobody has to see a new supplier invoice. So people call it free. But it still has cost. It has to be found. Moved. Checked. Measured. Cleaned. Verified. Cut. Possibly tested. Possibly rejected. And if it creates rework, fit-up problems, coating problems, certification problems, or customer trust problems, it was never free. It was just a hidden cost waiting for the right job to expose it. So estimate yard stock with discipline. If it is verified and usable, assign it a fair internal value.
+
+If it needs cleaning, handling, or testing, carry that labour. If certification is required and you cannot prove it, do not use it. If using it creates risk, price the risk or leave it alone. Old stock can be an advantage. But only when it is controlled. Uncontrolled inventory is not savings. It is uncertainty. So here is the practical estimating workflow for material. Start with the drawing requirement. Then convert it into the real purchase. What does the job use? What does the shop have to buy? What stock sizes are available? What minimums apply? What freight applies? What special requirements apply? Then check the drop. Will there be leftover? Can it be used on a released job?
+
+Is it the right size, grade, finish, and condition? Should it get shop value, scrap value, or no credit? Then check the loss. How many cuts? How much kerf? How much nesting waste? How much trim? How much unusable remnant? Then separate finish. Raw steel is one number. Outside processing is another. Freight is another. Handling is another. Touch-up and risk are another. Then verify the spec. Grade. Shape. Thickness. Finish. Certification.
+
+Availability. Lead time. Minimum order. Then protect the quote. Short validity for short jobs. Updated supplier pricing or escalation clauses for delayed and volatile work. That is the system. So here is the real strategy for material costing: Price the buy. Check the spec. Track the loss. Separate the finish. Control the drop credit. Use formulas for speed. Use supplier quotes for truth. Protect against market movement. Respect the risk in old stock. That is how material stops being a guess and becomes a system. And that is how you stay competitive without quietly giving away your profit.
+
+Because good estimating is not about being high. And it is not about being cheap. It is about being clear. Clear on what the job uses. Clear on what the shop must buy. Clear on what gets wasted. Clear on what can actually be reused. Clear on what has to be outsourced. Clear on what can move in the market. And clear on what risk the shop is carrying. That is the difference between quoting steel and estimating a job. And if you understand that difference, you will protect the shop, price with more confidence, and stop letting hidden material costs eat the profit after the work is already won.
