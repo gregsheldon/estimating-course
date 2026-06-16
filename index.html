@@ -1,3 +1,121 @@
+ChatGPT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pasted text(60).txt
+Document
+can you make me a course page html using this same design as attached. keep videos medium sized and the user not able to go full screen. there will also need to be downloads for each course page. design it like other course platforms but with our design. each video will have content with it also. be creative to make the experience engaging.
+
+I’ll build this as a reusable HTML course platform page, not just a static sales page. I’ll keep the same square-edged industrial orange/slate design, medium locked-down videos, lesson content, module navigation, progress, and downloadable resources.
+
+I found the attached page’s main visual language: dark slate panels, orange accents, square corners, strong cards, sticky header, two-column video sections, and checklist rows. I’m carrying that over into a course dashboard layout instead of copying the sales-page structure directly.
+
+Thought for 2m 58s
+Done — I made you a full course platform-style HTML page using the same industrial orange/slate, square-card design language from the attached page. 
+
+
+Download it here:
+
+Download the course page HTML
+
+What’s included:
+
+Medium-sized locked lesson video area
+
+No allowfullscreen on embeds
+
+HTML5 video set with controlslist="nofullscreen"
+
+JavaScript fullscreen blocking
+
+9-module sidebar
+
+Progress tracking saved in browser
+
+Per-module notes saved in browser
+
+Lesson checklist
+
+Downloads for every module
+
+“Shop-floor action drill” section
+
+Full downloads library section
+
+Easy-to-edit courseModules JavaScript array for adding real video/download links
+
+One honest note: website code can block the course video player from going fullscreen, but it cannot stop someone from using browser-level fullscreen like F11 or operating-system screen controls.
+
+
+
+they will be youtube videos. make sure they are locked from full screen. also, there will only be two downloads per module, the worksheet and transcript
+
+I’ll revise the HTML so each lesson uses a YouTube embed with fullscreen-related permissions removed/blocked, and simplify every module download area to exactly two links: Worksheet and Transcript.
+
+I’m also changing the setup comments inside the HTML so you or Google AI Studio know exactly where to paste each YouTube video ID and each worksheet/transcript link.
+
+Thought for 1m 41s
+Done — I updated the course page for YouTube-only lessons and simplified downloads to exactly two per module: Worksheet and Transcript.
+
+Download the updated course page HTML
+
+I kept the same design direction from the attached page. 
+
+
+What changed:
+
+Removed the MP4 video setup.
+
+Added YouTube ID fields for each module.
+
+YouTube embeds now use:
+
+fs=0
+
+no allowfullscreen
+
+restricted iframe permissions
+
+sandboxing
+
+fullscreen exit blocking script
+
+Each module now has only:
+
+Module XX Worksheet
+
+Module XX Transcript
+
+One important note: this blocks fullscreen inside the course page/player, but no website can stop someone from using browser fullscreen or opening YouTube directly if they somehow get the video link.
+
+
+
+use this course logo link: https://gregsheldon.github.io/estimating-course/estimating-course-logo.png
+
+Thought for 40s
+Done — I added the course logo link into the header and sized it for desktop and mobile.
+
+Download the updated course page HTML
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -1426,3 +1544,1500 @@
   </script>
 </body>
 </html>
+
+there are only two downlaods for each module, worksheet and transcript. here are worksheet download links: https://gregsheldon.github.io/estimating-course/Module-01-The-Real-Role-of-an-Estimator-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-02-How-to-Read-Drawings-Like-a-Fabricator-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-03-Scope-Breakdown-System-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-04-Labour-Estimating-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-05-Material-&-Costing-Strategy-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-06-Subcontractors-&-Outsourced-Work-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-07-Risk,-Unknowns,-and-Margin-Protection-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-08-Building-the-Final-Price-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/Module-09-Writing-a-Winning-Quote-Student-Download.pdf
+
+https://gregsheldon.github.io/estimating-course/All-Module-Student-Downloads-Combined-Pack.pdf
+
+Thought for 1m 43s
+Done — I updated the course page so each module has only two downloads:
+
+Worksheet — using the live links you gave me
+
+Transcript — kept as a placeholder until you send/upload transcript links
+
+I also added the All Module Student Downloads Combined Pack as a separate full-course download, not inside the individual module download count.
+
+Download the updated course page HTML
+
+I also kept the YouTube video setup locked down with no fullscreen permission, fs=0, sandboxing, and fullscreen exit blocking.
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
+  <title>Fabrication Estimating Course | Metal Fabrication Power Tools</title>
+  <meta name="description" content="A practical metal fabrication estimating course with locked medium-size YouTube lessons, module worksheets, transcripts, shop-floor drills, notes, and progress tracking." />
+  <style>
+    :root {
+      --slate-950: #020617;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --orange-700: #c2410c;
+      --orange-600: #ea580c;
+      --orange-500: #f97316;
+      --orange-100: #ffedd5;
+      --orange-50: #fff7ed;
+      --red-950: #450a0a;
+      --red-700: #b91c1c;
+      --red-100: #fee2e2;
+      --green-950: #052e16;
+      --green-800: #166534;
+      --green-700: #15803d;
+      --green-100: #dcfce7;
+      --blue-100: #dbeafe;
+      --blue-950: #172554;
+      --purple-100: #f3e8ff;
+      --purple-950: #3b0764;
+      --amber-100: #fef3c7;
+      --amber-800: #92400e;
+      --shadow: 0 24px 80px rgba(15, 23, 42, .12);
+      --shadow-soft: 0 14px 40px rgba(15, 23, 42, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--slate-900);
+      background:
+        radial-gradient(circle at 14% 4%, rgba(249, 115, 22, .14), transparent 32rem),
+        linear-gradient(180deg, #fff 0%, var(--slate-50) 38%, var(--slate-100) 100%);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    h1, h2, h3, p { margin-top: 0; }
+
+    .container { width: min(1320px, calc(100% - 32px)); margin: 0 auto; }
+
+    .top-strip {
+      background: var(--slate-950);
+      color: #fff;
+      font-size: .88rem;
+      text-align: center;
+      padding: .55rem 1rem;
+      font-weight: 750;
+    }
+
+    .top-strip strong { color: #fed7aa; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, .88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(226, 232, 240, .9);
+    }
+
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      font-weight: 950;
+      letter-spacing: -.04em;
+      font-size: 1.22rem;
+      color: var(--slate-950);
+    }
+
+    .brand-logo {
+      display: block;
+      height: 54px;
+      width: auto;
+      max-width: 340px;
+      object-fit: contain;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, .28);
+      font-weight: 950;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--slate-500);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-top: .1rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+      font-size: .93rem;
+      color: var(--slate-600);
+      font-weight: 750;
+    }
+
+    .nav a:hover { color: var(--slate-950); }
+
+    .btn {
+      border: 0;
+      border-radius: 0;
+      padding: .95rem 1.25rem;
+      font-weight: 900;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .45rem;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      box-shadow: 0 14px 35px rgba(234, 88, 12, .30);
+    }
+
+    .btn-dark {
+      color: #fff;
+      background: var(--slate-950);
+      box-shadow: 0 14px 35px rgba(2, 6, 23, .18);
+    }
+
+    .btn-light {
+      color: var(--slate-950);
+      background: #fff;
+      border: 1px solid var(--slate-200);
+    }
+
+    .btn-ghost {
+      color: var(--slate-700);
+      background: var(--slate-100);
+      border: 1px solid var(--slate-200);
+    }
+
+    .hero { padding: 58px 0 34px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .72fr);
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      border: 1px solid rgba(234, 88, 12, .22);
+      background: var(--orange-50);
+      color: var(--orange-700);
+      padding: .55rem .75rem;
+      font-size: .78rem;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.55rem, 5.1vw, 5.2rem);
+      line-height: .96;
+      letter-spacing: -.075em;
+      margin-bottom: 1.1rem;
+      color: var(--slate-950);
+    }
+
+    .hero-lede {
+      font-size: clamp(1.08rem, 2vw, 1.28rem);
+      color: var(--slate-600);
+      max-width: 780px;
+      margin-bottom: 1.45rem;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+    .hero-panel {
+      background: var(--slate-950);
+      color: #fff;
+      overflow: hidden;
+      box-shadow: 0 28px 90px rgba(2, 6, 23, .28);
+      position: relative;
+      isolation: isolate;
+      min-height: 100%;
+    }
+
+    .hero-panel:before {
+      content: "";
+      position: absolute;
+      inset: -80px -110px auto auto;
+      width: 260px;
+      height: 260px;
+      background: rgba(249, 115, 22, .28);
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    .panel-top {
+      padding: 1.15rem 1.3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .10);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .8rem;
+    }
+
+    .status-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      color: #bbf7d0;
+      font-weight: 850;
+      font-size: .83rem;
+    }
+
+    .status-dot:before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, .12);
+    }
+
+    .panel-body { padding: 1.35rem; }
+
+    .panel-total {
+      background: linear-gradient(135deg, rgba(127, 29, 29, .74), rgba(234, 88, 12, .20));
+      border: 1px solid rgba(248, 113, 113, .38);
+      padding: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .panel-total span {
+      display: block;
+      color: #fecaca;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .72rem;
+      font-weight: 900;
+      margin-bottom: .35rem;
+    }
+
+    .panel-total strong {
+      display: block;
+      font-size: clamp(2.35rem, 5vw, 3.8rem);
+      line-height: .95;
+      letter-spacing: -.07em;
+    }
+
+    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+
+    .mini-stat {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .09);
+      padding: 1rem;
+    }
+
+    .mini-stat span {
+      display: block;
+      color: var(--slate-300);
+      font-size: .72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.25rem;
+      letter-spacing: -.04em;
+      margin-top: .25rem;
+    }
+
+    .course-shell {
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+      padding: 22px 0 42px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      background: #fff;
+      border: 2px solid var(--slate-950);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      max-height: calc(100vh - 110px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-head {
+      padding: 1.15rem;
+      background: var(--slate-950);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .sidebar-head h2 {
+      font-size: 1.25rem;
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin-bottom: .45rem;
+    }
+
+    .progress-track {
+      height: 12px;
+      background: rgba(255,255,255,.14);
+      margin-top: .85rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      transition: width .25s ease;
+    }
+
+    .module-list {
+      overflow: auto;
+      padding: .7rem;
+      display: grid;
+      gap: .5rem;
+    }
+
+    .module-button {
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      color: var(--slate-800);
+      padding: .85rem;
+      text-align: left;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr) auto;
+      gap: .65rem;
+      align-items: center;
+    }
+
+    .module-button:hover { border-color: var(--orange-600); background: var(--orange-50); }
+    .module-button.active { border: 2px solid var(--orange-600); background: var(--orange-50); }
+
+    .module-number {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      background: var(--slate-950);
+      color: #fff;
+      font-weight: 950;
+      font-size: .86rem;
+    }
+
+    .module-button.active .module-number { background: linear-gradient(135deg, var(--orange-500), var(--orange-700)); }
+
+    .module-text strong {
+      display: block;
+      font-size: .94rem;
+      line-height: 1.14;
+      letter-spacing: -.025em;
+      color: var(--slate-950);
+    }
+
+    .module-text span {
+      display: block;
+      margin-top: .25rem;
+      font-size: .78rem;
+      color: var(--slate-500);
+      font-weight: 750;
+    }
+
+    .done-badge {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--slate-200);
+      color: var(--slate-400);
+      background: #fff;
+      font-weight: 950;
+    }
+
+    .module-button.complete .done-badge {
+      background: var(--green-100);
+      border-color: var(--green-700);
+      color: var(--green-800);
+    }
+
+    .lesson-card {
+      background: #fff;
+      border: 2px solid var(--slate-950);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .lesson-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1rem;
+      align-items: start;
+      padding: clamp(1.1rem, 3vw, 1.85rem);
+      border-bottom: 1px solid var(--slate-200);
+      background:
+        radial-gradient(circle at 95% 0%, rgba(249,115,22,.16), transparent 22rem),
+        linear-gradient(135deg, #fff, var(--slate-50));
+    }
+
+    .lesson-top h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: .96;
+      letter-spacing: -.065em;
+      color: var(--slate-950);
+      margin-bottom: .65rem;
+    }
+
+    .lesson-top p {
+      color: var(--slate-600);
+      font-size: 1.05rem;
+      max-width: 830px;
+      margin: 0;
+    }
+
+    .lesson-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: .65rem;
+      min-width: 260px;
+    }
+
+    .meta-pill {
+      background: var(--slate-950);
+      color: #fff;
+      padding: .8rem;
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .meta-pill span {
+      display: block;
+      color: var(--slate-300);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 950;
+      margin-bottom: .2rem;
+    }
+
+    .meta-pill strong { display: block; font-size: 1rem; letter-spacing: -.02em; }
+
+    .lesson-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 350px;
+      gap: 0;
+      align-items: start;
+    }
+
+    .lesson-primary { padding: clamp(1.1rem, 3vw, 1.8rem); min-width: 0; }
+    .lesson-side { padding: clamp(1.1rem, 3vw, 1.35rem); background: linear-gradient(180deg, var(--slate-950), var(--slate-900)); color: #fff; min-height: 100%; }
+
+    .media-lock {
+      width: min(760px, 100%);
+      margin: 0 auto 1.15rem;
+      padding: .95rem;
+      background: var(--slate-950);
+      color: #fff;
+      border: 2px solid var(--slate-950);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      max-height: 430px;
+      background:
+        linear-gradient(135deg, rgba(234, 88, 12, .22), rgba(15, 23, 42, .12)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,.055) 0 10px, rgba(255,255,255,.025) 10px 20px),
+        var(--slate-900);
+      border: 1px solid rgba(255, 255, 255, .28);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .video-frame iframe,
+    .video-frame video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #000;
+    }
+
+    video::-webkit-media-controls-fullscreen-button { display: none !important; }
+    video::-webkit-media-controls-enclosure { overflow: hidden; }
+
+    .video-placeholder {
+      text-align: center;
+      padding: 1.5rem;
+      max-width: 520px;
+    }
+
+    .play-icon {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 1rem;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      color: #fff;
+      font-size: 1.65rem;
+      box-shadow: 0 18px 42px rgba(234, 88, 12, .34);
+    }
+
+    .video-placeholder strong {
+      display: block;
+      font-size: clamp(1.35rem, 3vw, 2.1rem);
+      letter-spacing: -.055em;
+      line-height: 1;
+      margin-bottom: .55rem;
+    }
+
+    .video-placeholder span { display: block; color: var(--slate-300); font-weight: 750; }
+
+    .embed-note {
+      color: var(--slate-300);
+      font-size: .84rem;
+      margin: .8rem 0 0;
+      font-weight: 750;
+      display: flex;
+      justify-content: space-between;
+      gap: .75rem;
+      flex-wrap: wrap;
+    }
+
+    .content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+
+    .story-card,
+    .proof-card,
+    .download-card,
+    .note-card,
+    .check-card,
+    .drill-card {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-soft);
+      padding: 1.15rem;
+    }
+
+    .story-card h3,
+    .proof-card h3,
+    .download-card h3,
+    .note-card h3,
+    .check-card h3,
+    .drill-card h3 {
+      font-size: 1.35rem;
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      margin-bottom: .65rem;
+      color: var(--slate-950);
+    }
+
+    .story-card p,
+    .proof-card p,
+    .drill-card p {
+      color: var(--slate-600);
+      font-weight: 650;
+      margin-bottom: 0;
+    }
+
+    .list-stack { display: grid; gap: .75rem; margin-top: .8rem; }
+
+    .win-row,
+    .pain-row {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      border-left: 5px solid var(--green-700);
+      background: #f0fdf4;
+      padding: .9rem;
+      color: var(--slate-800);
+      font-weight: 760;
+      line-height: 1.42;
+    }
+
+    .pain-row { border-left-color: var(--red-700); background: #fff5f5; }
+
+    .icon-badge {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, .08);
+      font-weight: 950;
+    }
+
+    .dark-callout {
+      background: var(--slate-950);
+      color: #fff;
+      border: 2px solid var(--orange-600);
+      padding: 1.15rem;
+      margin-top: 1rem;
+    }
+
+    .dark-callout h3 { color: #fed7aa; letter-spacing: -.04em; font-size: 1.35rem; margin-bottom: .5rem; }
+    .dark-callout p { color: var(--slate-200); margin: 0; font-weight: 700; }
+
+    .download-list { display: grid; gap: .75rem; }
+
+    .download-card {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: .75rem;
+      padding: .85rem;
+    }
+
+    .download-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      font-weight: 950;
+    }
+
+    .download-card strong { display: block; color: var(--slate-950); letter-spacing: -.02em; line-height: 1.15; }
+    .download-card span { display: block; color: var(--slate-500); font-size: .84rem; font-weight: 750; margin-top: .25rem; }
+
+    .download-action {
+      background: var(--slate-950);
+      color: #fff;
+      padding: .65rem .85rem;
+      font-weight: 900;
+      font-size: .86rem;
+    }
+
+    .lesson-side .step-tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      background: var(--orange-600);
+      color: #fff;
+      padding: .45rem .7rem;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 950;
+      margin-bottom: 1rem;
+    }
+
+    .side-box {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .side-box h3 { color: #fff; letter-spacing: -.04em; font-size: 1.35rem; line-height: 1.05; margin-bottom: .5rem; }
+    .side-box p { color: var(--slate-300); margin: 0; font-weight: 700; }
+
+    .checklist { display: grid; gap: .55rem; margin-top: .8rem; }
+
+    .checkline {
+      display: flex;
+      gap: .6rem;
+      align-items: flex-start;
+      color: var(--slate-200);
+      font-weight: 760;
+      line-height: 1.35;
+    }
+
+    .checkline input { width: 18px; height: 18px; margin-top: .1rem; accent-color: var(--orange-600); flex: 0 0 auto; }
+
+    .note-area {
+      width: 100%;
+      min-height: 170px;
+      resize: vertical;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      padding: .9rem;
+      outline: none;
+      font-weight: 650;
+    }
+
+    .note-area::placeholder { color: var(--slate-400); }
+    .note-area:focus { border-color: var(--orange-500); box-shadow: 0 0 0 4px rgba(249,115,22,.14); }
+
+    .side-actions { display: grid; gap: .65rem; }
+    .side-actions .btn { width: 100%; }
+
+    .resources-section { padding: 10px 0 52px; }
+
+    .section-heading { max-width: 810px; margin-bottom: 1.35rem; }
+    .section-heading h2 { font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1; letter-spacing: -.06em; margin-bottom: .75rem; color: var(--slate-950); }
+    .section-heading p { color: var(--slate-600); font-size: 1.05rem; }
+
+    .resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+
+    .resource-module {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-soft);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+    }
+
+    .resource-module h3 { font-size: 1.15rem; line-height: 1.1; letter-spacing: -.035em; margin-bottom: .1rem; }
+    .resource-links { display: grid; gap: .45rem; margin-top: auto; }
+    .resource-links a { color: var(--orange-700); font-weight: 900; font-size: .92rem; }
+
+    .cta-band {
+      background: var(--slate-950);
+      color: #fff;
+      padding: clamp(1.4rem, 4vw, 2.3rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1rem;
+      align-items: center;
+      box-shadow: 0 28px 80px rgba(2, 6, 23, .22);
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .cta-band:after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      right: -80px;
+      top: -80px;
+      background: rgba(249, 115, 22, .27);
+    }
+
+    .cta-band > * { position: relative; z-index: 1; }
+    .cta-band h2 { letter-spacing: -.055em; line-height: 1; font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: .5rem; }
+    .cta-band p { color: var(--slate-300); margin: 0; font-weight: 700; }
+
+    .site-footer {
+      background: var(--slate-950);
+      color: var(--slate-300);
+      text-align: center;
+      padding: 2.3rem 1rem;
+      margin-top: 1rem;
+    }
+
+    .site-footer a { color: #fed7aa; font-weight: 850; }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .course-shell,
+      .lesson-main,
+      .cta-band { grid-template-columns: 1fr; }
+      .sidebar { position: static; max-height: none; }
+      .lesson-side { min-height: auto; }
+      .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lesson-top { grid-template-columns: 1fr; }
+      .lesson-meta { min-width: 0; }
+    }
+
+    @media (max-width: 760px) {
+      .nav { display: none; }
+      .header-inner { min-height: 66px; }
+      .brand-logo { height: 46px; max-width: 245px; }
+      .hero { padding-top: 42px; }
+      .mini-grid,
+      .content-grid,
+      .resource-grid,
+      .lesson-meta { grid-template-columns: 1fr; }
+      .hero-actions .btn,
+      .cta-band .btn { width: 100%; }
+      .module-button { grid-template-columns: 34px minmax(0, 1fr) auto; }
+      .download-card { grid-template-columns: 42px minmax(0, 1fr); }
+      .download-action { grid-column: 1 / -1; text-align: center; }
+    }
+
+    @media print {
+      .top-strip,
+      .site-header,
+      .sidebar,
+      .lesson-side,
+      .cta-band,
+      .site-footer,
+      .hero-actions,
+      .video-frame { display: none !important; }
+      body { background: #fff; }
+      .container { width: 100%; }
+      .lesson-card,
+      .story-card,
+      .proof-card,
+      .resource-module { box-shadow: none; }
+      .lesson-main,
+      .content-grid,
+      .resource-grid { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip">Fabrication Estimating Training • <strong>Watch the lesson, do the drill, download the tools, build the quote tighter.</strong></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Course home">
+        <img class="brand-logo" src="https://gregsheldon.github.io/estimating-course/estimating-course-logo.png" alt="Fabrication Estimating Course" />
+      </a>
+      <nav class="nav" aria-label="Course navigation">
+        <a href="#course">Course</a>
+        <a href="#downloads">Downloads</a>
+        <a href="mailto:gregwsheldon@gmail.com?subject=Course%20Question">Ask Greg</a>
+      </nav>
+      <a class="btn btn-primary" href="#course">Continue Course</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Shop-floor estimating system</span>
+          <h1>Build quotes that protect the job before steel hits the floor.</h1>
+          <p class="hero-lede">A course platform page for your fabrication estimating training. Each module has a medium-size locked YouTube video, a practical lesson breakdown, an action drill, saved notes, progress tracking, and two focused downloads: the worksheet and transcript.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#course">Start Module</a>
+            <a class="btn btn-light" href="#downloads">View Downloads</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Course progress summary">
+          <div class="panel-top">
+            <strong>Course Dashboard</strong>
+            <span class="status-dot">Active</span>
+          </div>
+          <div class="panel-body">
+            <div class="panel-total">
+              <span>Your Progress</span>
+              <strong id="heroProgress">0%</strong>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-stat"><span>Modules</span><strong>9 Lessons</strong></div>
+              <div class="mini-stat"><span>Downloads</span><strong>18 Files</strong></div>
+              <div class="mini-stat"><span>Current Module</span><strong id="heroModule">01</strong></div>
+              <div class="mini-stat"><span>Next Action</span><strong>Do the drill</strong></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="course" class="container course-shell" aria-label="Course player">
+      <aside class="sidebar">
+        <div class="sidebar-head">
+          <h2>Course Modules</h2>
+          <p style="color:var(--slate-300); margin:0; font-weight:700;">Progress saves in this browser.</p>
+          <div class="progress-track" aria-label="Course progress"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="module-list" id="moduleList"></div>
+      </aside>
+
+      <article class="lesson-card">
+        <div class="lesson-top">
+          <div>
+            <span class="eyebrow" id="lessonEyebrow">Module 01</span>
+            <h2 id="lessonTitle">The Real Role of an Estimator</h2>
+            <p id="lessonSummary">Loading lesson...</p>
+          </div>
+          <div class="lesson-meta">
+            <div class="meta-pill"><span>Video</span><strong id="lessonLength">18 min</strong></div>
+            <div class="meta-pill"><span>Level</span><strong id="lessonLevel">Foundation</strong></div>
+            <div class="meta-pill"><span>Drill</span><strong id="lessonDrillShort">Scope filter</strong></div>
+            <div class="meta-pill"><span>Downloads</span><strong id="lessonDownloadCount">2 files</strong></div>
+          </div>
+        </div>
+
+        <div class="lesson-main">
+          <div class="lesson-primary">
+            <div class="media-lock" aria-label="Lesson video area">
+              <div class="video-frame" id="videoFrame">
+                <iframe id="lessonEmbed" class="hidden" title="Lesson video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <div id="videoPlaceholder" class="video-placeholder">
+                  <div class="play-icon">▶</div>
+                  <strong>Paste the YouTube video ID for this module.</strong>
+                  <span>The YouTube player is intentionally medium sized and configured without fullscreen permissions.</span>
+                </div>
+              </div>
+              <p class="embed-note"><span>YouTube fullscreen blocked by design.</span><span>Paste YouTube IDs in the courseModules array. Do not add allowfullscreen.</span></p>
+            </div>
+
+            <div class="content-grid">
+              <section class="story-card">
+                <h3>What this module teaches</h3>
+                <p id="lessonBody">This lesson gives the student the practical thinking behind the estimating process.</p>
+                <div class="list-stack" id="takeawayList"></div>
+              </section>
+
+              <section class="proof-card">
+                <h3>Why this matters in a real shop</h3>
+                <div class="list-stack" id="whyList"></div>
+                <div class="dark-callout">
+                  <h3>Greg's field note</h3>
+                  <p id="fieldNote">The quote is where the job is won or lost before the shop ever sees it.</p>
+                </div>
+              </section>
+            </div>
+
+            <section class="drill-card" style="margin-top:1rem;">
+              <h3>Shop-floor action drill</h3>
+              <p id="drillText">Use this drill to turn the lesson into an estimating habit.</p>
+            </section>
+          </div>
+
+          <aside class="lesson-side">
+            <span class="step-tag">Module Workspace</span>
+
+            <div class="side-box">
+              <h3>Downloads for this lesson</h3>
+              <p>Each module includes exactly two downloads: the worksheet and the transcript. Worksheet links are live now.</p>
+            </div>
+            <div class="download-list" id="downloadsList"></div>
+
+            <div class="side-box" style="margin-top:1rem;">
+              <h3>Lesson checklist</h3>
+              <p>Simple completion tasks to make the student actually apply the video.</p>
+              <div class="checklist" id="lessonChecklist"></div>
+            </div>
+
+            <div class="side-box">
+              <h3>My notes</h3>
+              <p style="margin-bottom:.75rem;">Notes save automatically in this browser.</p>
+              <textarea class="note-area" id="notesArea" placeholder="Write your takeaways, shop questions, or quote reminders here..."></textarea>
+            </div>
+
+            <div class="side-actions">
+              <button class="btn btn-primary" id="completeButton" type="button">Mark Module Complete</button>
+              <button class="btn btn-light" id="nextButton" type="button">Next Module →</button>
+              <button class="btn btn-ghost" id="resetProgress" type="button">Reset Progress</button>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </section>
+
+    <section id="downloads" class="resources-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Downloads by module.</h2>
+          <p>Each module has exactly two downloads: a worksheet and a transcript. The worksheet links are live, and the transcript links are placeholders until the transcript files are uploaded.</p>
+        </div>
+        <div class="resource-grid" id="resourceGrid"></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Keep the training practical.</h2>
+          <p>Each module should move the student from watching, to thinking, to applying, to using the worksheet and reviewing the transcript when they build the next quote.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:gregwsheldon@gmail.com?subject=Course%20Portal%20Question">Ask Greg A Question</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Metal Fabrication Power Tools. Built for practical estimating training.</p>
+    <p><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></p>
+  </footer>
+
+  <script>
+    /*
+      HOW TO USE:
+      1) Worksheet PDF links are already added from the hosted estimating-course folder.
+      2) Replace the transcript placeholder href values once transcript PDFs are uploaded.
+      3) Paste each YouTube video ID into the youtubeId field below.
+         Example: for https://www.youtube.com/watch?v=abc123XYZ00, use youtubeId: "abc123XYZ00".
+      4) Keep fs=0 in the embed builder and do not add allowfullscreen to the iframe.
+      5) Each module is intentionally limited to two downloads: Worksheet and Transcript.
+    */
+
+    const courseModules = [
+      {
+        id: 1,
+        title: "The Real Role of an Estimator",
+        length: "18 min",
+        level: "Foundation",
+        drillShort: "Estimator filter",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "The estimator is not just building a number. The estimator is protecting the shop, the margin, the schedule, and the handoff before the work ever hits the floor.",
+        body: "Students learn how to stop treating estimating like a guessing exercise and start treating it like the first stage of production planning.",
+        takeaways: ["Understand what the estimator is really responsible for.", "Separate price pressure from scope reality.", "Build quotes that help the shop execute, not just win work."],
+        why: ["A bad estimate becomes a shop problem later.", "Missed scope usually starts before production begins.", "The best estimators think like fabricators, installers, and owners at the same time."],
+        fieldNote: "A winning quote is not just the cheapest number. It is the clearest promise you can actually build profitably.",
+        drill: "Take one recent quote and write down what the shop needed to know after the quote was won. Anything that was unclear belongs in your estimating process earlier.",
+        checklist: ["Watch the full lesson.", "Write your definition of a good estimator.", "List three things your shop usually finds out too late."],
+        downloads: [
+          { title: "Module 01 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-01-The-Real-Role-of-an-Estimator-Student-Download.pdf" },
+          { title: "Module 01 Transcript", type: "PDF", href: "transcripts/module-01-the-real-role-of-an-estimator-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 2,
+        title: "How to Read Drawings Like a Fabricator",
+        length: "24 min",
+        level: "Core Skill",
+        drillShort: "Drawing sweep",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "Students learn to read drawings for what will actually have to be fabricated, handled, finished, delivered, and installed.",
+        body: "This module trains the student to move beyond counting lines on drawings and start seeing material, labour, risk, sequencing, and install constraints.",
+        takeaways: ["Read notes, sections, details, elevations, and specs together.", "Spot hidden labour inside details.", "Turn drawing review into an estimating checklist."],
+        why: ["Drawings rarely explain the job in one place.", "Missed notes create missed cost.", "A fabricator reads for buildability, not just quantity."],
+        fieldNote: "The detail you skip is usually the detail that eats the margin.",
+        drill: "Open one set of drawings and do a three-pass review: scope pass, connection/detail pass, and install/access pass. Write down what changed after each pass.",
+        checklist: ["Review general notes.", "Check sections and details against plans.", "Write three RFIs or clarifying questions."],
+        downloads: [
+          { title: "Module 02 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-02-How-to-Read-Drawings-Like-a-Fabricator-Student-Download.pdf" },
+          { title: "Module 02 Transcript", type: "PDF", href: "transcripts/module-02-how-to-read-drawings-like-a-fabricator-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 3,
+        title: "Scope Breakdown System",
+        length: "22 min",
+        level: "System",
+        drillShort: "Scope map",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "This module shows students how to break a project into clean estimating buckets so nothing important gets buried or forgotten.",
+        body: "Students build a repeatable scope map for material, fabrication, finishing, install, subcontractors, rentals, shipping, safety, and exclusions.",
+        takeaways: ["Break scope into quoteable sections.", "Separate included, excluded, assumed, and unknown items.", "Make the final proposal easier to defend."],
+        why: ["Loose scope creates loose pricing.", "The customer may assume more than you included.", "Clean scope makes change orders easier later."],
+        fieldNote: "If you cannot explain what is included, the customer will decide for you after the job starts.",
+        drill: "Take a project and create four columns: included, excluded, assumed, and needs clarification. Fill them before pricing anything.",
+        checklist: ["Build a scope breakdown before pricing.", "Create an exclusions list.", "Identify unknowns before final quote."],
+        downloads: [
+          { title: "Module 03 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-03-Scope-Breakdown-System-Student-Download.pdf" },
+          { title: "Module 03 Transcript", type: "PDF", href: "transcripts/module-03-scope-breakdown-system-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 4,
+        title: "Labour Estimating",
+        length: "31 min",
+        level: "Core Pricing",
+        drillShort: "Labour build",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "Students learn how labour really behaves in a fabrication shop and on site, and how to estimate for more than just ideal cutting and welding time.",
+        body: "This lesson covers handling, layout, fit-up, welding, grinding, movement, setup, supervision, rework risk, install access, weather, and crew productivity.",
+        takeaways: ["Separate shop labour from field labour.", "Price setup, handling, fit-up, welding, finishing, and movement.", "Use questions when you do not know what the job will really take."],
+        why: ["Most jobs do not lose money on the obvious labour.", "The hidden time is often in handling, fitting, waiting, moving, and fixing.", "Field work needs different thinking than shop work."],
+        fieldNote: "Labour is where confidence can become dangerous. Slow down and price the reality, not the perfect version of the job.",
+        drill: "Pick one fabricated item and break labour into steps: receive, handle, lay out, cut, drill, fit, weld, clean, finish, load, ship, install. Assign hours to each step.",
+        checklist: ["Build labour by operation.", "Add handling and setup.", "Check shop versus field assumptions."],
+        downloads: [
+          { title: "Module 04 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-04-Labour-Estimating-Student-Download.pdf" },
+          { title: "Module 04 Transcript", type: "PDF", href: "transcripts/module-04-labour-estimating-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 5,
+        title: "Material & Costing Strategy",
+        length: "26 min",
+        level: "Cost Control",
+        drillShort: "Material logic",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "This module helps students price material with waste, sourcing, volatility, freight, cut sizes, minimum buys, and real purchasing constraints in mind.",
+        body: "Students learn how to think through stock lengths, plate yield, buyouts, freight, supplier quotes, substitutions, and pricing windows.",
+        takeaways: ["Price what you actually need to buy.", "Account for waste, drops, minimums, freight, and volatility.", "Use supplier confirmation when risk is high."],
+        why: ["The takeoff may be correct while the purchase cost is still wrong.", "Small material misses stack up quickly.", "Supplier lead time can become schedule risk."],
+        fieldNote: "Material cost is not just pounds times a number. It is purchasing reality plus waste plus timing plus risk.",
+        drill: "Take one material list and mark each item as stock, special order, supplier quote required, volatile price, or substitution possible.",
+        checklist: ["Check waste and minimum buys.", "Add freight and handling.", "Verify high-risk material pricing."],
+        downloads: [
+          { title: "Module 05 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-05-Material-&-Costing-Strategy-Student-Download.pdf" },
+          { title: "Module 05 Transcript", type: "PDF", href: "transcripts/module-05-material-costing-strategy-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 6,
+        title: "Subcontractors & Outsourced Work",
+        length: "21 min",
+        level: "Coordination",
+        drillShort: "Sub review",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "Students learn how to protect the quote when outside vendors, finishers, erectors, engineers, trucking, rental companies, and specialty suppliers are involved.",
+        body: "This module explains how to review sub quotes, compare apples to apples, catch exclusions, and add coordination time.",
+        takeaways: ["Never pass through a sub number without reviewing scope.", "Look for exclusions, lead times, access needs, and schedule limits.", "Add coordination, markup, risk, and management time."],
+        why: ["A subcontractor miss becomes your customer problem.", "The lowest sub quote may be missing the most scope.", "Coordination takes real time and should be priced."],
+        fieldNote: "A sub quote is not a finished number until you know what is missing from it.",
+        drill: "Review one subcontractor quote and highlight included scope, excluded scope, assumptions, validity date, lead time, and risk items.",
+        checklist: ["Review sub quote exclusions.", "Check schedule and lead time.", "Add coordination and markup."],
+        downloads: [
+          { title: "Module 06 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-06-Subcontractors-&-Outsourced-Work-Student-Download.pdf" },
+          { title: "Module 06 Transcript", type: "PDF", href: "transcripts/module-06-subcontractors-outsourced-work-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 7,
+        title: "Risk, Unknowns, and Margin Protection",
+        length: "29 min",
+        level: "Margin Protection",
+        drillShort: "Risk register",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "This module teaches students how to identify what can hurt the job, price uncertainty intelligently, and protect margin without just throwing random money at the quote.",
+        body: "Students build a risk register and learn how to separate normal cost, contingency, allowance, qualification, and exclusion.",
+        takeaways: ["Identify risk before final pricing.", "Use allowances, exclusions, clarifications, or contingency correctly.", "Protect margin without making the quote messy."],
+        why: ["Unknowns do not disappear after the job is won.", "Risk either gets priced, qualified, or absorbed.", "Clear wording protects the relationship and the margin."],
+        fieldNote: "Hope is not a margin strategy. If the risk is real, deal with it before the quote goes out.",
+        drill: "Create a risk register for one current job with columns for risk, likelihood, impact, pricing response, and proposal wording.",
+        checklist: ["List risk items.", "Choose allowance, exclusion, clarification, or contingency.", "Review wording before sending the quote."],
+        downloads: [
+          { title: "Module 07 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-07-Risk,-Unknowns,-and-Margin-Protection-Student-Download.pdf" },
+          { title: "Module 07 Transcript", type: "PDF", href: "transcripts/module-07-risk-unknowns-margin-protection-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 8,
+        title: "Building the Final Price",
+        length: "25 min",
+        level: "Final Pricing",
+        drillShort: "Final price",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "Students learn the difference between markup and margin, how to roll up costs, and how to build a final sell price that actually produces the intended gross margin.",
+        body: "This module walks through material, labour, subs, rentals, freight, overhead recovery, markup, gross margin, tax, and final review.",
+        takeaways: ["Understand markup versus margin.", "Roll up all cost buckets cleanly.", "Check final sell price before proposal."],
+        why: ["A 20% markup is not a 20% margin.", "Small formula mistakes can erase profit.", "Final price needs a sanity check before it leaves the shop."],
+        fieldNote: "The final price is not done when the spreadsheet gives a number. It is done when the number makes sense, protects the job, and can be explained.",
+        drill: "Take one completed estimate and calculate both markup percentage and gross margin percentage. Compare what you thought you were making to what the math says.",
+        checklist: ["Verify all costs are included.", "Check markup versus margin.", "Do a final quote sanity review."],
+        downloads: [
+          { title: "Module 08 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-08-Building-the-Final-Price-Student-Download.pdf" },
+          { title: "Module 08 Transcript", type: "PDF", href: "transcripts/module-08-building-the-final-price-transcript.pdf", needsLink: true }
+        ]
+      },
+      {
+        id: 9,
+        title: "Writing a Winning Quote",
+        length: "27 min",
+        level: "Proposal",
+        drillShort: "Quote letter",
+        youtubeId: "",
+        youtubeUrl: "",
+        summary: "Students learn how to turn the estimate into a clear, professional proposal that sells the value, defines the scope, and protects the company.",
+        body: "This module covers proposal structure, scope wording, assumptions, exclusions, alternates, allowances, schedule notes, payment terms, and how to make the quote easy to accept.",
+        takeaways: ["Write clear included and excluded scope.", "Use proposal language that reduces confusion.", "Make the quote professional without hiding the important details."],
+        why: ["A confusing quote creates disputes later.", "The proposal is part sales document and part protection document.", "Clear wording helps customers say yes with fewer assumptions."],
+        fieldNote: "A winning quote should be easy to understand, hard to misunderstand, and strong enough to protect the shop after the job starts.",
+        drill: "Rewrite one old proposal using clear headings: scope, price, assumptions, exclusions, schedule, terms, and acceptance.",
+        checklist: ["Write included scope clearly.", "Add assumptions and exclusions.", "Check the quote from the customer's point of view."],
+        downloads: [
+          { title: "Module 09 Worksheet", type: "PDF", href: "https://gregsheldon.github.io/estimating-course/Module-09-Writing-a-Winning-Quote-Student-Download.pdf" },
+          { title: "Module 09 Transcript", type: "PDF", href: "transcripts/module-09-writing-a-winning-quote-transcript.pdf", needsLink: true }
+        ]
+      }
+    ];
+
+    const storageKey = "mfpt_course_progress_v1";
+    const notesKey = "mfpt_course_notes_v1";
+    const checksKey = "mfpt_course_checks_v1";
+
+    let activeIndex = 0;
+    let progress = JSON.parse(localStorage.getItem(storageKey) || "{}");
+    let notes = JSON.parse(localStorage.getItem(notesKey) || "{}");
+    let checks = JSON.parse(localStorage.getItem(checksKey) || "{}");
+
+    const $ = (id) => document.getElementById(id);
+
+    function pad(num) { return String(num).padStart(2, "0"); }
+
+    function htmlEscape(str) {
+      return String(str).replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[char]));
+    }
+
+    function downloadCard(item) {
+      const pending = item.needsLink || !item.href || item.href === "#";
+      const href = pending ? "#" : item.href;
+      const attrs = pending ? 'aria-disabled="true" onclick="return false;"' : "download";
+      const subtext = pending ? "Transcript link placeholder" : `${item.type} download`;
+      const action = pending ? "Link Needed" : "Download";
+      return `
+        <a class="download-card ${pending ? "pending-download" : ""}" href="${htmlEscape(href)}" ${attrs}>
+          <span class="download-icon">${htmlEscape(item.type)}</span>
+          <span><strong>${htmlEscape(item.title)}</strong><span>${htmlEscape(subtext)}</span></span>
+          <span class="download-action">${htmlEscape(action)}</span>
+        </a>
+      `;
+    }
+
+    function renderModules() {
+      $("moduleList").innerHTML = courseModules.map((module, index) => `
+        <button class="module-button ${index === activeIndex ? "active" : ""} ${progress[module.id] ? "complete" : ""}" type="button" data-module-index="${index}">
+          <span class="module-number">${pad(module.id)}</span>
+          <span class="module-text"><strong>${htmlEscape(module.title)}</strong><span>${htmlEscape(module.length)} • ${htmlEscape(module.level)}</span></span>
+          <span class="done-badge">✓</span>
+        </button>
+      `).join("");
+
+      document.querySelectorAll("[data-module-index]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeIndex = Number(button.dataset.moduleIndex);
+          renderLesson();
+          document.querySelector("#course").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    }
+
+    function extractYouTubeId(urlOrId) {
+      if (!urlOrId) return "";
+      const clean = String(urlOrId).trim();
+      if (/^[a-zA-Z0-9_-]{11}$/.test(clean)) return clean;
+
+      try {
+        const parsed = new URL(clean);
+        if (parsed.hostname.includes("youtu.be")) return parsed.pathname.replace("/", "").slice(0, 11);
+        if (parsed.hostname.includes("youtube.com") || parsed.hostname.includes("youtube-nocookie.com")) {
+          if (parsed.pathname.includes("/embed/")) return parsed.pathname.split("/embed/")[1].split(/[/?#]/)[0].slice(0, 11);
+          return parsed.searchParams.get("v") || "";
+        }
+      } catch (error) {
+        return "";
+      }
+      return "";
+    }
+
+    function buildLockedYouTubeEmbed(module) {
+      const id = extractYouTubeId(module.youtubeId || module.youtubeUrl);
+      if (!id) return "";
+      const params = new URLSearchParams({
+        rel: "0",
+        modestbranding: "1",
+        fs: "0",
+        playsinline: "1",
+        controls: "1",
+        disablekb: "1",
+        iv_load_policy: "3"
+      });
+      return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${params.toString()}`;
+    }
+
+    function renderVideo(module) {
+      const embed = $("lessonEmbed");
+      const placeholder = $("videoPlaceholder");
+
+      embed.classList.add("hidden");
+      embed.removeAttribute("src");
+      embed.removeAttribute("allowfullscreen");
+      embed.allowFullscreen = false;
+      placeholder.classList.remove("hidden");
+
+      const lockedEmbedUrl = buildLockedYouTubeEmbed(module);
+      if (lockedEmbedUrl) {
+        embed.src = lockedEmbedUrl;
+        // Important: no fullscreen permission is granted here.
+        embed.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
+        embed.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups");
+        embed.classList.remove("hidden");
+        placeholder.classList.add("hidden");
+      }
+    }
+
+    function renderLesson() {
+      const module = courseModules[activeIndex];
+      $("lessonEyebrow").textContent = `Module ${pad(module.id)}`;
+      $("lessonTitle").textContent = module.title;
+      $("lessonSummary").textContent = module.summary;
+      $("lessonLength").textContent = module.length;
+      $("lessonLevel").textContent = module.level;
+      $("lessonDrillShort").textContent = module.drillShort;
+      $("lessonDownloadCount").textContent = `${module.downloads.length} files`;
+      $("lessonBody").textContent = module.body;
+      $("fieldNote").textContent = module.fieldNote;
+      $("drillText").textContent = module.drill;
+      $("heroModule").textContent = pad(module.id);
+
+      $("takeawayList").innerHTML = module.takeaways.map(item => `<div class="win-row"><span class="icon-badge">✓</span><span>${htmlEscape(item)}</span></div>`).join("");
+      $("whyList").innerHTML = module.why.map(item => `<div class="pain-row"><span class="icon-badge">⚠</span><span>${htmlEscape(item)}</span></div>`).join("");
+      $("downloadsList").innerHTML = module.downloads.map(downloadCard).join("");
+
+      const savedChecks = checks[module.id] || [];
+      $("lessonChecklist").innerHTML = module.checklist.map((item, index) => `
+        <label class="checkline">
+          <input type="checkbox" data-check-index="${index}" ${savedChecks[index] ? "checked" : ""} />
+          <span>${htmlEscape(item)}</span>
+        </label>
+      `).join("");
+
+      document.querySelectorAll("[data-check-index]").forEach(input => {
+        input.addEventListener("change", () => {
+          const current = checks[module.id] || [];
+          current[Number(input.dataset.checkIndex)] = input.checked;
+          checks[module.id] = current;
+          localStorage.setItem(checksKey, JSON.stringify(checks));
+        });
+      });
+
+      $("notesArea").value = notes[module.id] || "";
+      $("completeButton").textContent = progress[module.id] ? "Module Complete ✓" : "Mark Module Complete";
+
+      renderVideo(module);
+      renderModules();
+      updateProgress();
+    }
+
+    function renderResources() {
+      const combinedPack = "https://gregsheldon.github.io/estimating-course/All-Module-Student-Downloads-Combined-Pack.pdf";
+      const moduleCards = courseModules.map(module => `
+        <div class="resource-module">
+          <span class="eyebrow" style="margin-bottom:0;">Module ${pad(module.id)}</span>
+          <h3>${htmlEscape(module.title)}</h3>
+          <div class="resource-links">
+            ${module.downloads.map(item => {
+              const pending = item.needsLink || !item.href || item.href === "#";
+              return pending
+                ? `<a href="#" aria-disabled="true" onclick="return false;">↳ ${htmlEscape(item.title)} · link needed</a>`
+                : `<a href="${htmlEscape(item.href)}" download>↳ ${htmlEscape(item.title)}</a>`;
+            }).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      $("resourceGrid").innerHTML = `
+        <div class="resource-module" style="border:2px solid var(--orange-600); background:var(--orange-50);">
+          <span class="eyebrow" style="margin-bottom:0;">Full Course Pack</span>
+          <h3>All Module Student Downloads</h3>
+          <div class="resource-links">
+            <a href="${combinedPack}" download>↳ Download the combined worksheet pack</a>
+          </div>
+        </div>
+        ${moduleCards}
+      `;
+    }
+
+    function updateProgress() {
+      const completed = courseModules.filter(module => progress[module.id]).length;
+      const percent = Math.round((completed / courseModules.length) * 100);
+      $("progressFill").style.width = `${percent}%`;
+      $("heroProgress").textContent = `${percent}%`;
+    }
+
+    function saveNote() {
+      const module = courseModules[activeIndex];
+      notes[module.id] = $("notesArea").value;
+      localStorage.setItem(notesKey, JSON.stringify(notes));
+    }
+
+    function blockFullscreen() {
+      const lock = document.querySelector(".media-lock");
+      const fsElement = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+      if (!fsElement || !lock) return;
+      if (fsElement === lock || lock.contains(fsElement)) {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+        else if (document.msExitFullscreen) document.msExitFullscreen();
+      }
+    }
+
+    document.addEventListener("fullscreenchange", blockFullscreen);
+    document.addEventListener("webkitfullscreenchange", blockFullscreen);
+    document.addEventListener("mozfullscreenchange", blockFullscreen);
+    document.addEventListener("MSFullscreenChange", blockFullscreen);
+
+
+    $("notesArea").addEventListener("input", saveNote);
+
+    $("completeButton").addEventListener("click", () => {
+      const module = courseModules[activeIndex];
+      progress[module.id] = true;
+      localStorage.setItem(storageKey, JSON.stringify(progress));
+      renderLesson();
+    });
+
+    $("nextButton").addEventListener("click", () => {
+      activeIndex = (activeIndex + 1) % courseModules.length;
+      renderLesson();
+      document.querySelector("#course").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    $("resetProgress").addEventListener("click", () => {
+      const okay = confirm("Reset course progress, checklist items, and notes saved in this browser?");
+      if (!okay) return;
+      progress = {};
+      notes = {};
+      checks = {};
+      localStorage.removeItem(storageKey);
+      localStorage.removeItem(notesKey);
+      localStorage.removeItem(checksKey);
+      renderLesson();
+    });
+
+    $("year").textContent = new Date().getFullYear();
+    renderModules();
+    renderResources();
+    renderLesson();
+  </script>
+</body>
+</html>
+
