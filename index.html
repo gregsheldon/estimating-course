@@ -7,7 +7,7 @@
   <link rel="shortcut icon" type="image/png" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
   <link rel="apple-touch-icon" href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" />
   <title>Fabrication Estimating Course | Metal Fabrication Power Tools</title>
-  <meta name="description" content="A practical metal fabrication estimating course with locked medium-size YouTube lessons, module worksheets, transcripts, shop-floor drills, notes, and progress tracking." />
+  <meta name="description" content="A practical metal fabrication estimating course with locked medium-size lessons, module downloads, shop-floor drills, notes, and progress tracking." />
   <style>
     :root {
       --slate-950: #020617;
@@ -101,15 +101,12 @@
       color: var(--slate-950);
     }
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(234, 88, 12, .28);
-      font-weight: 950;
+    .brand-logo {
+      display: block;
+      height: 54px;
+      width: auto;
+      max-width: 330px;
+      object-fit: contain;
     }
 
     .brand small {
@@ -812,6 +809,7 @@
 
     @media (max-width: 760px) {
       .nav { display: none; }
+      .brand-logo { height: 46px; max-width: 245px; }
       .header-inner { min-height: 66px; }
       .hero { padding-top: 42px; }
       .mini-grid,
@@ -852,8 +850,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Course home">
-        <span class="brand-mark">MF</span>
-        <span>Metal Fabrication Power Tools <small>Estimating Course Portal</small></span>
+        <img class="brand-logo" src="https://gregsheldon.github.io/estimating-course/estimating-course-logo.png" alt="Fabrication Estimating Course" />
       </a>
       <nav class="nav" aria-label="Course navigation">
         <a href="#course">Course</a>
@@ -870,10 +867,10 @@
         <div>
           <span class="eyebrow">Shop-floor estimating system</span>
           <h1>Build quotes that protect the job before steel hits the floor.</h1>
-          <p class="hero-lede">A course platform page for your fabrication estimating training. Each module has a medium-size locked YouTube video, a practical lesson breakdown, an action drill, saved notes, progress tracking, and two focused downloads: the worksheet and transcript.</p>
+          <p class="hero-lede">A course platform page for your fabrication estimating training. Each module has a medium-size locked video, a practical lesson breakdown, an action drill, saved notes, progress tracking, and downloads students can take back into the shop.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#course">Start Module</a>
-            <a class="btn btn-light" href="#downloads">View Worksheets</a>
+            <a class="btn btn-light" href="#downloads">View Downloads</a>
           </div>
         </div>
 
@@ -919,7 +916,7 @@
             <div class="meta-pill"><span>Video</span><strong id="lessonLength">18 min</strong></div>
             <div class="meta-pill"><span>Level</span><strong id="lessonLevel">Foundation</strong></div>
             <div class="meta-pill"><span>Drill</span><strong id="lessonDrillShort">Scope filter</strong></div>
-            <div class="meta-pill"><span>Downloads</span><strong id="lessonDownloadCount">2 files</strong></div>
+            <div class="meta-pill"><span>Downloads</span><strong id="lessonDownloadCount">3 files</strong></div>
           </div>
         </div>
 
@@ -927,14 +924,15 @@
           <div class="lesson-primary">
             <div class="media-lock" aria-label="Lesson video area">
               <div class="video-frame" id="videoFrame">
+                <video id="lessonVideo" controls controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture playsinline preload="metadata"></video>
                 <iframe id="lessonEmbed" class="hidden" title="Lesson video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 <div id="videoPlaceholder" class="video-placeholder">
                   <div class="play-icon">▶</div>
-                  <strong>Paste the YouTube video ID for this module.</strong>
-                  <span>The YouTube player is intentionally medium sized and configured without fullscreen permissions.</span>
+                  <strong>Replace this with your module video.</strong>
+                  <span>The player is intentionally medium sized and configured without fullscreen permissions.</span>
                 </div>
               </div>
-              <p class="embed-note"><span>YouTube fullscreen blocked by design.</span><span>Paste YouTube IDs in the courseModules array. Do not add allowfullscreen.</span></p>
+              <p class="embed-note"><span>Fullscreen disabled by design.</span><span>Use MP4 paths or locked embed URLs in the courseModules array.</span></p>
             </div>
 
             <div class="content-grid">
@@ -965,7 +963,7 @@
 
             <div class="side-box">
               <h3>Downloads for this lesson</h3>
-              <p>Each module includes exactly two downloads: the worksheet and the transcript.</p>
+              <p>Give students practical tools they can print, fill out, or use while building real quotes.</p>
             </div>
             <div class="download-list" id="downloadsList"></div>
 
@@ -995,7 +993,7 @@
       <div class="container">
         <div class="section-heading">
           <h2>Downloads by module.</h2>
-          <p>Each module has exactly two downloads: a worksheet and a transcript. Update the links in the JavaScript array once your files are uploaded.</p>
+          <p>Each course page can have its own downloadable workbook, checklist, calculator, template, or shop-floor handout. Update the links in the JavaScript array once your files are uploaded.</p>
         </div>
         <div class="resource-grid" id="resourceGrid"></div>
       </div>
@@ -1005,7 +1003,7 @@
       <div class="cta-band">
         <div>
           <h2>Keep the training practical.</h2>
-          <p>Each module should move the student from watching, to thinking, to applying, to using the worksheet and reviewing the transcript when they build the next quote.</p>
+          <p>Each module should move the student from watching, to thinking, to applying, to downloading a tool they can use on the next quote.</p>
         </div>
         <a class="btn btn-primary" href="mailto:gregwsheldon@gmail.com?subject=Course%20Portal%20Question">Ask Greg A Question</a>
       </div>
@@ -1020,11 +1018,11 @@
   <script>
     /*
       HOW TO USE:
-      1) Upload each module worksheet and transcript to /downloads/.
-      2) Paste each YouTube video ID into the youtubeId field below.
-         Example: for https://www.youtube.com/watch?v=abc123XYZ00, use youtubeId: "abc123XYZ00".
-      3) Keep fs=0 in the embed builder and do not add allowfullscreen to the iframe.
-      4) Each module is intentionally limited to two downloads: Worksheet and Transcript.
+      1) Put lesson videos in /videos/ and downloads in /downloads/.
+      2) Replace the videoSrc or embedUrl values below.
+      3) Replace download href values with the real PDF/XLSX/DOCX files.
+      4) For YouTube embeds, use embedUrl and include ?rel=0&modestbranding=1&fs=0.
+      5) Do not add allowfullscreen to the iframe if you want fullscreen blocked.
     */
 
     const courseModules = [
@@ -1034,8 +1032,8 @@
         length: "18 min",
         level: "Foundation",
         drillShort: "Estimator filter",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-01-the-real-role-of-an-estimator.mp4",
+        embedUrl: "",
         summary: "The estimator is not just building a number. The estimator is protecting the shop, the margin, the schedule, and the handoff before the work ever hits the floor.",
         body: "Students learn how to stop treating estimating like a guessing exercise and start treating it like the first stage of production planning.",
         takeaways: ["Understand what the estimator is really responsible for.", "Separate price pressure from scope reality.", "Build quotes that help the shop execute, not just win work."],
@@ -1044,8 +1042,9 @@
         drill: "Take one recent quote and write down what the shop needed to know after the quote was won. Anything that was unclear belongs in your estimating process earlier.",
         checklist: ["Watch the full lesson.", "Write your definition of a good estimator.", "List three things your shop usually finds out too late."],
         downloads: [
-          { title: "Module 01 Worksheet", type: "PDF", href: "downloads/module-01-the-real-role-of-an-estimator-worksheet.pdf" },
-          { title: "Module 01 Transcript", type: "PDF", href: "downloads/module-01-the-real-role-of-an-estimator-transcript.pdf" }
+          { title: "Estimator Role Field Guide", type: "PDF", href: "downloads/module-01-estimator-role-field-guide.pdf" },
+          { title: "Quote Responsibility Checklist", type: "PDF", href: "downloads/module-01-quote-responsibility-checklist.pdf" },
+          { title: "Estimator Mindset Worksheet", type: "DOCX", href: "downloads/module-01-estimator-mindset-worksheet.docx" }
         ]
       },
       {
@@ -1054,8 +1053,8 @@
         length: "24 min",
         level: "Core Skill",
         drillShort: "Drawing sweep",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-02-read-drawings-like-a-fabricator.mp4",
+        embedUrl: "",
         summary: "Students learn to read drawings for what will actually have to be fabricated, handled, finished, delivered, and installed.",
         body: "This module trains the student to move beyond counting lines on drawings and start seeing material, labour, risk, sequencing, and install constraints.",
         takeaways: ["Read notes, sections, details, elevations, and specs together.", "Spot hidden labour inside details.", "Turn drawing review into an estimating checklist."],
@@ -1064,8 +1063,9 @@
         drill: "Open one set of drawings and do a three-pass review: scope pass, connection/detail pass, and install/access pass. Write down what changed after each pass.",
         checklist: ["Review general notes.", "Check sections and details against plans.", "Write three RFIs or clarifying questions."],
         downloads: [
-          { title: "Module 02 Worksheet", type: "PDF", href: "downloads/module-02-read-drawings-like-a-fabricator-worksheet.pdf" },
-          { title: "Module 02 Transcript", type: "PDF", href: "downloads/module-02-read-drawings-like-a-fabricator-transcript.pdf" }
+          { title: "Drawing Review Sweep Checklist", type: "PDF", href: "downloads/module-02-drawing-review-sweep-checklist.pdf" },
+          { title: "Fabricator Drawing Notes Sheet", type: "PDF", href: "downloads/module-02-fabricator-drawing-notes-sheet.pdf" },
+          { title: "RFI Question Builder", type: "DOCX", href: "downloads/module-02-rfi-question-builder.docx" }
         ]
       },
       {
@@ -1074,8 +1074,8 @@
         length: "22 min",
         level: "System",
         drillShort: "Scope map",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-03-scope-breakdown-system.mp4",
+        embedUrl: "",
         summary: "This module shows students how to break a project into clean estimating buckets so nothing important gets buried or forgotten.",
         body: "Students build a repeatable scope map for material, fabrication, finishing, install, subcontractors, rentals, shipping, safety, and exclusions.",
         takeaways: ["Break scope into quoteable sections.", "Separate included, excluded, assumed, and unknown items.", "Make the final proposal easier to defend."],
@@ -1084,8 +1084,9 @@
         drill: "Take a project and create four columns: included, excluded, assumed, and needs clarification. Fill them before pricing anything.",
         checklist: ["Build a scope breakdown before pricing.", "Create an exclusions list.", "Identify unknowns before final quote."],
         downloads: [
-          { title: "Module 03 Worksheet", type: "PDF", href: "downloads/module-03-scope-breakdown-system-worksheet.pdf" },
-          { title: "Module 03 Transcript", type: "PDF", href: "downloads/module-03-scope-breakdown-system-transcript.pdf" }
+          { title: "Scope Breakdown Workbook", type: "XLSX", href: "downloads/module-03-scope-breakdown-workbook.xlsx" },
+          { title: "Included / Excluded / Assumed Template", type: "PDF", href: "downloads/module-03-included-excluded-assumed-template.pdf" },
+          { title: "Missed Scope Prevention Checklist", type: "PDF", href: "downloads/module-03-missed-scope-prevention-checklist.pdf" }
         ]
       },
       {
@@ -1094,8 +1095,8 @@
         length: "31 min",
         level: "Core Pricing",
         drillShort: "Labour build",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-04-labour-estimating.mp4",
+        embedUrl: "",
         summary: "Students learn how labour really behaves in a fabrication shop and on site, and how to estimate for more than just ideal cutting and welding time.",
         body: "This lesson covers handling, layout, fit-up, welding, grinding, movement, setup, supervision, rework risk, install access, weather, and crew productivity.",
         takeaways: ["Separate shop labour from field labour.", "Price setup, handling, fit-up, welding, finishing, and movement.", "Use questions when you do not know what the job will really take."],
@@ -1104,8 +1105,9 @@
         drill: "Pick one fabricated item and break labour into steps: receive, handle, lay out, cut, drill, fit, weld, clean, finish, load, ship, install. Assign hours to each step.",
         checklist: ["Build labour by operation.", "Add handling and setup.", "Check shop versus field assumptions."],
         downloads: [
-          { title: "Module 04 Worksheet", type: "PDF", href: "downloads/module-04-labour-estimating-worksheet.pdf" },
-          { title: "Module 04 Transcript", type: "PDF", href: "downloads/module-04-labour-estimating-transcript.pdf" }
+          { title: "Labour Estimating Worksheet", type: "XLSX", href: "downloads/module-04-labour-estimating-worksheet.xlsx" },
+          { title: "Shop Labour Operation Checklist", type: "PDF", href: "downloads/module-04-shop-labour-operation-checklist.pdf" },
+          { title: "Field Install Labour Question Sheet", type: "PDF", href: "downloads/module-04-field-install-labour-question-sheet.pdf" }
         ]
       },
       {
@@ -1114,8 +1116,8 @@
         length: "26 min",
         level: "Cost Control",
         drillShort: "Material logic",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-05-material-costing-strategy.mp4",
+        embedUrl: "",
         summary: "This module helps students price material with waste, sourcing, volatility, freight, cut sizes, minimum buys, and real purchasing constraints in mind.",
         body: "Students learn how to think through stock lengths, plate yield, buyouts, freight, supplier quotes, substitutions, and pricing windows.",
         takeaways: ["Price what you actually need to buy.", "Account for waste, drops, minimums, freight, and volatility.", "Use supplier confirmation when risk is high."],
@@ -1124,8 +1126,9 @@
         drill: "Take one material list and mark each item as stock, special order, supplier quote required, volatile price, or substitution possible.",
         checklist: ["Check waste and minimum buys.", "Add freight and handling.", "Verify high-risk material pricing."],
         downloads: [
-          { title: "Module 05 Worksheet", type: "PDF", href: "downloads/module-05-material-costing-strategy-worksheet.pdf" },
-          { title: "Module 05 Transcript", type: "PDF", href: "downloads/module-05-material-costing-strategy-transcript.pdf" }
+          { title: "Material Costing Strategy Sheet", type: "XLSX", href: "downloads/module-05-material-costing-strategy-sheet.xlsx" },
+          { title: "Supplier Quote Request Template", type: "DOCX", href: "downloads/module-05-supplier-quote-request-template.docx" },
+          { title: "Material Risk Checklist", type: "PDF", href: "downloads/module-05-material-risk-checklist.pdf" }
         ]
       },
       {
@@ -1134,8 +1137,8 @@
         length: "21 min",
         level: "Coordination",
         drillShort: "Sub review",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-06-subcontractors-outsourced-work.mp4",
+        embedUrl: "",
         summary: "Students learn how to protect the quote when outside vendors, finishers, erectors, engineers, trucking, rental companies, and specialty suppliers are involved.",
         body: "This module explains how to review sub quotes, compare apples to apples, catch exclusions, and add coordination time.",
         takeaways: ["Never pass through a sub number without reviewing scope.", "Look for exclusions, lead times, access needs, and schedule limits.", "Add coordination, markup, risk, and management time."],
@@ -1144,8 +1147,9 @@
         drill: "Review one subcontractor quote and highlight included scope, excluded scope, assumptions, validity date, lead time, and risk items.",
         checklist: ["Review sub quote exclusions.", "Check schedule and lead time.", "Add coordination and markup."],
         downloads: [
-          { title: "Module 06 Worksheet", type: "PDF", href: "downloads/module-06-subcontractors-outsourced-work-worksheet.pdf" },
-          { title: "Module 06 Transcript", type: "PDF", href: "downloads/module-06-subcontractors-outsourced-work-transcript.pdf" }
+          { title: "Subcontractor Quote Review Checklist", type: "PDF", href: "downloads/module-06-subcontractor-quote-review-checklist.pdf" },
+          { title: "Outsourced Work Comparison Sheet", type: "XLSX", href: "downloads/module-06-outsourced-work-comparison-sheet.xlsx" },
+          { title: "Vendor Clarification Email Template", type: "DOCX", href: "downloads/module-06-vendor-clarification-email-template.docx" }
         ]
       },
       {
@@ -1154,8 +1158,8 @@
         length: "29 min",
         level: "Margin Protection",
         drillShort: "Risk register",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-07-risk-unknowns-margin-protection.mp4",
+        embedUrl: "",
         summary: "This module teaches students how to identify what can hurt the job, price uncertainty intelligently, and protect margin without just throwing random money at the quote.",
         body: "Students build a risk register and learn how to separate normal cost, contingency, allowance, qualification, and exclusion.",
         takeaways: ["Identify risk before final pricing.", "Use allowances, exclusions, clarifications, or contingency correctly.", "Protect margin without making the quote messy."],
@@ -1164,8 +1168,9 @@
         drill: "Create a risk register for one current job with columns for risk, likelihood, impact, pricing response, and proposal wording.",
         checklist: ["List risk items.", "Choose allowance, exclusion, clarification, or contingency.", "Review wording before sending the quote."],
         downloads: [
-          { title: "Module 07 Worksheet", type: "PDF", href: "downloads/module-07-risk-unknowns-margin-protection-worksheet.pdf" },
-          { title: "Module 07 Transcript", type: "PDF", href: "downloads/module-07-risk-unknowns-margin-protection-transcript.pdf" }
+          { title: "Risk Register Template", type: "XLSX", href: "downloads/module-07-risk-register-template.xlsx" },
+          { title: "Margin Protection Checklist", type: "PDF", href: "downloads/module-07-margin-protection-checklist.pdf" },
+          { title: "Allowance vs Exclusion Guide", type: "PDF", href: "downloads/module-07-allowance-vs-exclusion-guide.pdf" }
         ]
       },
       {
@@ -1174,8 +1179,8 @@
         length: "25 min",
         level: "Final Pricing",
         drillShort: "Final price",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-08-building-the-final-price.mp4",
+        embedUrl: "",
         summary: "Students learn the difference between markup and margin, how to roll up costs, and how to build a final sell price that actually produces the intended gross margin.",
         body: "This module walks through material, labour, subs, rentals, freight, overhead recovery, markup, gross margin, tax, and final review.",
         takeaways: ["Understand markup versus margin.", "Roll up all cost buckets cleanly.", "Check final sell price before proposal."],
@@ -1184,8 +1189,9 @@
         drill: "Take one completed estimate and calculate both markup percentage and gross margin percentage. Compare what you thought you were making to what the math says.",
         checklist: ["Verify all costs are included.", "Check markup versus margin.", "Do a final quote sanity review."],
         downloads: [
-          { title: "Module 08 Worksheet", type: "PDF", href: "downloads/module-08-building-the-final-price-worksheet.pdf" },
-          { title: "Module 08 Transcript", type: "PDF", href: "downloads/module-08-building-the-final-price-transcript.pdf" }
+          { title: "Final Price Builder Workbook", type: "XLSX", href: "downloads/module-08-final-price-builder-workbook.xlsx" },
+          { title: "Markup vs Margin Cheat Sheet", type: "PDF", href: "downloads/module-08-markup-vs-margin-cheat-sheet.pdf" },
+          { title: "Final Quote Review Checklist", type: "PDF", href: "downloads/module-08-final-quote-review-checklist.pdf" }
         ]
       },
       {
@@ -1194,8 +1200,8 @@
         length: "27 min",
         level: "Proposal",
         drillShort: "Quote letter",
-        youtubeId: "",
-        youtubeUrl: "",
+        videoSrc: "videos/module-09-writing-a-winning-quote.mp4",
+        embedUrl: "",
         summary: "Students learn how to turn the estimate into a clear, professional proposal that sells the value, defines the scope, and protects the company.",
         body: "This module covers proposal structure, scope wording, assumptions, exclusions, alternates, allowances, schedule notes, payment terms, and how to make the quote easy to accept.",
         takeaways: ["Write clear included and excluded scope.", "Use proposal language that reduces confusion.", "Make the quote professional without hiding the important details."],
@@ -1204,8 +1210,9 @@
         drill: "Rewrite one old proposal using clear headings: scope, price, assumptions, exclusions, schedule, terms, and acceptance.",
         checklist: ["Write included scope clearly.", "Add assumptions and exclusions.", "Check the quote from the customer's point of view."],
         downloads: [
-          { title: "Module 09 Worksheet", type: "PDF", href: "downloads/module-09-writing-a-winning-quote-worksheet.pdf" },
-          { title: "Module 09 Transcript", type: "PDF", href: "downloads/module-09-writing-a-winning-quote-transcript.pdf" }
+          { title: "Winning Quote Proposal Template", type: "DOCX", href: "downloads/module-09-winning-quote-proposal-template.docx" },
+          { title: "Proposal Language Swipe File", type: "PDF", href: "downloads/module-09-proposal-language-swipe-file.pdf" },
+          { title: "Quote Send-Off Checklist", type: "PDF", href: "downloads/module-09-quote-send-off-checklist.pdf" }
         ]
       }
     ];
@@ -1255,55 +1262,42 @@
       });
     }
 
-    function extractYouTubeId(urlOrId) {
-      if (!urlOrId) return "";
-      const clean = String(urlOrId).trim();
-      if (/^[a-zA-Z0-9_-]{11}$/.test(clean)) return clean;
-
+    function safeEmbedUrl(url) {
+      if (!url) return "";
       try {
-        const parsed = new URL(clean);
-        if (parsed.hostname.includes("youtu.be")) return parsed.pathname.replace("/", "").slice(0, 11);
-        if (parsed.hostname.includes("youtube.com") || parsed.hostname.includes("youtube-nocookie.com")) {
-          if (parsed.pathname.includes("/embed/")) return parsed.pathname.split("/embed/")[1].split(/[/?#]/)[0].slice(0, 11);
-          return parsed.searchParams.get("v") || "";
+        const parsed = new URL(url, window.location.href);
+        if (parsed.hostname.includes("youtube") || parsed.hostname.includes("youtu.be")) {
+          parsed.searchParams.set("fs", "0");
+          parsed.searchParams.set("rel", "0");
+          parsed.searchParams.set("modestbranding", "1");
         }
+        return parsed.toString();
       } catch (error) {
-        return "";
+        return url;
       }
-      return "";
-    }
-
-    function buildLockedYouTubeEmbed(module) {
-      const id = extractYouTubeId(module.youtubeId || module.youtubeUrl);
-      if (!id) return "";
-      const params = new URLSearchParams({
-        rel: "0",
-        modestbranding: "1",
-        fs: "0",
-        playsinline: "1",
-        controls: "1",
-        disablekb: "1",
-        iv_load_policy: "3"
-      });
-      return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${params.toString()}`;
     }
 
     function renderVideo(module) {
+      const video = $("lessonVideo");
       const embed = $("lessonEmbed");
       const placeholder = $("videoPlaceholder");
 
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+      video.classList.add("hidden");
       embed.classList.add("hidden");
       embed.removeAttribute("src");
-      embed.removeAttribute("allowfullscreen");
-      embed.allowFullscreen = false;
       placeholder.classList.remove("hidden");
 
-      const lockedEmbedUrl = buildLockedYouTubeEmbed(module);
-      if (lockedEmbedUrl) {
-        embed.src = lockedEmbedUrl;
-        // Important: no fullscreen permission is granted here.
-        embed.setAttribute("allow", "autoplay; encrypted-media");
-        embed.setAttribute("sandbox", "allow-scripts allow-same-origin");
+      if (module.videoSrc) {
+        video.src = module.videoSrc;
+        video.classList.remove("hidden");
+        placeholder.classList.add("hidden");
+      } else if (module.embedUrl) {
+        embed.src = safeEmbedUrl(module.embedUrl);
+        embed.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
+        embed.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups");
         embed.classList.remove("hidden");
         placeholder.classList.add("hidden");
       }
@@ -1394,6 +1388,9 @@
     document.addEventListener("mozfullscreenchange", blockFullscreen);
     document.addEventListener("MSFullscreenChange", blockFullscreen);
 
+    $("lessonVideo").addEventListener("webkitbeginfullscreen", function () {
+      if (this.webkitExitFullscreen) this.webkitExitFullscreen();
+    });
 
     $("notesArea").addEventListener("input", saveNote);
 
