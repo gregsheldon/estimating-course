@@ -101,12 +101,15 @@
       color: var(--slate-950);
     }
 
-    .brand-logo {
-      display: block;
-      height: 54px;
-      width: auto;
-      max-width: 340px;
-      object-fit: contain;
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange-500), var(--orange-700));
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, .28);
+      font-weight: 950;
     }
 
     .brand small {
@@ -849,7 +852,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Course home">
-        <img class="brand-logo" src="https://gregsheldon.github.io/estimating-course/estimating-course-logo.png" alt="Metal Fabrication Estimating Course" />
+        <span class="brand-mark">MF</span>
+        <span>Metal Fabrication Power Tools <small>Estimating Course Portal</small></span>
       </a>
       <nav class="nav" aria-label="Course navigation">
         <a href="#course">Course</a>
@@ -1017,7 +1021,7 @@
   <script>
     /*
       YOUTUBE VIDEO SETUP:
-      Paste each private/unlisted YouTube video ID into the youtubeId field below.
+      The courseModules data below already contains the YouTube video IDs supplied for Modules 1-9.
       The iframe uses fs=0, no allowfullscreen attribute, restricted permissions, sandboxing,
       and fullscreen exit blocking. This blocks the embedded player from going fullscreen.
       Browser-level fullscreen shortcuts cannot be fully controlled by page code.
@@ -1030,7 +1034,7 @@
             "length": "7:12",
             "level": "Foundation",
             "drillShort": "Think like a gatekeeper",
-            "youtubeId": "",
+            "youtubeId": "_TtBznDHhD4",
             "summary": "Start here. This module reframes estimating as one of the highest-leverage roles in a fabrication business: part pricing, part planning, part risk control, and part margin protection.",
             "body": "You will learn why the quote is the first version of the job plan. Instead of pricing only the obvious steel, you will begin looking at the actions required to create, finish, deliver, and install the work. Greg introduces the core estimating mindset used throughout the course: define the scope, document assumptions, break the job down, and decide whether each risk gets priced, qualified, or excluded.",
             "takeaways": [
@@ -1069,7 +1073,7 @@
             "length": "4:26",
             "level": "Drawing Review",
             "drillShort": "Read the white space",
-            "youtubeId": "",
+            "youtubeId": "cHuwN4mR2VU",
             "summary": "This module teaches students to stop reading drawings only as finished objects and start reading them as fabrication, handling, finish, shipping, and installation paths.",
             "body": "Engineers show the finished condition. Fabricators pay for everything it takes to get there. In this lesson, you learn how to read the white space: the moves, lifts, flips, bracing, access, laydown, finish requirements, notes, tolerances, and site conditions that may not be obvious in the main view but still create real cost.",
             "takeaways": [
@@ -1108,7 +1112,7 @@
             "length": "6:32",
             "level": "Scope Control",
             "drillShort": "Five buckets",
-            "youtubeId": "",
+            "youtubeId": "_BepEmZ4fiI",
             "summary": "This module gives students a repeatable five-bucket system for breaking each deliverable into the real work required before, during, and after fabrication.",
             "body": "Instead of staring at one giant drawing package and trying to create one giant number, students learn to run each deliverable through the same five buckets: preparation, fabrication, finishing, assembly and quality control, and logistics and field readiness. This turns estimating from a guess into a checklist-driven system that catches the items most shops forget.",
             "takeaways": [
@@ -1147,7 +1151,7 @@
             "length": "23:45",
             "level": "Labour Build-Up",
             "drillShort": "Predict the work",
-            "youtubeId": "",
+            "youtubeId": "wRS_ENCZgDs",
             "summary": "This is the deep labour module. Students learn why labour is where fabrication jobs are often won or lost, and how to estimate the full human process instead of only weld time.",
             "body": "Material can usually be counted. Labour has to be understood. This module teaches students to picture the job as a sequence of labour events: review, pull, move, cut, drill, deburr, lay out, fit, tack, check, flip, weld, clean, inspect, straighten, finish, load, install, and touch up. Students also learn the difference between wage rate, loaded cost rate, and sell rate, and why billable hours matter when building shop rates.",
             "takeaways": [
@@ -1186,7 +1190,7 @@
             "length": "13:22",
             "level": "Material Control",
             "drillShort": "Price the buy",
-            "youtubeId": "",
+            "youtubeId": "S7qAlw8buss",
             "summary": "This module teaches students to price material the way it is actually bought, cut, stored, wasted, moved, and exposed to market change.",
             "body": "A frame may only use part of a length, but the shop may need to buy the full stick, carry drop, pay freight, manage minimum order quantities, and absorb price changes. Students learn how to think through full purchase length, usable drops, cut loss, supplier validity, freight, finish impact, alternates, and material risk before locking in the quote.",
             "takeaways": [
@@ -1225,7 +1229,7 @@
             "length": "7:05",
             "level": "Vendor Scope",
             "drillShort": "Manage the pass-through",
-            "youtubeId": "",
+            "youtubeId": "siDPA2r9l2M",
             "summary": "This module shows why outsourced work is not just a vendor invoice. Students learn to price the managed scope around galvanizing, coating, machining, freight, QA, and recovery risk.",
             "body": "The vendor quote is only one layer of the cost. Students learn to add the internal labour before and after outsourcing: prep, vent and drain checks, disassembly, chasing threads, loading, freight, receiving, inspection, sorting, rework, schedule impact, and customer responsibility. The lesson also covers why duplex systems and specialty finishing require process-chain thinking, not simple pass-through pricing.",
             "takeaways": [
@@ -1264,7 +1268,7 @@
             "length": "26:56",
             "level": "Risk Control",
             "drillShort": "Name the risk",
-            "youtubeId": "",
+            "youtubeId": "MYZdM_c4LQc",
             "summary": "This module teaches students to stop hiding risk inside hope, contingency, or vague language, and start making risk visible, priced, qualified, excluded, transferred, or reserved.",
             "body": "A professional estimate is not only a cost calculation. It is a risk decision. Students learn to identify the cause, trigger, owner, cost, and schedule impact of risk before it eats the margin. The module covers drawing risk, site risk, material risk, coating risk, crane and rigging risk, schedule risk, customer-controlled unknowns, assumptions, exclusions, allowances, reserves, and quote language that protects the business.",
             "takeaways": [
@@ -1303,7 +1307,7 @@
             "length": "21:53",
             "level": "Final Pricing",
             "drillShort": "Build the number",
-            "youtubeId": "",
+            "youtubeId": "e80kJCfc48Q",
             "summary": "This module teaches students how to turn cost into a final selling price that covers true cost, protects against risk, and produces the margin the company needs.",
             "body": "Students learn the difference between markup and margin, why a 20% markup is not a 20% margin, and how low labour rates, poor overhead recovery, missed risk, and last-minute price cutting damage profit. The module walks through final price structure: direct costs, labour, overhead, equipment, freight, subcontractors, contingency or reserve, markup, target margin, quote checks, and confidence before sending.",
             "takeaways": [
@@ -1342,7 +1346,7 @@
             "length": "11:27",
             "level": "Proposal Writing",
             "drillShort": "Build the fence",
-            "youtubeId": "",
+            "youtubeId": "nywegiu6aG8",
             "summary": "This final module teaches students to write quotes that sell the work, define the scope, protect the margin, and create a clean handoff after award.",
             "body": "A quote is a sales tool, a production plan, and a risk-control document. Students learn how to write clear scope, assumptions, exclusions, alternates, allowances, schedule notes, commercial terms, and customer-friendly proposal language. The goal is a quote that is easy to understand, hard to misunderstand, and strong enough to protect the shop after the customer says yes.",
             "takeaways": [
