@@ -134,8 +134,7 @@
     .guarantee-image { width:min(120%,820px); max-width:none; height:auto; display:block; transform:translate(12%,0); filter:drop-shadow(0 28px 55px rgba(67,20,7,.20)); }
     .guarantee-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.4rem; }
     .guarantee-card { background:rgba(255,255,255,.9); border:1px solid rgba(249,115,22,.24); padding:1.2rem; box-shadow:0 20px 46px rgba(124,45,18,.08); }
-    .guarantee-card .g-icon { width:54px; height:54px; display:grid; place-items:center; background:linear-gradient(135deg,#fff7ed,#ffedd5); border:1px solid rgba(249,115,22,.22); color:#c2410c; font-size:1.55rem; margin-bottom:.75rem; }
-    .guarantee-card h3 { color:#431407; }
+    .guarantee-card h3 { color:#431407; margin-top:0; margin-bottom:.55rem; }
     .guarantee-card p { color:#431407; margin-bottom:0; }
     .testimonials { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
     .testimonial { background:#fff; border:1px solid var(--slate-200); box-shadow:var(--shadow-soft); padding:1.25rem; }
@@ -210,7 +209,1001 @@
     .value-row div span { display:block; color:var(--slate-500); font-size:.92rem; line-height:1.42; font-weight:650; }
     .value-row > strong { color:var(--orange-700); font-size:1.22rem; font-weight:950; white-space:nowrap; }
 
-  </style>
+  
+
+    /* Polished value stack close: stronger contrast, clearer pricing, better savings block */
+    .value-stack {
+      background: #fffaf5 !important;
+      border: 2px solid #e6ddd2 !important;
+      box-shadow: 0 22px 70px rgba(15, 23, 42, .13) !important;
+      overflow: hidden;
+    }
+
+    .value-stack h3 {
+      font-size: clamp(2rem, 3vw, 2.55rem) !important;
+      line-height: .98 !important;
+      margin-bottom: 1.2rem !important;
+    }
+
+    .value-stack .value-row {
+      padding: 1.05rem 0 !important;
+    }
+
+    .value-stack .value-row div strong {
+      color: #06142c !important;
+      font-weight: 950 !important;
+    }
+
+    .value-stack .value-row div span {
+      color: #52627a !important;
+      font-weight: 700 !important;
+    }
+
+    .value-stack .value-row > strong {
+      color: #d35400 !important;
+      font-size: 1.32rem !important;
+      font-weight: 950 !important;
+    }
+
+    .value-stack .total-value {
+      background: #ffffff !important;
+      margin: 1.2rem -1rem 0 !important;
+      padding: 1.35rem 1rem !important;
+      border: 2px solid #f1c5a8 !important;
+      box-shadow: inset 0 0 0 1px rgba(249, 115, 22, .08);
+    }
+
+    .value-stack .total-value div strong {
+      color: #06142c !important;
+      font-size: 1.2rem !important;
+    }
+
+    .value-stack .total-value div span {
+      color: #455872 !important;
+      font-size: 1rem !important;
+      font-weight: 800 !important;
+    }
+
+    .value-stack .total-value > strong {
+      color: #c2410c !important;
+      font-size: 1.85rem !important;
+    }
+
+    .value-stack .today-price {
+      position: relative;
+      background: linear-gradient(135deg, #06142c 0%, #0b1f43 100%) !important;
+      margin: 0 -1rem !important;
+      padding: 2rem 1rem 1.45rem !important;
+      border: 0 !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10);
+    }
+
+    .value-stack .today-price:before {
+      content: "TODAY PRICE";
+      position: absolute;
+      top: .75rem;
+      right: 1rem;
+      color: #ffd39b;
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 211, 155, .28);
+      padding: .34rem .55rem;
+      font-size: .68rem;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .value-stack .today-price div strong {
+      color: #ffffff !important;
+      font-size: 1.32rem !important;
+      letter-spacing: -.025em;
+    }
+
+    .value-stack .today-price div span {
+      color: #d9e4ff !important;
+      font-size: .98rem !important;
+      line-height: 1.55 !important;
+      font-weight: 760 !important;
+      max-width: 640px;
+    }
+
+    .value-stack .today-price > strong {
+      color: #ff8b2b !important;
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem) !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+    }
+
+    .value-stack .value-savings {
+      margin-top: 1.15rem !important;
+      background: linear-gradient(135deg, #e9fff0 0%, #d4f7df 100%) !important;
+      border: 2px solid #39a96b !important;
+      color: #0e5d36 !important;
+      padding: 1.25rem 1rem !important;
+      text-align: center !important;
+      box-shadow: 0 8px 22px rgba(57, 169, 107, .12);
+    }
+
+    .value-stack .value-savings strong {
+      display: block;
+      color: #0e5d36 !important;
+      font-size: clamp(1.45rem, 3vw, 2rem) !important;
+      line-height: 1.15;
+      font-weight: 950;
+      margin-bottom: .35rem;
+    }
+
+    .value-stack .value-savings span {
+      display: block;
+      color: #24553b !important;
+      font-size: .98rem;
+      font-weight: 750;
+    }
+
+    .value-stack .value-cta-wrap {
+      margin-top: 1.35rem;
+      text-align: center;
+    }
+
+    .value-stack .value-cta-wrap .btn-primary {
+      width: min(100%, 360px);
+      padding: 1.05rem 1.4rem;
+      font-size: 1rem;
+      box-shadow: 0 14px 34px rgba(217, 79, 6, .26);
+    }
+
+    @media (max-width: 760px) {
+      .value-stack .total-value,
+      .value-stack .today-price {
+        grid-template-columns: 1fr !important;
+        gap: .7rem !important;
+      }
+
+      .value-stack .today-price:before {
+        position: static;
+        display: inline-flex;
+        width: fit-content;
+        margin-bottom: .65rem;
+      }
+    }
+
+  
+
+    /* Balanced value stack section: uses the full width better without removing content */
+    #tools.tools-section {
+      padding-top: 74px !important;
+      padding-bottom: 74px !important;
+    }
+
+    #tools .tools-balanced {
+      display: grid !important;
+      grid-template-columns: minmax(330px, .82fr) minmax(560px, 1.18fr) !important;
+      gap: clamp(1.2rem, 3vw, 2rem) !important;
+      align-items: start !important;
+    }
+
+    #tools .tools-copy {
+      position: sticky;
+      top: 98px;
+      align-self: start;
+    }
+
+    #tools .tools-copy .section-heading {
+      margin-bottom: 1rem !important;
+    }
+
+    #tools .tools-copy h2 {
+      font-size: clamp(2.25rem, 4.2vw, 4.2rem) !important;
+      line-height: .95 !important;
+      margin-bottom: .9rem !important;
+      max-width: 640px;
+    }
+
+    #tools .tools-copy p {
+      max-width: 660px;
+    }
+
+    #tools .features-balanced {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: .55rem !important;
+      margin-top: 1.25rem !important;
+      max-width: 680px;
+    }
+
+    #tools .balanced-stack {
+      padding: 1.35rem !important;
+      background: #fffaf5 !important;
+      border: 2px solid #e6ddd2 !important;
+      box-shadow: 0 22px 70px rgba(15, 23, 42, .13) !important;
+      overflow: hidden !important;
+    }
+
+    #tools .value-stack-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: .95rem;
+      border-bottom: 2px solid #fed7aa;
+      margin-bottom: .95rem;
+    }
+
+    #tools .value-stack-head h3 {
+      margin: 0 !important;
+      font-size: clamp(1.85rem, 2.8vw, 2.55rem) !important;
+      line-height: .98 !important;
+      letter-spacing: -.06em !important;
+    }
+
+    #tools .value-stack-head p {
+      margin: 0 !important;
+      color: #52627a !important;
+      font-weight: 800 !important;
+      font-size: .95rem !important;
+      text-align: right;
+      max-width: 230px;
+    }
+
+    #tools .value-items-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: .75rem !important;
+    }
+
+    #tools .value-items-grid .value-row {
+      display: grid !important;
+      grid-template-columns: 1fr auto !important;
+      gap: .75rem !important;
+      align-items: start !important;
+      padding: .82rem .9rem !important;
+      border: 1px solid #f1c5a8 !important;
+      background: #ffffff !important;
+      min-height: 126px;
+    }
+
+    #tools .value-items-grid .value-row div strong {
+      color: #06142c !important;
+      font-size: .92rem !important;
+      line-height: 1.12 !important;
+      font-weight: 950 !important;
+      margin-bottom: .33rem !important;
+      letter-spacing: -.015em;
+    }
+
+    #tools .value-items-grid .value-row div span {
+      color: #52627a !important;
+      font-size: .82rem !important;
+      line-height: 1.32 !important;
+      font-weight: 720 !important;
+    }
+
+    #tools .value-items-grid .value-row > strong {
+      color: #d35400 !important;
+      font-size: 1.02rem !important;
+      line-height: 1 !important;
+      font-weight: 950 !important;
+      white-space: nowrap !important;
+    }
+
+    #tools .value-summary-grid {
+      display: grid !important;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+      gap: .85rem !important;
+      margin-top: .95rem !important;
+    }
+
+    #tools .value-summary-grid .value-row {
+      margin: 0 !important;
+      min-height: 168px;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      gap: .7rem !important;
+      padding: 1.05rem !important;
+      border: 2px solid #f1c5a8 !important;
+    }
+
+    #tools .value-summary-grid .total-value {
+      background: #ffffff !important;
+    }
+
+    #tools .value-summary-grid .total-value div strong {
+      color: #06142c !important;
+      font-size: 1.05rem !important;
+      line-height: 1.15 !important;
+    }
+
+    #tools .value-summary-grid .total-value div span {
+      color: #455872 !important;
+      font-size: .9rem !important;
+      font-weight: 800 !important;
+    }
+
+    #tools .value-summary-grid .total-value > strong {
+      color: #c2410c !important;
+      font-size: clamp(2rem, 3.8vw, 2.75rem) !important;
+      line-height: 1 !important;
+      align-self: flex-start;
+    }
+
+    #tools .value-summary-grid .today-price {
+      position: relative;
+      background: linear-gradient(135deg, #06142c 0%, #0b1f43 100%) !important;
+      color: #ffffff !important;
+      border: 0 !important;
+      padding-top: 2.1rem !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10);
+    }
+
+    #tools .value-summary-grid .today-price:before {
+      content: "TODAY PRICE";
+      position: absolute;
+      top: .8rem;
+      right: .9rem;
+      color: #ffd39b;
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 211, 155, .28);
+      padding: .34rem .55rem;
+      font-size: .66rem;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    #tools .value-summary-grid .today-price div strong {
+      color: #ffffff !important;
+      font-size: 1.1rem !important;
+      line-height: 1.1 !important;
+      font-weight: 950 !important;
+    }
+
+    #tools .value-summary-grid .today-price div span {
+      color: #d9e4ff !important;
+      font-size: .88rem !important;
+      line-height: 1.42 !important;
+      font-weight: 760 !important;
+    }
+
+    #tools .value-summary-grid .today-price > strong {
+      color: #ff8b2b !important;
+      font-size: clamp(2.2rem, 3.8vw, 3rem) !important;
+      line-height: .95 !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+      align-self: flex-start;
+    }
+
+    #tools .balanced-stack .value-savings {
+      margin-top: .9rem !important;
+      background: linear-gradient(135deg, #e9fff0 0%, #d4f7df 100%) !important;
+      border: 2px solid #39a96b !important;
+      color: #0e5d36 !important;
+      padding: 1rem !important;
+      text-align: center !important;
+      box-shadow: 0 8px 22px rgba(57, 169, 107, .12);
+    }
+
+    #tools .balanced-stack .value-savings strong {
+      display: block;
+      color: #0e5d36 !important;
+      font-size: clamp(1.35rem, 2.5vw, 1.8rem) !important;
+      line-height: 1.1;
+      font-weight: 950;
+      margin-bottom: .25rem;
+    }
+
+    #tools .balanced-stack .value-savings span {
+      display: block;
+      color: #24553b !important;
+      font-size: .92rem;
+      font-weight: 750;
+    }
+
+    #tools .balanced-stack .value-cta-wrap {
+      margin-top: 1rem !important;
+      text-align: center;
+    }
+
+    #tools .balanced-stack .value-cta-wrap .btn-primary {
+      width: min(100%, 360px);
+      padding: 1.05rem 1.4rem;
+      font-size: 1rem;
+      box-shadow: 0 14px 34px rgba(217, 79, 6, .26);
+    }
+
+    @media (max-width: 1180px) {
+      #tools .tools-balanced {
+        grid-template-columns: 1fr !important;
+      }
+      #tools .tools-copy {
+        position: static;
+      }
+      #tools .features-balanced {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 760px) {
+      #tools .features-balanced,
+      #tools .value-items-grid,
+      #tools .value-summary-grid {
+        grid-template-columns: 1fr !important;
+      }
+      #tools .value-stack-head {
+        display: block;
+      }
+      #tools .value-stack-head p {
+        text-align: left;
+        max-width: none;
+        margin-top: .35rem !important;
+      }
+      #tools .value-items-grid .value-row,
+      #tools .value-summary-grid .value-row {
+        min-height: unset;
+      }
+      #tools .value-summary-grid .today-price:before {
+        position: static;
+        display: inline-flex;
+        width: fit-content;
+        margin-bottom: .65rem;
+      }
+    }
+
+
+    /* Reader-focused hero problem panel */
+    .hero-panel {
+      background:
+        radial-gradient(circle at top right, rgba(234, 88, 12, .22), transparent 280px),
+        linear-gradient(135deg, #030712 0%, #07111f 52%, #0b1220 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(249, 115, 22, .35) !important;
+      box-shadow: 0 28px 80px rgba(2, 6, 23, .30) !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .hero-panel:before {
+      content: "";
+      position: absolute;
+      inset: -120px -120px auto auto;
+      width: 320px;
+      height: 320px;
+      background: rgba(249, 115, 22, .20);
+      filter: blur(5px);
+      pointer-events: none;
+    }
+
+    .hero-panel .panel-top {
+      padding: 22px 24px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, .10) !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      gap: 16px !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-panel .panel-top strong {
+      color: #ffffff !important;
+      font-size: 18px !important;
+      line-height: 1.15 !important;
+      font-weight: 950 !important;
+    }
+
+    .hero-panel .status-dot {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      color: #bbf7d0 !important;
+      font-size: 13px !important;
+      font-weight: 850 !important;
+      white-space: nowrap !important;
+    }
+
+    .hero-panel .status-dot:before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, .14);
+    }
+
+    .hero-panel .panel-body {
+      padding: 24px !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .reader-problem {
+      background: linear-gradient(135deg, rgba(127, 29, 29, .72), rgba(194, 65, 12, .34));
+      border: 1px solid rgba(248, 113, 113, .42);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .reader-problem span {
+      display: block;
+      color: #fed7aa;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      font-weight: 950;
+      margin-bottom: 10px;
+    }
+
+    .reader-problem strong {
+      display: block;
+      color: #ffffff;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: .95;
+      letter-spacing: -.06em;
+      margin-bottom: 12px;
+    }
+
+    .reader-problem p {
+      color: #ffe4e6;
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .fix-list {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .fix-item {
+      background: rgba(255, 255, 255, .075);
+      border: 1px solid rgba(255, 255, 255, .12);
+      padding: 16px 18px;
+    }
+
+    .fix-item strong {
+      display: block;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .fix-item span {
+      display: block;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .panel-result {
+      background: #ffffff;
+      color: #020617;
+      padding: 20px;
+      border-left: 6px solid #f97316;
+    }
+
+    .panel-result strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.05;
+      letter-spacing: -.035em;
+      margin-bottom: 8px;
+      color: #020617;
+    }
+
+    .panel-result p {
+      color: #334155;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 750;
+      margin: 0;
+    }
+
+    .hero-panel .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .hero-panel .mini-stat {
+      background: rgba(255, 255, 255, .08) !important;
+      border: 1px solid rgba(255, 255, 255, .12) !important;
+      padding: 16px !important;
+    }
+
+    .hero-panel .mini-stat span {
+      display: block !important;
+      color: #94a3b8 !important;
+      font-size: 12px !important;
+      font-weight: 950 !important;
+      text-transform: uppercase !important;
+      letter-spacing: .06em !important;
+      margin-bottom: 6px !important;
+    }
+
+    .hero-panel .mini-stat strong {
+      display: block !important;
+      color: #ffffff !important;
+      font-size: 22px !important;
+      line-height: 1.05 !important;
+      letter-spacing: -.04em !important;
+    }
+
+    @media (max-width: 760px) {
+      .hero-panel .panel-top {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+      }
+
+      .hero-panel .mini-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+  
+
+    /* Intrigue-focused video section update */
+    .video-intrigue-section {
+      padding-top: 62px;
+      padding-bottom: 62px;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(249, 115, 22, .08), transparent 28rem),
+        linear-gradient(180deg, rgba(255,255,255,.78), rgba(248,250,252,.94));
+    }
+
+    .video-intrigue-wrap {
+      grid-template-columns: minmax(0, 1.02fr) minmax(380px, .98fr);
+      gap: 1.35rem;
+    }
+
+    .video-intrigue-copy {
+      padding: clamp(1.6rem, 3.2vw, 2.35rem);
+      border: 2px solid var(--slate-950);
+      background:
+        linear-gradient(180deg, #ffffff 0%, #fffaf5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-intrigue-copy:before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      right: -110px;
+      width: 220px;
+      height: 220px;
+      background: rgba(249, 115, 22, .10);
+      border: 1px solid rgba(249, 115, 22, .16);
+      transform: rotate(14deg);
+    }
+
+    .video-intrigue-copy > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-intrigue-copy h2 {
+      max-width: 720px;
+      font-size: clamp(2.4rem, 4.8vw, 4.6rem);
+      line-height: .92;
+      letter-spacing: -.075em;
+      margin-bottom: 1rem;
+    }
+
+    .video-lead {
+      color: var(--slate-800);
+      font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+      font-weight: 750;
+      line-height: 1.5;
+    }
+
+    .watch-trigger {
+      margin: 1.15rem 0 1.05rem;
+      background: #020617;
+      color: #ffffff;
+      border-left: 7px solid var(--orange-600);
+      padding: 1rem 1.1rem;
+      box-shadow: 0 14px 35px rgba(2, 6, 23, .12);
+    }
+
+    .watch-trigger strong {
+      display: block;
+      color: #fed7aa;
+      font-size: .82rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: .3rem;
+    }
+
+    .watch-trigger span {
+      display: block;
+      color: #ffffff;
+      font-size: 1.06rem;
+      font-weight: 850;
+      line-height: 1.42;
+    }
+
+    .intrigue-points {
+      margin-top: 1rem;
+    }
+
+    .intrigue-points li {
+      background: rgba(255, 247, 237, .9);
+      border: 1px solid rgba(249, 115, 22, .18);
+      padding: .72rem .78rem .72rem 0;
+    }
+
+    .video-intrigue-shell {
+      background:
+        radial-gradient(circle at top right, rgba(249, 115, 22, .22), transparent 18rem),
+        linear-gradient(135deg, #020617 0%, #08111f 100%);
+      padding: clamp(1.35rem, 3vw, 2rem);
+      border: 2px solid #020617;
+      box-shadow: 0 28px 90px rgba(2, 6, 23, .22);
+    }
+
+    .video-intrigue-shell .video-frame {
+      border: 1px solid rgba(255, 255, 255, .25);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, .34);
+      background: #111827;
+    }
+
+    .video-action-strong {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(249,115,22,.08));
+      border: 1px solid rgba(255,255,255,.17);
+      padding: 1.2rem;
+    }
+
+    .video-action-strong .mini-eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      background: rgba(249, 115, 22, .18);
+      color: #fed7aa;
+      border: 1px solid rgba(249, 115, 22, .35);
+      padding: .42rem .58rem;
+      font-size: .72rem;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: .8rem;
+    }
+
+    .video-action-strong h3 {
+      color: #ffffff;
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+    .video-action-strong p {
+      color: #dbeafe;
+      font-size: 1rem;
+      line-height: 1.52;
+    }
+
+    .video-action-strong .btn-primary {
+      width: 100%;
+      margin-top: .2rem;
+      padding: 1.08rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 1040px) {
+      .video-intrigue-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* Balanced, curiosity-driven video section update */
+    .video-intrigue-section {
+      padding-top: 64px !important;
+      padding-bottom: 64px !important;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(249, 115, 22, .08), transparent 28rem),
+        linear-gradient(180deg, rgba(255,255,255,.78), rgba(248,250,252,.94)) !important;
+    }
+
+    .video-intrigue-wrap {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 1.35rem !important;
+      align-items: stretch !important;
+    }
+
+    .video-intrigue-copy,
+    .video-intrigue-shell {
+      min-height: 690px !important;
+      height: 100% !important;
+    }
+
+    .video-intrigue-copy {
+      padding: clamp(1.55rem, 3vw, 2.2rem) !important;
+      border: 2px solid var(--slate-950) !important;
+      background:
+        linear-gradient(180deg, #ffffff 0%, #fffaf5 100%) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .video-intrigue-copy:before {
+      content: "" !important;
+      position: absolute !important;
+      top: -120px !important;
+      right: -95px !important;
+      width: 240px !important;
+      height: 240px !important;
+      background: rgba(249, 115, 22, .11) !important;
+      border: 1px solid rgba(249, 115, 22, .18) !important;
+      transform: rotate(14deg) !important;
+    }
+
+    .video-intrigue-copy > * {
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    .video-intrigue-copy h2 {
+      max-width: 720px !important;
+      font-size: clamp(2.35rem, 4.8vw, 4.55rem) !important;
+      line-height: .91 !important;
+      letter-spacing: -.075em !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .video-lead {
+      color: var(--slate-800) !important;
+      font-size: clamp(1.05rem, 1.5vw, 1.22rem) !important;
+      font-weight: 800 !important;
+      line-height: 1.5 !important;
+      margin-bottom: .95rem !important;
+    }
+
+    .video-curiosity-copy {
+      color: var(--slate-600) !important;
+      font-size: 1rem !important;
+      line-height: 1.55 !important;
+      font-weight: 700 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .watch-trigger {
+      margin: 1.15rem 0 !important;
+      background: #020617 !important;
+      color: #ffffff !important;
+      border-left: 7px solid var(--orange-600) !important;
+      padding: 1rem 1.1rem !important;
+      box-shadow: 0 14px 35px rgba(2, 6, 23, .12) !important;
+    }
+
+    .watch-trigger strong {
+      display: block !important;
+      color: #fed7aa !important;
+      font-size: .82rem !important;
+      font-weight: 950 !important;
+      text-transform: uppercase !important;
+      letter-spacing: .08em !important;
+      margin-bottom: .35rem !important;
+    }
+
+    .watch-trigger span {
+      display: block !important;
+      color: #ffffff !important;
+      font-size: 1.05rem !important;
+      font-weight: 850 !important;
+      line-height: 1.42 !important;
+    }
+
+    .intrigue-points {
+      margin-top: 1rem !important;
+      display: grid !important;
+      gap: .7rem !important;
+    }
+
+    .intrigue-points li {
+      background: rgba(255, 247, 237, .92) !important;
+      border: 1px solid rgba(249, 115, 22, .20) !important;
+      padding: .78rem .85rem .78rem 2.55rem !important;
+      font-weight: 850 !important;
+      color: var(--slate-800) !important;
+      line-height: 1.35 !important;
+      position: relative !important;
+    }
+
+    .intrigue-points li:before {
+      left: .8rem !important;
+      top: .82rem !important;
+    }
+
+    .video-intrigue-shell {
+      background:
+        radial-gradient(circle at top right, rgba(249, 115, 22, .20), transparent 18rem),
+        linear-gradient(135deg, #020617 0%, #08111f 100%) !important;
+      padding: clamp(1.35rem, 3vw, 2rem) !important;
+      border: 2px solid #020617 !important;
+      box-shadow: 0 28px 90px rgba(2, 6, 23, .22) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      gap: 1rem !important;
+    }
+
+    .video-intrigue-shell .video-frame {
+      border: 1px solid rgba(255, 255, 255, .25) !important;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, .34) !important;
+      background: #111827 !important;
+      width: 100% !important;
+      aspect-ratio: 16 / 9 !important;
+      min-height: 310px !important;
+      flex: 0 0 auto !important;
+    }
+
+    .video-action-strong {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.09), rgba(249,115,22,.10)) !important;
+      border: 1px solid rgba(255,255,255,.18) !important;
+      padding: 1.35rem !important;
+      box-shadow: 0 22px 55px rgba(0,0,0,.18) !important;
+    }
+
+    .video-action-strong .mini-eyebrow {
+      display: inline-flex !important;
+      width: fit-content !important;
+      background: rgba(249, 115, 22, .18) !important;
+      color: #fed7aa !important;
+      border: 1px solid rgba(249, 115, 22, .35) !important;
+      padding: .42rem .58rem !important;
+      font-size: .72rem !important;
+      font-weight: 950 !important;
+      letter-spacing: .08em !important;
+      text-transform: uppercase !important;
+      margin-bottom: .8rem !important;
+    }
+
+    .video-action-strong h3 {
+      color: #ffffff !important;
+      font-size: clamp(1.45rem, 2.3vw, 2.05rem) !important;
+      line-height: 1.02 !important;
+      letter-spacing: -.05em !important;
+      margin-bottom: .75rem !important;
+    }
+
+    .video-action-strong p {
+      color: #dbeafe !important;
+      font-size: 1rem !important;
+      line-height: 1.52 !important;
+      font-weight: 780 !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .video-action-strong .btn-primary {
+      width: 100% !important;
+      margin-top: .2rem !important;
+      padding: 1.08rem 1.25rem !important;
+      font-size: 1rem !important;
+    }
+
+    @media (max-width: 1040px) {
+      .video-intrigue-wrap {
+        grid-template-columns: 1fr !important;
+      }
+
+      .video-intrigue-copy,
+      .video-intrigue-shell {
+        min-height: auto !important;
+      }
+    }
+
+</style>
 </head>
 <body>
 <div class="top-strip"><strong>Estimating course:</strong> if your shop is busy but still bleeding hours, the leak probably started in the estimate.</div>
@@ -220,33 +1213,43 @@
 <nav aria-label="Main navigation" class="nav">
 <a href="#problem">Problem</a><a href="#course">Course</a><a href="#tools">Tools</a><a href="#guarantee">Guarantee</a><a href="#proof">Proof</a>
 </nav>
-<a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Instant Access</a>
+<a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Course Access</a>
 </div>
 </header>
 <main id="top">
 <section class="hero">
 <div class="container hero-grid">
 <div>
-<div class="eyebrow">Built for welding and metal fabrication shops</div>
-<h1>Stop letting blind estimates gamble with your shop’s profit.</h1>
-<p class="hero-lede">You can have decades of experience, polished spreadsheets, and a serious estimating process, then still win a job that looks beautiful on paper and watch the shop run out of hours three weeks later.</p>
-<p>The problem is not a stupid team. It is an estimating system that can hide the white space: material buy lengths, kerf loss, handling, staging, quality checks, vendor logistics, field friction, unpriced risk, and markup-versus-margin mistakes. This course helps you turn that guessing game into a predictable profit engine.</p>
+<div class="eyebrow">Online fabrication estimating course for shops</div>
+<h1>The fabrication estimating course built to stop blind quotes from gambling with your shop’s profit.</h1>
+<p class="hero-lede">This course is for shop owners, estimators, project managers, welders, and fabricators who want a repeatable estimating system instead of another rushed number that looks good on paper and runs out of hours in the shop.</p>
+<p>Inside the course, you learn how to find the white space most estimates miss: material buy lengths, kerf loss, handling, staging, quality checks, vendor logistics, field friction, unpriced risk, and markup-versus-margin mistakes. The goal is simple: build quotes that win work without quietly donating the margin after the job is awarded.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Instant Access</a>
-<a class="btn btn-light" href="#video">Watch The 4-Minute Breakdown</a>
+<a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Course Access</a>
+<a class="btn btn-light" href="#video">Watch The Course Preview</a>
 </div>
 <div aria-label="Trust signals" class="trust-row">
-<div class="trust-card"><strong>9 Modules</strong><span>drawing review to final quote</span></div>
-<div class="trust-card"><strong>Tools Included</strong><span>workbooks, spreadsheet, checklists</span></div>
-<div class="trust-card"><strong>$497 USD</strong><span>one markup mistake can cost more</span></div>
+<div class="trust-card"><strong>9 Course Modules</strong><span>drawing review to final quote</span></div>
+<div class="trust-card"><strong>Course Tools Included</strong><span>workbooks, spreadsheet, checklists</span></div>
+<div class="trust-card"><strong>$497 USD</strong><span>full course plus tools</span></div>
 </div>
 </div>
-<aside aria-label="Course preview" class="hero-panel">
-<div class="panel-top"><strong>Hidden Leak Preview</strong><span class="status-dot">Course Included</span></div>
+<aside aria-label="Course problem preview" class="hero-panel">
+<div class="panel-top"><strong>What This Course Teaches You To Fix</strong><span class="status-dot">Course Included Today</span></div>
 <div class="panel-body">
-<div class="panel-total"><span>A 20% markup is not a 20% margin</span><strong>16.7%</strong><p style="margin:.7rem 0 0;color:#fecaca;font-weight:800;">That mistake alone can bleed profit before the job starts.</p></div>
+<div class="reader-problem">
+<span>The problem the course solves</span>
+<strong>The job looked profitable until the shop ran out of hours.</strong>
+<p>The quote was not stupid. The team was not lazy. The estimate needed a stronger course-based process for finding the hidden work before the job was won.</p>
+</div>
+<div class="fix-list">
+<div class="fix-item"><strong>Stop quoting only the finished part.</strong><span>Price the cutting, handling, setup, movement, checking, finish, freight, install, and real shop friction.</span></div>
+<div class="fix-item"><strong>Stop copying vendor quotes as if they are the full cost.</strong><span>Carry prep, loading, freight, receiving, inspection, coordination, rework risk, and your margin.</span></div>
+<div class="fix-item"><strong>Stop sending numbers that do not protect the job.</strong><span>Use clear assumptions, exclusions, alternates, validity, and change-order language before the customer says yes.</span></div>
+</div>
+<div class="panel-result"><strong>This is exactly what the course is built to teach.</strong><p>You get the lessons, worksheets, spreadsheet, checklists, and quote language to catch margin leaks before the job is won and before your crew is forced to rescue the number.</p></div>
 <div class="mini-grid">
-<div class="mini-stat"><span>Core Training</span><strong>9 modules</strong></div>
+<div class="mini-stat"><span>Course Training</span><strong>9 modules</strong></div>
 <div class="mini-stat"><span>Student Files</span><strong>PDFs</strong></div>
 <div class="mini-stat"><span>Spreadsheet</span><strong>Included</strong></div>
 <div class="mini-stat"><span>Bonus</span><strong>Sales</strong></div>
@@ -308,25 +1311,30 @@
 </div>
 </div>
 </section>
-<section id="video">
-<div class="container video-wrap">
-<div class="video-copy">
-<div class="eyebrow">Watch this first</div>
-<h2>Why experienced shops still run out of hours.</h2>
-<p>You may already have an estimating system. You may already have custom spreadsheets. You may already have experienced people. But if the system hides operational friction, the shop floor is still forced to gamble on bad data.</p>
-<p>In this video, Greg breaks down the hidden leaks that turn a clean-looking quote into a painful job after it is won.</p>
-<ul class="video-points">
-<li>Drawings show the final condition. They do not show the white space required to build it.</li>
-<li>Pricing 14 feet of HSS instead of the 24-foot stick you must buy donates material to the rack.</li>
-<li>Kerf, handling, flipping, staging, checks, and movement are real costs, not padding.</li>
-<li>Labour needs five buckets: touch time, setup time, movement time, control time, and friction time.</li>
-<li>A subcontractor quote is only the ticket price. It is not your full cost.</li>
-<li>A 20% markup gives you 16.7% margin, not 20%.</li>
+<section id="video" class="video-intrigue-section">
+<div class="container video-wrap video-intrigue-wrap">
+<div class="video-copy video-intrigue-copy">
+<div>
+<div class="eyebrow">Watch this course preview before you enroll</div>
+<h2>Before you buy the course, watch the problem it was built to fix.</h2>
+<p class="video-lead">This short preview shows why the course exists: experienced shops can have good people, decent spreadsheets, and years of judgment, then still get blindsided when a clean-looking job quietly runs out of hours.</p>
+<p class="video-curiosity-copy">Watch it before you enroll. You will see the exact kind of estimating leaks the course trains you to catch: the work hiding between the drawing, the vendor quote, the material buy, and the final number.</p>
+<div class="watch-trigger">
+<strong>The question this course answers</strong>
+<span>How do you build a quote that prices the real job, not only the version of the job the drawing admits exists?</span>
+</div>
+</div>
+<ul class="video-points intrigue-points">
+<li>The hidden leak that does not show up as a line item until the job is already won.</li>
+<li>The moment a good spreadsheet starts giving you confidence in an incomplete number.</li>
+<li>Why the shop floor gets blamed for estimating decisions made weeks earlier.</li>
+<li>The quiet handoff where vendor work, material buy length, and labour touches become your problem.</li>
+<li>Why a quote can look professional and still leave the business exposed.</li>
 </ul>
 </div>
-<div class="video-shell">
-<div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bcBrZXJIb24" title="Why fabrication quotes lose money before the shop touches the steel"></iframe></div>
-<div class="video-action-card"><h3>Turn estimating into a predictable profit engine.</h3><p>The video shows the leaks. The course gives you the framework, worksheets, spreadsheet, quote language, and pricing checks to institutionalize your numbers before the shop owns the job.</p><a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Lock Down Your Shop’s Future</a></div>
+<div class="video-shell video-intrigue-shell">
+<div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/FnwCSmVFsDY?rel=0&amp;modestbranding=1" title="Why experienced fabrication shops still run out of hours"></iframe></div>
+<div class="video-action-card video-action-strong"><span class="mini-eyebrow">Course preview</span><h3>The job does not have to look messy to become expensive.</h3><p>Watch the video first. Then the course offer below will make sense: the modules, worksheets, spreadsheet, quote language, and pricing checks are built to help you catch these leaks before the shop is forced to finish a number that never saw the whole job.</p><a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Enroll In The Course</a></div>
 </div>
 </div>
 </section>
@@ -345,8 +1353,8 @@
 </div>
 <div class="dark-card">
 <div class="eyebrow">The better standard</div>
-<h2>Stop quoting the object. Price the operation.</h2>
-<p>A professional estimate does more than count steel. It prices the buy, the cuts, the touches, the moves, the checks, the vendor chain, the risk, and the true margin required to protect the job.</p>
+<h2>The course teaches you to stop quoting the object and price the operation.</h2>
+<p>Inside the course, you learn how a professional estimate goes beyond counting steel. It prices the buy, the cuts, the touches, the moves, the checks, the vendor chain, the risk, and the true margin required to protect the job.</p>
 <div class="list-stack">
 <div class="win-row"><span class="icon-badge">✓</span><span>Separate material used from material purchased.</span></div>
 <div class="win-row"><span class="icon-badge">✓</span><span>Break labour into touch, setup, movement, control, and friction time.</span></div>
@@ -377,20 +1385,30 @@
 </div>
 </div>
 </section>
-<section id="tools">
-<div class="container two-col">
-<div>
+<section id="tools" class="tools-section">
+<div class="container tools-balanced">
+<div class="tools-copy">
 <div class="section-heading">
 <div class="eyebrow">What is included</div>
-<h2>Institutionalize your numbers before the shop is forced to guess.</h2>
-<p>This is built for application, not passive watching. Watch the lesson, use the worksheet, apply it to a real or sample quote, and build a repeatable standard for material buy lengths, labour buckets, subcontractor risk, micro-contingencies, and quote protection.</p>
+<h2>Enroll in the course and institutionalize your numbers before the shop is forced to guess.</h2>
+<p>This course is built for application, not passive watching. Watch each lesson, use the worksheet, apply it to a real or sample quote, and build a repeatable standard for material buy lengths, labour buckets, subcontractor risk, micro-contingencies, and quote protection.</p>
 </div>
-<ul class="features">
-<li>9 video training modules</li><li>Student workbook PDF for every module</li><li>Winning Quote Builder spreadsheet</li><li>Scope, labour, material, subcontractor, risk, and final price worksheets</li><li>Quote wording banks for assumptions, exclusions, schedule, changes, and risk</li><li>Bonus Sales for Estimators training</li><li>Fabricator Sales Cheat Sheet and Profit Protection Cheat Sheet</li>
+<ul class="features features-balanced">
+<li>9 video training modules</li>
+<li>Student workbook PDF for every module</li>
+<li>Winning Quote Builder spreadsheet</li>
+<li>Scope, labour, material, subcontractor, risk, and final price worksheets</li>
+<li>Quote wording banks for assumptions, exclusions, schedule, changes, and risk</li>
+<li>Bonus Sales for Estimators training</li>
+<li>Fabricator Sales Cheat Sheet and Profit Protection Cheat Sheet</li>
 </ul>
 </div>
-<div class="value-stack">
+<div class="value-stack balanced-stack">
+<div class="value-stack-head">
 <h3>Course Value Stack</h3>
+<p>Everything included in one practical system.</p>
+</div>
+<div class="value-items-grid">
 <div class="value-row">
 <div>
 <strong>Full Fabrication Estimating Course</strong>
@@ -447,6 +1465,8 @@
 </div>
 <strong>$97</strong>
 </div>
+</div>
+<div class="value-summary-grid">
 <div class="value-row total-value">
 <div>
 <strong>Total Estimated Standalone Value</strong>
@@ -457,15 +1477,17 @@
 <div class="value-row today-price">
 <div>
 <strong>Get Everything Today</strong>
-<span>The full course, workbooks, spreadsheet, cheat sheets, bonus training, and quote tools.</span>
+<span>The full course, 9 workbooks, spreadsheet, cheat sheets, bonus training, transcripts, and quote tools you can put to work immediately.</span>
 </div>
 <strong>$497 USD</strong>
 </div>
+</div>
 <div class="value-savings">
-    You save $3,123 today.
-  </div>
-<div style="margin-top:24px;">
-<a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Instant Access</a>
+<strong>You save $3,123 today.</strong>
+<span>Own the complete system for a fraction of its estimated standalone value.</span>
+</div>
+<div class="value-cta-wrap">
+<a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Course Access</a>
 </div>
 </div>
 </div>
@@ -492,9 +1514,9 @@
 <div class="guarantee-visual"><div class="guarantee-highlight"><strong>Pay once. Own it. Use it on real jobs.</strong><p>No subscriptions. No monthly platform trap. The goal is a practical estimating system you can return to before the next quote goes out.</p></div><div class="guarantee-workbook"><img alt="Shop-Floor Ready Guarantee workbook visual" class="guarantee-image" loading="lazy" src="https://gregsheldon.github.io/metalfabexcel/shopfloor-guarantee.png"/></div></div>
 </div>
 <div class="guarantee-grid">
-<div class="guarantee-card"><div class="g-icon">⚙</div><h3>Practical support after launch</h3><p>If something is unclear, email support and ask for help applying the system.</p></div>
-<div class="guarantee-card"><div class="g-icon">📄</div><h3>Real-world workbook references</h3><p>Use the worksheets and quote language banks while working through real scope.</p></div>
-<div class="guarantee-card"><div class="g-icon">🛠</div><h3>No subscription trap</h3><p>Buy the course once and use the framework when your next estimate comes in.</p></div>
+<div class="guarantee-card"><h3>Practical support after launch</h3><p>If something is unclear, email support and ask for help applying the system.</p></div>
+<div class="guarantee-card"><h3>Real-world workbook references</h3><p>Use the worksheets and quote language banks while working through real scope.</p></div>
+<div class="guarantee-card"><h3>No subscription trap</h3><p>Buy the course once and use the framework when your next estimate comes in.</p></div>
 </div>
 </div>
 </div>
@@ -532,8 +1554,8 @@
 <section id="enroll">
 <div class="container">
 <div class="cta-band">
-<div><div class="eyebrow">Enroll today</div><h2>Want a quoting system that fits real fabrication work?</h2><p>Learn how to catch missed scope, protect margin, and write clearer winning quotes before the next job hits the shop floor.</p></div>
-<div><div style="font-size:3.2rem;line-height:1;font-weight:950;color:#fff;letter-spacing:-.06em;margin-bottom:.8rem;">$497 <span style="font-size:1.1rem;color:#cbd5e1;">USD</span></div><a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Instant Access</a><p style="font-size:.82rem;margin:.8rem 0 0;">Secure checkout through Systeme.io. Instant access details are delivered after purchase.</p></div>
+<div><div class="eyebrow">Enroll in the course today</div><h2>Want the full fabrication estimating course?</h2><p>Get instant access to the 9-module course, student workbooks, spreadsheet, cheat sheets, bonus sales training, and quote tools so you can catch missed scope, protect margin, and write clearer winning quotes before the next job hits the shop floor.</p></div>
+<div><div style="font-size:3.2rem;line-height:1;font-weight:950;color:#fff;letter-spacing:-.06em;margin-bottom:.8rem;">$497 <span style="font-size:1.1rem;color:#cbd5e1;">USD</span></div><a class="btn btn-primary" href="https://grsh.systeme.io/ec-order-form" rel="noopener" target="_blank">Get Course Access</a><p style="font-size:.82rem;margin:.8rem 0 0;">Secure checkout through Systeme.io. Instant access details are delivered after purchase.</p></div>
 </div>
 </div>
 </section>
