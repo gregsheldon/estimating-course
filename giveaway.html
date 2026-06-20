@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+  <title>Free Fabrication Estimating Spreadsheets | Metal Fabrication Power Tools</title>
+
+  <meta
+    name="description"
+    content="Download two free metal fabrication estimating spreadsheets: the Labor Rate Calculator and the Arc-to-Floor Ratio Calculator. Find your true hourly rate, expose hidden labour, and quote with more confidence."
+  />
+
+  <meta property="og:title" content="Free Fabrication Estimating Spreadsheets" />
+  <meta
+    property="og:description"
+    content="Get the Labor Rate Calculator and Arc-to-Floor Ratio Calculator to catch hidden labour, overhead, weak rates, and underpriced shop-floor hours before you send the quote."
+  />
+  <meta property="og:image" content="https://gregsheldon.github.io/metalfabexcel/social-share.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" rel="icon" type="image/png" />
+  <link href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" rel="shortcut icon" type="image/png" />
+  <link href="https://gregsheldon.github.io/metalfabexcel/metal-tools-favicon.png" rel="apple-touch-icon" />
+
+  <style>
+    :root {
+      --slate-950:#020617;
+      --slate-900:#0f172a;
+      --slate-800:#1e293b;
+      --slate-700:#334155;
+      --slate-600:#475569;
+      --slate-500:#64748b;
+      --slate-400:#94a3b8;
+      --slate-300:#cbd5e1;
+      --slate-200:#e2e8f0;
+      --slate-100:#f1f5f9;
+      --slate-50:#f8fafc;
+      --orange-700:#c2410c;
+      --orange-600:#ea580c;
+      --orange-500:#f97316;
+      --orange-100:#ffedd5;
+      --orange-50:#fff7ed;
+      --red-700:#b91c1c;
+      --red-100:#fee2e2;
+      --green-800:#166534;
+      --green-700:#15803d;
+      --green-100:#dcfce7;
+      --blue-100:#dbeafe;
+      --blue-800:#1e40af;
+      --purple-100:#f3e8ff;
+      --purple-800:#6b21a8;
+      --shadow:0 24px 80px rgba(15,23,42,.14);
+      --shadow-soft:0 14px 40px rgba(15,23,42,.08);
+      --line:1px solid rgba(226,232,240,.92);
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    html {
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--slate-900);
+      background:
+        radial-gradient(circle at 8% 2%, rgba(249,115,22,.18), transparent 34rem),
+        radial-gradient(circle at 96% 18%, rgba(15,23,42,.08), transparent 28rem),
+        linear-gradient(180deg,#ffffff 0%,#f8fafc 44%,#f1f5f9 100%);
+      line-height:1.55;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img {
+      max-width:100%;
+      display:block;
+    }
+
+    .container {
+      width:min(1180px, calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .top-strip {
+      background:var(--slate-950);
+      color:#fff;
+      text-align:center;
+      padding:.62rem 1rem;
+      font-size:.88rem;
+      font-weight:850;
+      letter-spacing:-.01em;
+    }
+
+    .top-strip strong {
+      color:#fed7aa;
+    }
+
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(18px);
+      border-bottom:var(--line);
+    }
+
+    .header-inner {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+
+    .brand-logo {
+      display:block;
+      height:54px;
+      width:auto;
+      max-width:340px;
+      object-fit:contain;
+    }
+
+    .nav {
+      display:flex;
+      align-items:center;
+      gap:1.35rem;
+      font-size:.93rem;
+      color:var(--slate-600);
+      font-weight:850;
+    }
+
+    .nav a:hover {
+      color:var(--slate-950);
+    }
+
+    .btn {
+      border:0;
+      border-radius:0;
+      padding:1rem 1.28rem;
+      font-weight:950;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.45rem;
+      white-space:nowrap;
+      transition:.18s ease;
+      cursor:pointer;
+      font-size:1rem;
+      font-family:inherit;
+      text-align:center;
+    }
+
+    .btn:hover {
+      transform:translateY(-1px);
+    }
+
+    .btn-primary {
+      color:#fff;
+      background:linear-gradient(135deg,var(--orange-500),var(--orange-700));
+      box-shadow:0 14px 36px rgba(234,88,12,.30);
+    }
+
+    .btn-light {
+      color:var(--slate-950);
+      background:#fff;
+      border:1px solid var(--slate-200);
+      box-shadow:0 10px 24px rgba(15,23,42,.06);
+    }
+
+    .btn-dark {
+      color:#fff;
+      background:var(--slate-950);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 14px 34px rgba(2,6,23,.18);
+    }
+
+    h1,h2,h3,p {
+      margin-top:0;
+    }
+
+    h1 {
+      font-size:clamp(3rem, 7vw, 6.45rem);
+      line-height:.9;
+      letter-spacing:-.083em;
+      color:var(--slate-950);
+      margin-bottom:1.25rem;
+      max-width:960px;
+    }
+
+    h2 {
+      font-size:clamp(2.05rem, 4vw, 3.85rem);
+      line-height:.96;
+      letter-spacing:-.068em;
+      color:var(--slate-950);
+      margin-bottom:.9rem;
+    }
+
+    h3 {
+      font-size:1.38rem;
+      line-height:1.08;
+      letter-spacing:-.04em;
+      margin-bottom:.6rem;
+      color:var(--slate-950);
+    }
+
+    p {
+      color:var(--slate-600);
+      font-size:1.02rem;
+    }
+
+    section {
+      padding:64px 0;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:.45rem;
+      border:1px solid rgba(234,88,12,.24);
+      background:var(--orange-50);
+      color:var(--orange-700);
+      padding:.58rem .82rem;
+      font-size:.78rem;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:1.15rem;
+    }
+
+    .dark-eyebrow {
+      background:rgba(249,115,22,.16);
+      color:#fed7aa;
+      border-color:rgba(249,115,22,.38);
+    }
+
+    .hero {
+      padding:82px 0 58px;
+    }
+
+    .hero-grid {
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-lede {
+      font-size:clamp(1.1rem,2vw,1.34rem);
+      max-width:780px;
+      margin-bottom:1.15rem;
+      color:var(--slate-600);
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.8rem;
+      margin:1.8rem 0 1.6rem;
+    }
+
+    .micro-proof {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.65rem;
+      margin:1.2rem 0 0;
+    }
+
+    .micro-pill {
+      background:#fff;
+      border:1px solid var(--slate-200);
+      color:var(--slate-700);
+      padding:.62rem .8rem;
+      font-size:.88rem;
+      font-weight:850;
+      box-shadow:0 8px 22px rgba(15,23,42,.06);
+    }
+
+    .trust-row {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.8rem;
+      margin-top:2rem;
+    }
+
+    .trust-card {
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--slate-200);
+      padding:1rem;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .trust-card strong {
+      display:block;
+      font-size:1.26rem;
+      letter-spacing:-.045em;
+      color:var(--slate-950);
+      line-height:1;
+    }
+
+    .trust-card span {
+      color:var(--slate-600);
+      font-size:.9rem;
+      font-weight:750;
+    }
+
+    .signup-panel {
+      background:
+        radial-gradient(circle at top right, rgba(234,88,12,.24), transparent 280px),
+        linear-gradient(135deg,#020617 0%,#07111f 52%,#0b1220 100%);
+      color:#fff;
+      border:1px solid rgba(249,115,22,.35);
+      box-shadow:0 30px 90px rgba(2,6,23,.28);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .signup-panel:before {
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      background:rgba(249,115,22,.20);
+      top:-130px;
+      right:-130px;
+      filter:blur(6px);
+      pointer-events:none;
+    }
+
+    .panel-top {
+      position:relative;
+      z-index:1;
+      padding:1.35rem 1.45rem;
+      border-bottom:1px solid rgba(255,255,255,.1);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.8rem;
+    }
+
+    .panel-top strong {
+      color:#fff;
+      font-size:1.08rem;
+      line-height:1.1;
+    }
+
+    .status-dot {
+      display:inline-flex;
+      align-items:center;
+      gap:.45rem;
+      color:#bbf7d0;
+      font-weight:850;
+      font-size:.84rem;
+      white-space:nowrap;
+    }
+
+    .status-dot:before {
+      content:"";
+      width:9px;
+      height:9px;
+      background:#22c55e;
+      box-shadow:0 0 0 5px rgba(34,197,94,.12);
+    }
+
+    .panel-body {
+      position:relative;
+      z-index:1;
+      padding:1.55rem;
+    }
+
+    .training-card {
+      background:linear-gradient(135deg,rgba(127,29,29,.76),rgba(234,88,12,.23));
+      border:1px solid rgba(248,113,113,.38);
+      padding:1.35rem;
+      margin-bottom:1rem;
+    }
+
+    .training-card span {
+      display:block;
+      color:#fed7aa;
+      font-size:.76rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:950;
+      margin-bottom:.4rem;
+    }
+
+    .training-card strong {
+      display:block;
+      font-size:clamp(2.1rem,4vw,3.35rem);
+      line-height:.94;
+      letter-spacing:-.07em;
+      color:#fff;
+      margin-bottom:.7rem;
+    }
+
+    .training-card p {
+      color:#ffe4e6;
+      font-weight:800;
+      margin-bottom:0;
+    }
+
+    .signup-form {
+      display:grid;
+      gap:.75rem;
+      margin-top:1rem;
+    }
+
+    .form-field {
+      display:grid;
+      gap:.35rem;
+    }
+
+    .form-field label {
+      color:#e2e8f0;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:950;
+    }
+
+    .form-field input,
+    .form-field select {
+      width:100%;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      padding:1rem;
+      border-radius:0;
+      outline:none;
+      font-size:1rem;
+      font-family:inherit;
+    }
+
+    .form-field input::placeholder {
+      color:#94a3b8;
+    }
+
+    .form-field select option {
+      color:var(--slate-950);
+    }
+
+    .form-field input:focus,
+    .form-field select:focus {
+      border-color:var(--orange-500);
+      box-shadow:0 0 0 4px rgba(249,115,22,.16);
+    }
+
+    .signup-form .btn {
+      width:100%;
+      margin-top:.25rem;
+    }
+
+    .privacy-note {
+      color:var(--slate-300);
+      font-size:.84rem;
+      font-weight:700;
+      margin:.75rem 0 0;
+    }
+
+    .privacy-note a {
+      color:#fed7aa;
+      font-weight:900;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .mini-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.75rem;
+      margin-top:1rem;
+    }
+
+    .mini-stat {
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.1);
+      padding:1rem;
+    }
+
+    .mini-stat span {
+      display:block;
+      color:var(--slate-300);
+      font-size:.73rem;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    .mini-stat strong {
+      display:block;
+      font-size:1.35rem;
+      color:#fff;
+      letter-spacing:-.045em;
+      margin-top:.25rem;
+    }
+
+    .section-heading {
+      max-width:860px;
+      margin-bottom:1.7rem;
+    }
+
+    .section-heading.center {
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+
+    .section-heading p {
+      font-size:1.08rem;
+    }
+
+    .conversion-strip {
+      padding:28px 0;
+    }
+
+    .strip-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1rem;
+      background:#fff;
+      border:2px solid var(--slate-950);
+      box-shadow:var(--shadow-soft);
+      padding:1rem;
+    }
+
+    .strip-item {
+      border-left:5px solid var(--orange-600);
+      padding:.9rem;
+      background:var(--slate-50);
+    }
+
+    .strip-item strong {
+      display:block;
+      color:var(--slate-950);
+      font-size:1rem;
+      line-height:1.12;
+      margin-bottom:.25rem;
+    }
+
+    .strip-item span {
+      display:block;
+      color:var(--slate-600);
+      font-weight:750;
+      font-size:.9rem;
+      line-height:1.35;
+    }
+
+    .two-col {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.2rem;
+      align-items:stretch;
+    }
+
+    .story-card {
+      background:#fff;
+      border:2px solid var(--slate-950);
+      box-shadow:var(--shadow);
+      padding:clamp(1.3rem,3vw,2.1rem);
+    }
+
+    .dark-card {
+      background:
+        radial-gradient(circle at top right, rgba(249,115,22,.13), transparent 18rem),
+        linear-gradient(135deg,#020617,#0f172a);
+      color:#fff;
+      border:2px solid var(--orange-600);
+      box-shadow:0 25px 80px rgba(2,6,23,.22);
+      padding:clamp(1.3rem,3vw,2.1rem);
+    }
+
+    .dark-card h2,
+    .dark-card h3,
+    .dark-card strong {
+      color:#fff;
+    }
+
+    .dark-card p {
+      color:var(--slate-300);
+    }
+
+    .list-stack {
+      display:grid;
+      gap:.75rem;
+      margin-top:1.1rem;
+    }
+
+    .pain-row,
+    .win-row {
+      display:flex;
+      gap:.8rem;
+      align-items:flex-start;
+      border-left:5px solid var(--red-700);
+      background:#fff5f5;
+      padding:1rem;
+      color:var(--slate-800);
+      font-weight:750;
+    }
+
+    .win-row {
+      border-left-color:var(--green-700);
+      background:#f0fdf4;
+    }
+
+    .icon-badge {
+      width:30px;
+      height:30px;
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      background:#fff;
+      box-shadow:0 6px 16px rgba(15,23,42,.08);
+      font-weight:950;
+    }
+
+    .lead-tools {
+      background:
+        radial-gradient(circle at 12% 8%, rgba(249,115,22,.08), transparent 28rem),
+        linear-gradient(180deg,rgba(255,255,255,.78),rgba(248,250,252,.94));
+    }
+
+    .tool-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.2rem;
+      align-items:stretch;
+    }
+
+    .tool-card {
+      background:#fff;
+      border:2px solid var(--slate-950);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:grid;
+      grid-template-rows:auto 1fr;
+    }
+
+    .tool-card-head {
+      background:
+        radial-gradient(circle at top right, rgba(249,115,22,.22), transparent 15rem),
+        linear-gradient(135deg,#020617,#0f172a);
+      color:#fff;
+      padding:1.35rem;
+      border-bottom:5px solid var(--orange-600);
+    }
+
+    .tool-card-head span {
+      display:inline-flex;
+      background:var(--orange-600);
+      color:#fff;
+      font-size:.72rem;
+      text-transform:uppercase;
+      font-weight:950;
+      letter-spacing:.08em;
+      padding:.42rem .62rem;
+      margin-bottom:.75rem;
+    }
+
+    .tool-card-head h3 {
+      color:#fff;
+      font-size:clamp(1.75rem,3vw,2.55rem);
+      margin-bottom:.55rem;
+    }
+
+    .tool-card-head p {
+      color:#cbd5e1;
+      font-weight:750;
+      margin-bottom:0;
+    }
+
+    .tool-card-body {
+      padding:1.35rem;
+    }
+
+    .feature-list {
+      display:grid;
+      gap:.72rem;
+      margin:1rem 0 0;
+      padding:0;
+      list-style:none;
+    }
+
+    .feature-list li {
+      display:flex;
+      align-items:flex-start;
+      gap:.65rem;
+      color:var(--slate-700);
+      font-weight:760;
+      line-height:1.38;
+    }
+
+    .feature-list li:before {
+      content:"✓";
+      width:26px;
+      height:26px;
+      flex:0 0 26px;
+      display:grid;
+      place-items:center;
+      background:var(--orange-600);
+      color:#fff;
+      font-size:.78rem;
+      font-weight:950;
+    }
+
+    .preview-wrap {
+      margin-top:1.1rem;
+      border:1px solid var(--slate-200);
+      background:var(--slate-50);
+      padding:.75rem;
+    }
+
+    .excel-preview {
+      background:#fff;
+      border:1px solid var(--slate-300);
+      box-shadow:0 12px 28px rgba(15,23,42,.08);
+      overflow:hidden;
+    }
+
+    .excel-bar {
+      background:var(--slate-950);
+      color:#fff;
+      padding:.62rem .75rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.75rem;
+      font-size:.78rem;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    .excel-tabs {
+      display:flex;
+      gap:.3rem;
+      flex-wrap:wrap;
+    }
+
+    .excel-tab {
+      background:rgba(255,255,255,.1);
+      color:#e2e8f0;
+      padding:.35rem .5rem;
+      font-size:.68rem;
+      font-weight:900;
+    }
+
+    .sheet-grid {
+      display:grid;
+      grid-template-columns:1.05fr .75fr .75fr;
+      border-top:1px solid var(--slate-200);
+    }
+
+    .sheet-cell {
+      min-height:40px;
+      padding:.62rem;
+      border-right:1px solid var(--slate-200);
+      border-bottom:1px solid var(--slate-200);
+      font-size:.82rem;
+      color:var(--slate-700);
+      font-weight:760;
+    }
+
+    .sheet-cell.head {
+      background:var(--slate-950);
+      color:#fff;
+      font-size:.72rem;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    .sheet-cell.input {
+      background:#ffedd5;
+    }
+
+    .sheet-cell.output {
+      background:#dbeafe;
+      color:#1e3a8a;
+      font-weight:950;
+    }
+
+    .sheet-cell.warn {
+      background:#fef9c3;
+      color:#854d0e;
+      font-weight:900;
+    }
+
+    .quote-band {
+      background:
+        radial-gradient(circle at top right, rgba(249,115,22,.22), transparent 18rem),
+        linear-gradient(135deg,#020617,#0f172a);
+      color:#fff;
+      padding:clamp(1.5rem,4vw,2.6rem);
+      box-shadow:0 28px 80px rgba(2,6,23,.22);
+      overflow:hidden;
+      position:relative;
+      border-left:8px solid var(--orange-600);
+    }
+
+    .quote-band h2 {
+      color:#fff;
+      max-width:940px;
+    }
+
+    .quote-band p {
+      color:var(--slate-300);
+      max-width:860px;
+    }
+
+    .comparison-section {
+      background:#fff;
+    }
+
+    .compare-table {
+      background:#fff;
+      border:2px solid var(--slate-950);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .compare-row {
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      border-bottom:1px solid var(--slate-200);
+    }
+
+    .compare-row:last-child {
+      border-bottom:0;
+    }
+
+    .compare-cell {
+      padding:1rem;
+      border-right:1px solid var(--slate-200);
+      font-weight:750;
+      color:var(--slate-700);
+    }
+
+    .compare-cell:last-child {
+      border-right:0;
+    }
+
+    .compare-head .compare-cell {
+      background:var(--slate-950);
+      color:#fff;
+      text-transform:uppercase;
+      font-size:.78rem;
+      letter-spacing:.08em;
+      font-weight:950;
+    }
+
+    .bad {
+      color:var(--red-700);
+      font-weight:950;
+    }
+
+    .good {
+      color:var(--green-700);
+      font-weight:950;
+    }
+
+    .who-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1rem;
+    }
+
+    .who-card {
+      background:#fff;
+      border:1px solid var(--slate-200);
+      box-shadow:var(--shadow-soft);
+      padding:1.3rem;
+    }
+
+    .who-card h3 {
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+    }
+
+    .who-card h3:before {
+      content:"✓";
+      background:var(--orange-600);
+      color:#fff;
+      width:28px;
+      height:28px;
+      display:grid;
+      place-items:center;
+      flex:0 0 28px;
+      font-size:.85rem;
+    }
+
+    .after-register {
+      background:#fff;
+    }
+
+    .steps-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1rem;
+    }
+
+    .step-card {
+      background:#fff;
+      border:1px solid var(--slate-200);
+      box-shadow:var(--shadow-soft);
+      padding:1.3rem;
+      position:relative;
+    }
+
+    .step-num {
+      display:inline-grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      background:var(--slate-950);
+      color:#fff;
+      font-weight:950;
+      margin-bottom:.9rem;
+    }
+
+    .about-section {
+      padding:78px 0;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(249,115,22,.11), transparent 24rem),
+        linear-gradient(180deg,rgba(255,255,255,.75),rgba(248,250,252,.98));
+    }
+
+    .about-card {
+      display:grid;
+      grid-template-columns:minmax(330px,.9fr) minmax(0,1.1fr);
+      gap:clamp(1.4rem,4vw,3rem);
+      background:#fff;
+      border:2px solid var(--slate-950);
+      box-shadow:var(--shadow);
+      padding:clamp(1.25rem,3.5vw,2.4rem);
+      align-items:stretch;
+      overflow:hidden;
+    }
+
+    .about-media {
+      background:
+        radial-gradient(circle at 50% 10%, rgba(249,115,22,.22), transparent 15rem),
+        linear-gradient(135deg,#020617 0%,#0f172a 100%);
+      border:1px solid rgba(15,23,42,.25);
+      min-height:540px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1.25rem;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .about-media:before {
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      right:-100px;
+      top:-100px;
+      background:rgba(249,115,22,.26);
+      pointer-events:none;
+    }
+
+    .about-media:after {
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      left:-100px;
+      bottom:-100px;
+      background:rgba(255,255,255,.08);
+      pointer-events:none;
+    }
+
+    .avatar {
+      position:relative;
+      z-index:1;
+      width:min(100%, 390px);
+      height:auto;
+      max-height:500px;
+      object-fit:contain;
+      object-position:center;
+      filter:drop-shadow(0 28px 55px rgba(0,0,0,.42));
+      background:transparent;
+    }
+
+    .about-content {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      max-width:780px;
+    }
+
+    .about-content h2 {
+      font-size:clamp(2.2rem,4.4vw,4.3rem);
+      line-height:.94;
+      margin-bottom:1rem;
+    }
+
+    .about-content p {
+      font-size:1.05rem;
+      line-height:1.62;
+      max-width:720px;
+    }
+
+    .about-proof-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.75rem;
+      margin:1rem 0 1.15rem;
+    }
+
+    .about-proof {
+      background:var(--slate-50);
+      border:1px solid var(--slate-200);
+      padding:.9rem;
+    }
+
+    .about-proof strong {
+      display:block;
+      color:var(--slate-950);
+      font-size:1.05rem;
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+
+    .about-proof span {
+      display:block;
+      color:var(--slate-600);
+      font-size:.86rem;
+      font-weight:750;
+      margin-top:.25rem;
+    }
+
+    .contact-lines {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.75rem;
+      margin-top:.35rem;
+    }
+
+    .contact-pill {
+      background:var(--slate-100);
+      border:1px solid var(--slate-200);
+      padding:.65rem .85rem;
+      color:var(--slate-700);
+      font-weight:850;
+    }
+
+    .faq-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+    }
+
+    .faq-item {
+      background:#fff;
+      border:1px solid var(--slate-200);
+      box-shadow:var(--shadow-soft);
+      padding:1.25rem;
+    }
+
+    .final-cta {
+      padding:78px 0 110px;
+    }
+
+    .final-cta-card {
+      background:
+        radial-gradient(circle at top right, rgba(249,115,22,.24), transparent 22rem),
+        linear-gradient(135deg,#020617 0%,#08111f 58%,#0f172a 100%);
+      color:#ffffff;
+      border:2px solid #020617;
+      border-left:8px solid var(--orange-600);
+      box-shadow:0 28px 80px rgba(2,6,23,.24);
+      padding:clamp(1.5rem,4vw,2.6rem);
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);
+      gap:clamp(1.2rem,3vw,2rem);
+      align-items:center;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .final-cta-card:after {
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      right:-110px;
+      top:-110px;
+      background:rgba(249,115,22,.22);
+      pointer-events:none;
+    }
+
+    .final-cta-card > * {
+      position:relative;
+      z-index:1;
+    }
+
+    .final-cta-copy h2 {
+      color:#ffffff;
+      font-size:clamp(2.25rem,4.6vw,4.65rem);
+      line-height:.92;
+      letter-spacing:-.075em;
+      margin-bottom:1rem;
+    }
+
+    .final-cta-copy p {
+      color:#cbd5e1;
+      font-size:clamp(1.02rem,1.4vw,1.18rem);
+      line-height:1.58;
+      font-weight:720;
+      max-width:760px;
+      margin-bottom:0;
+    }
+
+    .final-cta-box {
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      padding:1.25rem;
+      display:grid;
+      gap:.85rem;
+      box-shadow:0 18px 55px rgba(0,0,0,.18);
+    }
+
+    .final-cta-box strong {
+      color:#ffffff;
+      font-size:1.55rem;
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+
+    .final-cta-box span {
+      color:#dbeafe;
+      font-weight:750;
+      line-height:1.45;
+    }
+
+    .final-cta-box .btn {
+      width:100%;
+      margin-top:.25rem;
+    }
+
+    .sticky-cta {
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:60;
+      background:rgba(2,6,23,.94);
+      backdrop-filter:blur(16px);
+      border-top:1px solid rgba(255,255,255,.12);
+      color:#fff;
+      padding:.75rem 1rem;
+      box-shadow:0 -20px 50px rgba(2,6,23,.25);
+    }
+
+    .sticky-inner {
+      width:min(1180px, calc(100% - 12px));
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+
+    .sticky-inner strong {
+      display:block;
+      color:#fff;
+      line-height:1.1;
+    }
+
+    .sticky-inner span {
+      color:#cbd5e1;
+      font-size:.9rem;
+      font-weight:750;
+    }
+
+    .sticky-inner .btn {
+      padding:.82rem 1rem;
+    }
+
+    .site-footer {
+      background:var(--slate-950);
+      color:var(--slate-300);
+      text-align:center;
+      padding:2.2rem 1rem 6rem;
+      font-size:.9rem;
+    }
+
+    .site-footer a {
+      color:#fed7aa;
+      font-weight:850;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .footer-lines {
+      display:grid;
+      gap:.35rem;
+      justify-items:center;
+    }
+
+    @media (max-width:1180px) {
+      .strip-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media (max-width:1040px) {
+      .hero-grid,
+      .two-col,
+      .tool-grid,
+      .final-cta-card,
+      .about-card {
+        grid-template-columns:1fr;
+      }
+
+      .who-grid,
+      .steps-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .faq-grid {
+        grid-template-columns:1fr;
+      }
+
+      .final-cta-box {
+        max-width:520px;
+      }
+
+      .about-content {
+        max-width:none;
+      }
+
+      .about-media {
+        min-height:460px;
+      }
+
+      .avatar {
+        max-height:420px;
+        width:min(100%, 340px);
+      }
+    }
+
+    @media (max-width:760px) {
+      .nav {
+        display:none;
+      }
+
+      .header-inner {
+        min-height:66px;
+        flex-wrap:wrap;
+        padding:.75rem 0;
+      }
+
+      .brand-logo {
+        height:46px;
+        max-width:260px;
+      }
+
+      .header-inner .btn {
+        width:100%;
+      }
+
+      .hero {
+        padding-top:48px;
+      }
+
+      .hero-actions .btn {
+        width:100%;
+      }
+
+      .trust-row,
+      .mini-grid,
+      .who-grid,
+      .about-proof-grid,
+      .strip-grid,
+      .steps-grid {
+        grid-template-columns:1fr;
+      }
+
+      .panel-top {
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .compare-row {
+        grid-template-columns:1fr;
+      }
+
+      .compare-cell {
+        border-right:0;
+        border-bottom:1px solid var(--slate-200);
+      }
+
+      .compare-cell:last-child {
+        border-bottom:0;
+      }
+
+      .sheet-grid {
+        grid-template-columns:1fr;
+      }
+
+      .sheet-cell {
+        border-right:0;
+      }
+
+      .about-section {
+        padding:48px 0;
+      }
+
+      .about-card {
+        padding:1rem;
+      }
+
+      .about-media {
+        min-height:390px;
+      }
+
+      .avatar {
+        width:min(100%, 280px);
+        max-height:350px;
+      }
+
+      .sticky-inner {
+        display:grid;
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .sticky-inner .btn {
+        width:100%;
+      }
+
+      .site-footer {
+        padding-bottom:9.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip">
+    <strong>Free spreadsheet pack:</strong> calculate your true labour rate and expose hidden fabrication hours before you quote the job.
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a aria-label="Metal Fabrication Power Tools home" class="brand" href="#top">
+        <img
+          alt="Metal Fabrication Power Tools"
+          class="brand-logo"
+          src="https://gregsheldon.github.io/metalfabexcel/metal-fabrication-powertools-logo.png"
+        />
+      </a>
+
+      <nav aria-label="Main navigation" class="nav">
+        <a href="#tools">Free Tools</a>
+        <a href="#problem">Problem</a>
+        <a href="#inside">Inside</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#signup">Get The Spreadsheets</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Free Excel tools for fabrication shops</div>
+
+          <h1>Stop quoting labour like the arc is the whole job.</h1>
+
+          <p class="hero-lede">
+            Download two practical fabrication estimating spreadsheets that help you calculate your true hourly rate, expose hidden shop-floor labour, and catch underpriced hours before the customer says yes.
+          </p>
+
+          <p>
+            Most bad fabrication quotes do not look bad when they leave the office. They look bad later, when the shop burns extra handling time, the installer waits on site, the real overhead was never recovered, or the estimate only priced the obvious work.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#signup">Download The Free Spreadsheet Pack</a>
+            <a class="btn btn-light" href="#tools">See What Is Included</a>
+          </div>
+
+          <div class="micro-proof" aria-label="Quick proof points">
+            <div class="micro-pill">Built for metal fabrication</div>
+            <div class="micro-pill">Excel workbook files</div>
+            <div class="micro-pill">Use on your next quote</div>
+          </div>
+
+          <div aria-label="Lead magnet trust signals" class="trust-row">
+            <div class="trust-card">
+              <strong>2 Free Tools</strong>
+              <span>labour rate plus AFR converter</span>
+            </div>
+
+            <div class="trust-card">
+              <strong>Hidden Hours</strong>
+              <span>setup, movement, control, friction</span>
+            </div>
+
+            <div class="trust-card">
+              <strong>Real Pricing</strong>
+              <span>burden, overhead, profit, risk</span>
+            </div>
+          </div>
+        </div>
+
+        <aside aria-label="Spreadsheet download form" class="signup-panel" id="signup">
+          <div class="panel-top">
+            <strong>Get The Free Spreadsheet Pack</strong>
+            <span class="status-dot">Available Now</span>
+          </div>
+
+          <div class="panel-body">
+            <div class="training-card">
+              <span>Free fabrication estimating tools</span>
+              <strong>Labor Rate + Arc-To-Floor Calculator</strong>
+              <p>
+                Use these before your next quote so you are not guessing your hourly rate or pretending weld time is the whole labour story.
+              </p>
+            </div>
+
+            <form class="signup-form" action="FORM_ACTION_URL_HERE" method="post">
+              <input type="hidden" name="lead_magnet" value="Free Fabrication Estimating Spreadsheet Pack" />
+              <input type="hidden" name="source_page" value="lead-magnet-optin-page" />
+
+              <div class="form-field">
+                <label for="first-name">First Name</label>
+                <input id="first-name" name="first_name" type="text" placeholder="Enter your first name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email address" required />
+              </div>
+
+              <div class="form-field">
+                <label for="role">Which best describes you?</label>
+                <select id="role" name="role">
+                  <option value="Shop Owner">Shop Owner</option>
+                  <option value="Estimator">Estimator</option>
+                  <option value="Foreman / Lead Hand">Foreman / Lead Hand</option>
+                  <option value="Welder / Fabricator">Welder / Fabricator</option>
+                  <option value="Project Manager">Project Manager</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Send Me The Free Spreadsheets</button>
+            </form>
+
+            <p class="privacy-note">
+              No spam. No generic business fluff. By submitting, you agree to receive the spreadsheet download and related Metal Fabrication Power Tools emails. View the
+              <a href="https://gregsheldon.github.io/estimating-course/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and
+              <a href="https://gregsheldon.github.io/estimating-course/terms.html" target="_blank" rel="noopener">Terms</a>.
+            </p>
+
+            <div class="mini-grid">
+              <div class="mini-stat">
+                <span>Tool 1</span>
+                <strong>True Rate</strong>
+              </div>
+
+              <div class="mini-stat">
+                <span>Tool 2</span>
+                <strong>AFR</strong>
+              </div>
+
+              <div class="mini-stat">
+                <span>Find</span>
+                <strong>Hidden Hours</strong>
+              </div>
+
+              <div class="mini-stat">
+                <span>Protect</span>
+                <strong>Margin</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="conversion-strip" aria-label="What the spreadsheet pack helps with">
+      <div class="container">
+        <div class="strip-grid">
+          <div class="strip-item">
+            <strong>Find your real labour rate</strong>
+            <span>Include payroll burden, lost days, billable hours, overhead, taxes, and profit.</span>
+          </div>
+
+          <div class="strip-item">
+            <strong>Expose hidden floor hours</strong>
+            <span>Turn arc time into real labour using handling, access, position, repeat, fatigue, and risk.</span>
+          </div>
+
+          <div class="strip-item">
+            <strong>Stop quoting from memory</strong>
+            <span>Use clear inputs, formulas, warnings, and output summaries instead of gut feel.</span>
+          </div>
+
+          <div class="strip-item">
+            <strong>Quote with more confidence</strong>
+            <span>Check the number before you send it, not after the job is already won.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="container two-col">
+        <div class="story-card">
+          <div class="eyebrow">The quiet profit leak</div>
+          <h2>Your shop can be busy and still be undercharging every hour.</h2>
+          <p>
+            If your rate is based on what sounds normal in the market, or what you used last year, it may not be recovering the real cost of labour. Wages are only the start. Paid time off, payroll burden, non-billable time, overhead, shop support, taxes, and profit all need a home.
+          </p>
+          <p>
+            The Labor Rate Calculator helps you turn those costs into a number you can actually quote with, then gives you a simple job quote tab so you can use that rate immediately.
+          </p>
+        </div>
+
+        <div class="dark-card">
+          <div class="eyebrow dark-eyebrow">The estimating trap</div>
+          <h2>Arc time is not shop time.</h2>
+          <p>
+            A weld might only take a few minutes to run. But the job still includes setup, print review, staging, clamping, flipping, checking, grinding, cleaning, finish protection, loading, field travel, site friction, and all the small actions that never show up in the arc calculation.
+          </p>
+          <p>
+            The Arc-to-Floor Ratio Calculator helps convert visible weld time into real floor time so the hidden labour does not quietly come out of your margin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-tools" id="tools">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="eyebrow">What you get free</div>
+          <h2>Two spreadsheets that make hidden estimating problems visible.</h2>
+          <p>
+            These are not pretty blank templates. They are practical workbooks with guided inputs, calculated outputs, plain-English explanations, and built-in checks designed around real fabrication quoting.
+          </p>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card">
+            <div class="tool-card-head">
+              <span>Spreadsheet 01</span>
+              <h3>Labor Rate Calculator</h3>
+              <p>Figure out what your shop or field labour hour actually needs to sell for.</p>
+            </div>
+
+            <div class="tool-card-body">
+              <p>
+                This calculator walks through wage, payroll burden, paid holidays, vacation, lost time, billable hours, overhead, miscellaneous costs, tax, and profit so you are not guessing at your hourly rate.
+              </p>
+
+              <ul class="feature-list">
+                <li>Calculates direct labour cost after burden and lost time.</li>
+                <li>Spreads annual overhead across real billable hours.</li>
+                <li>Shows break-even labour cost before profit.</li>
+                <li>Builds a suggested sell rate after taxes and desired profit.</li>
+                <li>Includes a Simple Job Quote tab using the calculated rate.</li>
+              </ul>
+
+              <div class="preview-wrap" aria-label="Labor Rate Calculator preview">
+                <div class="excel-preview">
+                  <div class="excel-bar">
+                    <span>Rate Calculator</span>
+                    <div class="excel-tabs">
+                      <div class="excel-tab">Inputs</div>
+                      <div class="excel-tab">Outputs</div>
+                    </div>
+                  </div>
+                  <div class="sheet-grid">
+                    <div class="sheet-cell head">Line Item</div>
+                    <div class="sheet-cell head">Amount</div>
+                    <div class="sheet-cell head">Result</div>
+                    <div class="sheet-cell input">Base wage</div>
+                    <div class="sheet-cell input">$32/hr</div>
+                    <div class="sheet-cell output">Loaded cost</div>
+                    <div class="sheet-cell input">Billable hours</div>
+                    <div class="sheet-cell input">6.5/day</div>
+                    <div class="sheet-cell output">True cost/hr</div>
+                    <div class="sheet-cell input">Overhead</div>
+                    <div class="sheet-cell input">Annual cost</div>
+                    <div class="sheet-cell warn">Rate warning</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tool-card" id="inside">
+            <div class="tool-card-head">
+              <span>Spreadsheet 02</span>
+              <h3>Arc-to-Floor Ratio Calculator</h3>
+              <p>Convert weld arc time into real floor hours using fabrication reality.</p>
+            </div>
+
+            <div class="tool-card-body">
+              <p>
+                This workbook proves the arc is only one slice of the labour story. Enter weld inches, travel speed, shop rate, job type, handling, access, position, repeat, fatigue, and risk to see how arc-only pricing can miss real money.
+              </p>
+
+              <ul class="feature-list">
+                <li>Simple AFR Calculator for fast arc-time to floor-time conversion.</li>
+                <li>Advanced AFR Calculator for mixed weld conditions.</li>
+                <li>Bucket Warning System for setup, movement, control, friction, finish, and loadout.</li>
+                <li>Event Build-Up for counting real shop actions, not feelings.</li>
+                <li>Field Work Add-On, Quote Assumptions, Output Summary, and Post-Job Calibration tabs.</li>
+              </ul>
+
+              <div class="preview-wrap" aria-label="AFR Calculator preview">
+                <div class="excel-preview">
+                  <div class="excel-bar">
+                    <span>AFR Calculator</span>
+                    <div class="excel-tabs">
+                      <div class="excel-tab">Simple</div>
+                      <div class="excel-tab">Field</div>
+                      <div class="excel-tab">Output</div>
+                    </div>
+                  </div>
+                  <div class="sheet-grid">
+                    <div class="sheet-cell head">Input</div>
+                    <div class="sheet-cell head">Factor</div>
+                    <div class="sheet-cell head">Output</div>
+                    <div class="sheet-cell input">Weld inches</div>
+                    <div class="sheet-cell input">Travel speed</div>
+                    <div class="sheet-cell output">Arc hours</div>
+                    <div class="sheet-cell input">Handling</div>
+                    <div class="sheet-cell input">Access</div>
+                    <div class="sheet-cell output">Floor hours</div>
+                    <div class="sheet-cell warn">Missing labour?</div>
+                    <div class="sheet-cell warn">Risk check</div>
+                    <div class="sheet-cell output">Money missed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="quote-band">
+          <div class="eyebrow dark-eyebrow">The point of these tools</div>
+          <h2>The goal is not to make estimating more complicated. The goal is to stop guessing at the parts that lose money.</h2>
+          <p>
+            These spreadsheets give you a slower, cleaner way to check the number before it leaves your office. You still use judgment. You still use shop experience. But now the hidden costs have somewhere to show up before the quote becomes a job.
+          </p>
+          <a class="btn btn-primary" href="#signup">Get The Free Spreadsheet Pack</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="eyebrow">Before and after</div>
+          <h2>What changes when you use the tools.</h2>
+        </div>
+
+        <div class="compare-table" role="table" aria-label="Before and after using the spreadsheet pack">
+          <div class="compare-row compare-head" role="row">
+            <div class="compare-cell" role="columnheader">Quote Area</div>
+            <div class="compare-cell" role="columnheader">Without The Tools</div>
+            <div class="compare-cell" role="columnheader">With The Tools</div>
+          </div>
+
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><strong>Hourly rate</strong></div>
+            <div class="compare-cell bad" role="cell">Based on what feels normal or what the market seems to accept.</div>
+            <div class="compare-cell good" role="cell">Based on wage, burden, billable time, overhead, tax, and profit.</div>
+          </div>
+
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><strong>Weld labour</strong></div>
+            <div class="compare-cell bad" role="cell">Arc time gets treated like the whole labour story.</div>
+            <div class="compare-cell good" role="cell">Arc time becomes a starting point, then real floor hours are checked.</div>
+          </div>
+
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><strong>Hidden work</strong></div>
+            <div class="compare-cell bad" role="cell">Setup, movement, checking, friction, finish, and loadout get missed.</div>
+            <div class="compare-cell good" role="cell">The workbook flags the labour buckets so they cannot hide as easily.</div>
+          </div>
+
+          <div class="compare-row" role="row">
+            <div class="compare-cell" role="cell"><strong>Quote confidence</strong></div>
+            <div class="compare-cell bad" role="cell">The number leaves the office with too many assumptions in your head.</div>
+            <div class="compare-cell good" role="cell">The estimate has clearer inputs, outputs, warnings, and assumptions.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div class="story-card">
+          <div class="eyebrow">Stop doing this</div>
+          <h2>Quoting from shortcuts that punish your own shop.</h2>
+          <div class="list-stack">
+            <div class="pain-row"><span class="icon-badge">!</span><span>Using the employee wage as if it is the true billable cost.</span></div>
+            <div class="pain-row"><span class="icon-badge">!</span><span>Calculating weld time but forgetting the labour before and after the arc.</span></div>
+            <div class="pain-row"><span class="icon-badge">!</span><span>Letting overhead, admin, supervision, and non-billable time disappear.</span></div>
+            <div class="pain-row"><span class="icon-badge">!</span><span>Winning work because the quote was missing the same hours your shop still has to pay for.</span></div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="eyebrow">Start doing this</div>
+          <h2>Build the number around how the work actually happens.</h2>
+          <div class="list-stack">
+            <div class="win-row"><span class="icon-badge">✓</span><span>Calculate the hourly rate your company actually needs to sell.</span></div>
+            <div class="win-row"><span class="icon-badge">✓</span><span>Use arc time as a starting point, not the final labour number.</span></div>
+            <div class="win-row"><span class="icon-badge">✓</span><span>Force setup, movement, control, friction, field add-ons, and finish handling into the conversation.</span></div>
+            <div class="win-row"><span class="icon-badge">✓</span><span>Send quotes with more confidence because the weak spots were checked first.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading center">
+          <div class="eyebrow">Who this is for</div>
+          <h2>Made for people who price real fabrication work.</h2>
+          <p>
+            This spreadsheet pack is for anyone who needs a better way to see labour, overhead, hidden time, and job risk before a number goes out.
+          </p>
+        </div>
+
+        <div class="who-grid">
+          <div class="who-card">
+            <h3>Shop Owners</h3>
+            <p>Use it to check whether your hourly rate actually supports wages, overhead, profit, and the way your shop really operates.</p>
+          </div>
+
+          <div class="who-card">
+            <h3>Estimators</h3>
+            <p>Use it as a fast reality check before labour gets priced too clean and the quote goes out underprotected.</p>
+          </div>
+
+          <div class="who-card">
+            <h3>Foremen & Lead Hands</h3>
+            <p>Use it to explain why the work takes longer than the arc time, and where setup, movement, control, and friction show up.</p>
+          </div>
+
+          <div class="who-card">
+            <h3>Welders Moving Into Quoting</h3>
+            <p>Use it to connect the real floor work you already understand to a quote number that protects the shop.</p>
+          </div>
+
+          <div class="who-card">
+            <h3>Project Managers</h3>
+            <p>Use it to review assumptions, field add-ons, and labour risk before the job is handed to production or install.</p>
+          </div>
+
+          <div class="who-card">
+            <h3>Custom Fabricators</h3>
+            <p>Use it when every job is a little different and a generic price per pound is not enough to protect the real scope.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="after-register">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="eyebrow">What happens next</div>
+          <h2>Download the tools and test them on one real quote.</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>Enter your email</h3>
+            <p>You get access to the free spreadsheet pack and instructions for how to start using the workbooks.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>Open the calculators</h3>
+            <p>Start with the Labor Rate Calculator, then use the AFR Calculator to compare arc-only hours against real floor hours.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>Check your next quote</h3>
+            <p>Run one real job through the tools and look for the hours, overhead, risk, and assumptions that usually get missed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-media">
+            <img
+              alt="Greg Sheldon"
+              class="avatar"
+              src="https://gregsheldon.github.io/estimating-course/greg-sheldon-vertical.png"
+            />
+          </div>
+
+          <div class="about-content">
+            <div class="eyebrow">Created by Greg Sheldon</div>
+
+            <h2>Real fabrication estimating. Not generic spreadsheet fluff.</h2>
+
+            <p>
+              Greg Sheldon created Metal Fabrication Power Tools to help fabricators build stronger quotes, protect margin, and stop guessing at the work that should have been priced from the beginning.
+            </p>
+
+            <p>
+              These free tools are built around a simple idea: a quote should reflect the real work. That means real labour cost, real shop-floor time, real overhead recovery, real field friction, and real assumptions before the job is won.
+            </p>
+
+            <div class="about-proof-grid">
+              <div class="about-proof">
+                <strong>Shop-Floor Practical</strong>
+                <span>Built around real fabrication work, not theory.</span>
+              </div>
+
+              <div class="about-proof">
+                <strong>Estimator Focused</strong>
+                <span>Designed to help protect labour, scope, and margin.</span>
+              </div>
+
+              <div class="about-proof">
+                <strong>Course Aligned</strong>
+                <span>A natural first step into the full estimating system.</span>
+              </div>
+            </div>
+
+            <div class="contact-lines">
+              <div class="contact-pill">Metal Fabrication Power Tools</div>
+              <div class="contact-pill">gregwsheldon@gmail.com</div>
+              <div class="contact-pill">Free Spreadsheet Pack</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="eyebrow">Questions</div>
+          <h2>Before you download.</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Are these actual spreadsheet files?</h3>
+            <p>Yes. The download is built around Excel workbook files for fabrication estimating. They include guided inputs, formulas, calculated outputs, and plain-English explanations.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is this only for shop owners?</h3>
+            <p>No. The tools are useful for shop owners, estimators, foremen, project managers, welders moving into quoting, and anyone responsible for pricing fabrication work.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What is the AFR Calculator?</h3>
+            <p>AFR means Arc-to-Floor Ratio. It helps compare arc-only weld time against the real labour hours created by setup, handling, access, position, repeat work, fatigue, field work, and risk.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What should I use first?</h3>
+            <p>Start with the Labor Rate Calculator so you know what your hour needs to sell for. Then use the AFR Calculator to check whether your labour hours are too clean.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Will this replace estimating judgment?</h3>
+            <p>No. It gives your judgment a stronger structure. You still need to know the work, read the drawings, ask questions, and apply shop experience.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Why are you giving these away?</h3>
+            <p>Because once you see how much labour and overhead can hide inside a bad quote, the need for a better estimating system becomes obvious.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta-card">
+          <div class="final-cta-copy">
+            <div class="eyebrow dark-eyebrow">Get the free tools</div>
+            <h2>Before you send another quote, check the rate and the real labour story.</h2>
+            <p>
+              Download the free spreadsheet pack and run one real job through it. If the number changes, that is not the spreadsheet making the job expensive. That is the spreadsheet showing what the job was already going to cost.
+            </p>
+          </div>
+
+          <div class="final-cta-box">
+            <strong>Free Spreadsheet Pack</strong>
+            <span>Labor Rate Calculator plus Arc-to-Floor Ratio Calculator for fabrication estimating.</span>
+            <a class="btn btn-primary" href="#signup">Send Me The Spreadsheets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" aria-label="Sticky download call to action">
+    <div class="sticky-inner">
+      <div>
+        <strong>Get the free fabrication estimating spreadsheet pack.</strong>
+        <span>Labor Rate Calculator + Arc-to-Floor Ratio Calculator.</span>
+      </div>
+      <a class="btn btn-primary" href="#signup">Download Free</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-lines">
+      <div>© <span id="year"></span> Metal Fabrication Power Tools. All rights reserved.</div>
+      <div>Created by Greg Sheldon · gregwsheldon@gmail.com</div>
+      <div>
+        <a href="https://gregsheldon.github.io/estimating-course/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> ·
+        <a href="https://gregsheldon.github.io/estimating-course/terms.html" target="_blank" rel="noopener">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
