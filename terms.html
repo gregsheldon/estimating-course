@@ -1,27 +1,27 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms and Conditions | Metal Fabrication Power Tools</title>
-  <meta name="description" content="Terms and Conditions for Metal Fabrication Power Tools by Greg Sheldon." />
+
+  <title>Terms and Conditions | Fabrication Estimating Course</title>
+  <meta name="description" content="Terms and Conditions for the Fabrication Estimating Course by Greg Sheldon and Metal Fabrication Power Tools." />
 
   <style>
     :root {
-      --bg: #080808;
-      --bg-soft: #111111;
-      --panel: #171717;
+      --bg: #070707;
+      --bg-soft: #101010;
+      --panel: #161616;
       --panel-2: #202020;
       --text: #f5f5f5;
       --muted: #b8b8b8;
-      --line: rgba(255,255,255,0.12);
+      --line: rgba(255, 255, 255, 0.14);
       --orange: #ff7a1a;
       --orange-2: #ff9a3d;
       --danger: #ff4d4d;
-      --max: 1080px;
-      --radius: 18px;
-      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1120px;
+      --radius: 0px;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -36,8 +36,8 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(255,122,26,0.14), transparent 34rem),
-        radial-gradient(circle at top right, rgba(255,122,26,0.08), transparent 26rem),
+        radial-gradient(circle at top left, rgba(255, 122, 26, 0.13), transparent 34rem),
+        radial-gradient(circle at top right, rgba(255, 122, 26, 0.07), transparent 28rem),
         var(--bg);
       color: var(--text);
       line-height: 1.65;
@@ -56,7 +56,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(8,8,8,0.88);
+      background: rgba(7, 7, 7, 0.92);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
     }
@@ -64,7 +64,7 @@
     .nav {
       width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
-      min-height: 72px;
+      min-height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -98,28 +98,31 @@
       font-size: 14px;
     }
 
-    .navlinks a {
-      color: var(--text);
-      opacity: 0.85;
-    }
-
-    .navlinks a:hover {
-      color: var(--orange-2);
-      opacity: 1;
-    }
-
+    .back-btn,
     .btn {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 44px;
       padding: 12px 18px;
-      border-radius: 999px;
+      border-radius: 0;
       background: linear-gradient(135deg, var(--orange), var(--orange-2));
-      color: #151515 !important;
-      font-weight: 800;
-      box-shadow: 0 10px 28px rgba(255,122,26,0.22);
+      color: #111 !important;
+      font-weight: 900;
+      box-shadow: 0 10px 28px rgba(255, 122, 26, 0.22);
       text-decoration: none !important;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .back-btn:hover,
+    .btn:hover {
+      filter: brightness(1.05);
     }
 
     .wrap {
@@ -136,26 +139,27 @@
       align-items: center;
       gap: 10px;
       padding: 8px 12px;
-      border: 1px solid rgba(255,122,26,0.35);
-      background: rgba(255,122,26,0.08);
+      border: 1px solid rgba(255, 122, 26, 0.45);
+      background: rgba(255, 122, 26, 0.08);
       color: var(--orange-2);
-      border-radius: 999px;
+      border-radius: 0;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     h1 {
       margin: 18px 0 16px;
-      max-width: 880px;
-      font-size: clamp(36px, 6vw, 68px);
+      max-width: 900px;
+      font-size: clamp(38px, 6vw, 72px);
       line-height: 0.98;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
     }
 
     .hero p {
-      max-width: 850px;
+      max-width: 880px;
       color: var(--muted);
       font-size: 18px;
       margin: 0 0 18px;
@@ -163,10 +167,10 @@
 
     .notice {
       margin-top: 28px;
-      padding: 18px 20px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,122,26,0.35);
-      background: linear-gradient(135deg, rgba(255,122,26,0.10), rgba(255,122,26,0.03));
+      padding: 20px;
+      border-radius: 0;
+      border: 1px solid rgba(255, 122, 26, 0.45);
+      background: linear-gradient(135deg, rgba(255, 122, 26, 0.12), rgba(255, 122, 26, 0.03));
       box-shadow: var(--shadow);
     }
 
@@ -176,18 +180,18 @@
 
     .layout {
       display: grid;
-      grid-template-columns: 290px 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 28px;
       align-items: start;
-      padding: 34px 0 72px;
+      padding: 34px 0 74px;
     }
 
     .toc {
       position: sticky;
       top: 96px;
       border: 1px solid var(--line);
-      background: rgba(23,23,23,0.82);
-      border-radius: var(--radius);
+      background: rgba(22, 22, 22, 0.88);
+      border-radius: 0;
       padding: 18px;
       box-shadow: var(--shadow);
       max-height: calc(100vh - 120px);
@@ -205,7 +209,7 @@
     .toc a {
       display: block;
       padding: 8px 0;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       color: var(--muted);
       font-size: 14px;
     }
@@ -214,24 +218,25 @@
       color: var(--orange-2);
     }
 
-    .terms {
+    .policy {
       border: 1px solid var(--line);
-      background: rgba(17,17,17,0.88);
-      border-radius: 26px;
+      background: rgba(16, 16, 16, 0.92);
+      border-radius: 0;
       padding: clamp(22px, 4vw, 46px);
       box-shadow: var(--shadow);
     }
 
-    .terms section {
-      padding: 26px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+    .policy section {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+      scroll-margin-top: 100px;
     }
 
-    .terms section:first-child {
+    .policy section:first-child {
       padding-top: 0;
     }
 
-    .terms section:last-child {
+    .policy section:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
@@ -247,6 +252,8 @@
       margin: 22px 0 10px;
       color: var(--orange-2);
       font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     p {
@@ -264,29 +271,40 @@
       margin: 7px 0;
     }
 
+    strong {
+      color: var(--text);
+    }
+
     .strong-box {
       margin: 18px 0;
       padding: 18px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.045);
+      border-radius: 0;
+      background: rgba(255, 255, 255, 0.045);
       border: 1px solid var(--line);
     }
 
     .warning-box {
       margin: 18px 0;
       padding: 18px;
-      border-radius: var(--radius);
-      background: rgba(255,77,77,0.08);
-      border: 1px solid rgba(255,77,77,0.32);
+      border-radius: 0;
+      background: rgba(255, 122, 26, 0.08);
+      border: 1px solid rgba(255, 122, 26, 0.38);
     }
 
     .warning-box strong {
-      color: #ff8f8f;
+      color: var(--orange-2);
     }
 
-    .money {
-      color: var(--orange-2);
-      font-weight: 900;
+    .danger-box {
+      margin: 18px 0;
+      padding: 18px;
+      border-radius: 0;
+      background: rgba(255, 77, 77, 0.08);
+      border: 1px solid rgba(255, 77, 77, 0.34);
+    }
+
+    .danger-box strong {
+      color: #ff9d9d;
     }
 
     .meta-grid {
@@ -298,8 +316,8 @@
 
     .meta-card {
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 0;
       padding: 16px;
     }
 
@@ -309,12 +327,19 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 4px;
-      font-weight: 800;
+      font-weight: 900;
     }
 
     .meta-card strong {
       color: var(--text);
       font-size: 17px;
+    }
+
+    .back-panel {
+      margin-top: 26px;
+      padding: 18px;
+      border: 1px solid rgba(255, 122, 26, 0.38);
+      background: rgba(255, 122, 26, 0.06);
     }
 
     footer {
@@ -332,14 +357,6 @@
       flex-wrap: wrap;
       color: var(--muted);
       font-size: 14px;
-    }
-
-    .footer-inner a {
-      color: var(--muted);
-    }
-
-    .footer-inner a:hover {
-      color: var(--orange-2);
     }
 
     @media (max-width: 900px) {
@@ -377,7 +394,8 @@
       .topbar,
       .toc,
       footer,
-      .btn {
+      .btn,
+      .back-btn {
         display: none !important;
       }
 
@@ -391,7 +409,7 @@
         padding: 20px 0;
       }
 
-      .terms {
+      .policy {
         box-shadow: none;
         border: none;
         padding: 0;
@@ -402,27 +420,37 @@
       h2,
       h3,
       p,
-      li {
+      li,
+      strong {
         color: #111111;
       }
     }
   </style>
+  <script>
+    function goBackToPreviousPage() {
+      if (window.history.length > 1) {
+        window.history.back();
+        return;
+      }
+      if (document.referrer) {
+        window.location.href = document.referrer;
+        return;
+      }
+      alert('Use your browser back button to return to the previous page.');
+    }
+  </script>
 </head>
 
 <body>
   <header class="topbar">
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav" aria-label="Page navigation">
       <div class="brand">
         <strong>Metal Fabrication Power Tools</strong>
-        <span>Greg Sheldon | Estimating & Fabrication Systems</span>
+        <span>Fabrication Estimating Course | Greg Sheldon</span>
       </div>
 
       <div class="navlinks">
-        <a href="/metalfabexcel/">Home</a>
-        <a href="/metalfabexcel/#calculator">Calculator</a>
-        <a href="/metalfabexcel/#pricing">Pricing</a>
-        <a href="/metalfabexcel/#contact">Contact</a>
-        <a class="btn" href="mailto:gregwsheldon@gmail.com">Contact Greg</a>
+        <button class="back-btn" type="button" onclick="goBackToPreviousPage()">Back to Previous Page</button>
       </div>
     </nav>
   </header>
@@ -430,90 +458,68 @@
   <main>
     <div class="wrap">
       <section class="hero">
-        <span class="eyebrow">Legal Terms</span>
+        <span class="eyebrow">Course Terms</span>
         <h1>Terms and Conditions</h1>
-        <p>
-          These Terms and Conditions protect the customer, Greg Sheldon, Metal Fabrication Power Tools,
-          and the intellectual property connected to the products, tools, spreadsheets, courses, and services.
-        </p>
-        <p><strong>Last updated:</strong> [INSERT DATE]</p>
-
-        <div class="notice">
-          <p>
-            <strong>Important:</strong> By purchasing, downloading, accessing, using, viewing, or receiving any product,
-            service, course, spreadsheet, calculator, template, guide, worksheet, transcript, workbook, or material from
-            Greg Sheldon or Metal Fabrication Power Tools, you agree to these Terms and Conditions.
-          </p>
-        </div>
+        <p>These Terms and Conditions apply to the Fabrication Estimating Course, including lessons, downloads, workbooks, worksheets, spreadsheets, calculators, templates, and related student resources.</p>
+        <p><strong>Last updated:</strong> June 20, 2026</p>
       </section>
 
       <div class="layout">
         <aside class="toc">
           <h2>On This Page</h2>
-          <a href="#seller">1. Seller Information</a>
-          <a href="#apply">2. Who These Terms Apply To</a>
-          <a href="#purpose">3. Purpose of Products and Services</a>
-          <a href="#age">4. Age Requirements</a>
-          <a href="#orders">5. Orders and Acceptance</a>
-          <a href="#payment">6. Payment Terms</a>
-          <a href="#delivery">7. Delivery and Access</a>
-          <a href="#license">8. License to Use Digital Products</a>
-          <a href="#no-theft">9. No Theft, No Resale, No Sharing</a>
-          <a href="#damages">10. $10,000 USD Liquidated Damages</a>
-          <a href="#ip">11. Intellectual Property Ownership</a>
-          <a href="#customer-protection">12. Customer Protection and Fair Use</a>
-          <a href="#security">13. Account Security</a>
-          <a href="#responsibilities">14. Customer Responsibilities</a>
-          <a href="#results">15. No Guaranteed Results</a>
-          <a href="#accuracy">16. Accuracy of Materials</a>
-          <a href="#refunds">17. Refunds</a>
-          <a href="#chargebacks">18. Chargebacks and Payment Disputes</a>
-          <a href="#services">19. Services, Consulting, and Custom Work</a>
-          <a href="#privacy">20. Privacy and Personal Data</a>
-          <a href="#email">21. Email Communication</a>
-          <a href="#technical">22. Technical Requirements</a>
-          <a href="#liability">23. Limitation of Liability</a>
-          <a href="#indemnification">24. Indemnification</a>
-          <a href="#termination">25. Termination of Access</a>
-          <a href="#force-majeure">26. Force Majeure</a>
-          <a href="#changes">27. Changes to These Terms</a>
-          <a href="#severability">28. Severability</a>
-          <a href="#waiver">29. No Waiver</a>
-          <a href="#law">30. Applicable Law</a>
-          <a href="#contact">31. Contact</a>
+          <a href="#overview">1. Overview</a>
+          <a href="#seller">2. Seller Information</a>
+          <a href="#acceptance">3. Acceptance of Terms</a>
+          <a href="#course">4. Course Description</a>
+          <a href="#age">5. Age Requirements</a>
+          <a href="#purchase">6. Orders, Payments, and Access</a>
+          <a href="#license">7. Course License</a>
+          <a href="#ip">8. Intellectual Property</a>
+          <a href="#no-sharing">9. No Sharing, Resale, or Duplication</a>
+          <a href="#damages">10. Unauthorized Use and Damages</a>
+          <a href="#student-use">11. Student Use and Fair Use</a>
+          <a href="#refunds">12. Refunds</a>
+          <a href="#chargebacks">13. Chargebacks and Payment Disputes</a>
+          <a href="#no-guarantees">14. No Guaranteed Results</a>
+          <a href="#accuracy">15. Accuracy and Student Responsibility</a>
+          <a href="#tools">16. Spreadsheets and Calculators</a>
+          <a href="#support">17. Support</a>
+          <a href="#accounts">18. Account Security</a>
+          <a href="#privacy">19. Privacy</a>
+          <a href="#limitation">20. Limitation of Liability</a>
+          <a href="#indemnification">21. Indemnification</a>
+          <a href="#termination">22. Termination of Access</a>
+          <a href="#changes">23. Changes to These Terms</a>
+          <a href="#law">24. Governing Law</a>
+          <a href="#contact">25. Contact</a>
         </aside>
 
-        <article class="terms">
-          <section id="intro">
-            <h2>Terms and Conditions</h2>
+        <article class="policy">
+          <section id="overview">
+            <h2>1. Overview</h2>
             <p>
-              These Terms and Conditions apply to all websites, checkout pages, course platforms, digital downloads,
-              payment links, invoices, products, services, and materials operated, sold, licensed, distributed,
-              or provided by <strong>Greg Sheldon</strong> under the brand name
+              These Terms and Conditions apply to the <strong>Fabrication Estimating Course</strong>, including all course lessons,
+              videos, student downloads, workbooks, worksheets, transcripts, spreadsheets, calculators, templates,
+              quote builders, checklists, bonus trainings, email lessons, support material, and related digital resources
+              sold, licensed, delivered, or provided by <strong>Greg Sheldon</strong> under the brand name
               <strong>Metal Fabrication Power Tools</strong>.
             </p>
-
             <p>
-              All course materials, spreadsheets, calculators, templates, PDFs, worksheets, workbooks, transcripts,
-              videos, written content, formulas, systems, designs, layouts, branding, intellectual property,
-              business assets, and related materials are owned by, assigned to, held for the benefit of,
-              or protected under <strong>Legacy Seven Trust</strong>, where applicable.
+              The course is built for metal fabrication estimating education, including scope breakdown, drawing review,
+              labour estimating, material costing, subcontractor pricing, risk protection, final pricing, and writing a
+              winning quote. The materials are practical training tools, not a replacement for your own professional judgment,
+              company standards, customer contracts, legal review, tax advice, engineering review, safety obligations, or final quote approval.
             </p>
-
-            <p>
-              Greg Sheldon and Metal Fabrication Power Tools sell, license, distribute, and provide access to these
-              materials for lawful customer use only. No ownership rights are transferred to the customer.
-            </p>
-
-            <p>
-              If you do not agree with these Terms and Conditions, do not purchase, download, access, use, copy,
-              view, or receive the products or services.
-            </p>
+            <div class="warning-box">
+              <p>
+                <strong>Important:</strong> By purchasing, accessing, downloading, viewing, using, or receiving the course or any course material,
+                you agree to these Terms and Conditions.
+              </p>
+            </div>
           </section>
 
           <section id="seller">
-            <h2>1. Seller Information</h2>
-
+            <h2>2. Seller Information</h2>
             <div class="meta-grid">
               <div class="meta-card">
                 <small>Seller</small>
@@ -524,674 +530,326 @@
                 <strong>Metal Fabrication Power Tools</strong>
               </div>
               <div class="meta-card">
-                <small>Email</small>
-                <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
+                <small>Course</small>
+                <strong>Fabrication Estimating Course</strong>
               </div>
               <div class="meta-card">
-                <small>Trust</small>
-                <strong>Legacy Seven Trust, where applicable</strong>
+                <small>Email</small>
+                <strong>gregwsheldon@gmail.com</strong>
               </div>
             </div>
-
             <p style="margin-top: 18px;">
-              Where applicable, certain intellectual property, digital products, business assets, materials,
-              and related rights are owned by, assigned to, held for the benefit of, or protected under
-              <strong>Legacy Seven Trust</strong>.
+              Where applicable, certain intellectual property, digital products, course materials, spreadsheets,
+              calculators, workbooks, business assets, and related rights are owned by, assigned to, held for the benefit of,
+              or protected under <strong>Legacy Seven Trust</strong>.
             </p>
           </section>
 
-          <section id="apply">
-            <h2>2. Who These Terms Apply To</h2>
+          <section id="acceptance">
+            <h2>3. Acceptance of Terms</h2>
             <p>
-              These Terms and Conditions apply to every customer, purchaser, student, subscriber, user, viewer,
-              business, organization, or person who purchases, accesses, downloads, receives, views, or uses anything
-              sold or provided by Greg Sheldon or Metal Fabrication Power Tools.
-            </p>
-
-            <h3>Definitions</h3>
-            <p>
-              <strong>“Seller,” “I,” “me,” “my,” “we,” “us,” or “our”</strong> means Greg Sheldon,
-              Metal Fabrication Power Tools, and, where applicable, Legacy Seven Trust.
+              You accept these Terms when you buy the course, create an account, access the course platform, open a lesson,
+              download a workbook, use a spreadsheet, join a training, contact support, or otherwise use any course material.
             </p>
             <p>
-              <strong>“Legacy Seven Trust”</strong> means the trust that owns, holds, controls, protects,
-              benefits from, or has been assigned certain intellectual property, digital products, course materials,
-              spreadsheets, calculators, templates, business assets, and related rights connected to Metal Fabrication
-              Power Tools.
+              If you are buying on behalf of a company, shop, employer, partnership, school, or organization, you confirm that
+              you have authority to accept these Terms for that organization and that the organization is also bound by these Terms.
             </p>
             <p>
-              <strong>“Customer,” “client,” “student,” “user,” “you,” or “your”</strong> means any person,
-              business, or organization that purchases, accesses, downloads, views, receives, or uses any product,
-              service, or material.
-            </p>
-            <p>
-              <strong>“Products”</strong> means courses, videos, spreadsheets, calculators, templates, PDFs, guides,
-              cheat sheets, worksheets, workbooks, transcripts, downloads, documents, examples, formulas,
-              training content, and any other digital or physical material provided.
-            </p>
-            <p>
-              <strong>“Services”</strong> means coaching, consulting, estimating support, spreadsheet builds,
-              training, workshops, audits, reviews, custom work, and professional support.
+              If you do not agree with these Terms, do not purchase, access, download, copy, share, or use the course materials.
             </p>
           </section>
 
-          <section id="purpose">
-            <h2>3. Purpose of the Products and Services</h2>
+          <section id="course">
+            <h2>4. Course Description</h2>
             <p>
-              The products and services are designed to provide education, tools, examples, structure, training,
-              templates, systems, and practical support for estimating, quoting, pricing, sales, metal fabrication,
-              business workflows, and related professional topics.
+              The course teaches a practical estimating system for fabrication work. Course materials may include training on:
             </p>
+            <ul>
+              <li>The real role of an estimator as a profit protector</li>
+              <li>Reading drawings like a fabricator</li>
+              <li>Breaking scope into workable cost buckets</li>
+              <li>Estimating shop and field labour</li>
+              <li>Building material pricing from actual buy quantities</li>
+              <li>Pricing subcontractors and outsourced work as managed scope</li>
+              <li>Handling risk, unknowns, contingency, and margin protection</li>
+              <li>Building the final price using proper markup and margin logic</li>
+              <li>Writing quotes that define scope, protect margin, and help close work</li>
+            </ul>
             <p>
-              The products and services are meant to help customers think more clearly, price more carefully,
-              quote more professionally, and better understand estimating, quoting, and business systems.
-            </p>
-            <p>
-              They are not a guarantee of profit, sales, job wins, business success, perfect estimates,
-              legal compliance, tax compliance, or error-free work.
-            </p>
-            <p>
-              The customer is responsible for reviewing, checking, adjusting, and approving all numbers, quotes,
-              estimates, contracts, prices, markups, margins, labour rates, material costs, subcontractor costs,
-              taxes, exclusions, assumptions, and final business decisions.
+              The exact course contents, bonuses, downloads, and access method may change over time as the course is improved,
+              updated, repaired, expanded, or reorganized.
             </p>
           </section>
 
           <section id="age">
-            <h2>4. Age Requirements</h2>
+            <h2>5. Age Requirements</h2>
             <p>
-              By purchasing, accessing, downloading, or using any product or service, you confirm that you meet the
-              applicable age requirements.
+              You must be at least <strong>16 years old</strong> to access digital course materials and at least
+              <strong>18 years old</strong> to purchase or participate in paid consulting, coaching, workshops, custom estimating support,
+              or professional services connected to the course.
             </p>
-            <ul>
-              <li>You must be at least <strong>16 years old</strong> to access or purchase digital products, spreadsheets, calculators, guides, PDFs, templates, worksheets, transcripts, workbooks, or electronic resources.</li>
-              <li>You must be at least <strong>18 years old</strong> to purchase or participate in coaching, consulting, estimating support, workshops, seminars, training sessions, or professional services.</li>
-              <li>If you are under the age of majority where you live, you confirm that you have permission from a parent or legal guardian where required by law.</li>
-            </ul>
             <p>
-              We reserve the right to cancel access, refuse service, remove a subscriber, or refund a customer if we
-              become aware that the customer does not meet the required age criteria.
+              If you are under the age of majority where you live, you confirm that you have permission from a parent or legal guardian
+              where required by law.
             </p>
           </section>
 
-          <section id="orders">
-            <h2>5. Orders and Acceptance</h2>
+          <section id="purchase">
+            <h2>6. Orders, Payments, and Access</h2>
             <p>
-              By placing an order, completing a checkout, paying an invoice, using a payment link, downloading a product,
-              accessing a course, receiving a service, or using any materials, you agree to these Terms and Conditions.
-            </p>
-            <p>Before purchasing, you are responsible for reviewing:</p>
-            <ul>
-              <li>The product or service description</li>
-              <li>The price</li>
-              <li>The included materials</li>
-              <li>The delivery method</li>
-              <li>The refund policy</li>
-              <li>The access limits</li>
-              <li>The technical requirements</li>
-              <li>These Terms and Conditions</li>
-            </ul>
-            <p>
-              We reserve the right to refuse, cancel, suspend, or refund any order for suspected fraud, abuse,
-              unauthorized sharing, payment issues, violation of these terms, or any other reasonable concern.
-            </p>
-          </section>
-
-          <section id="payment">
-            <h2>6. Payment Terms</h2>
-            <p>Payment is due immediately at the time of purchase unless otherwise agreed in writing.</p>
-            <p>
-              Payments may be accepted by credit card, debit card, Stripe, electronic transfer, invoice, cheque, cash,
-              or another approved method.
+              Payment is due at checkout unless a separate written payment arrangement is provided. Access may be delivered through
+              a course platform, email, download page, member area, checkout system, or other digital delivery method.
             </p>
             <p>
-              Online payments are processed through third-party payment processors. We do not store full credit card
-              numbers on our own systems.
+              You are responsible for entering a correct email address, keeping your login secure, and making sure you can access
+              the digital platform, files, spreadsheets, and downloads required to use the course.
             </p>
             <p>
-              If a payment is declined, reversed, disputed, charged back, cancelled, or not completed, access to the
-              product or service may be suspended or terminated.
-            </p>
-            <p>
-              For payment plans, the customer agrees to complete all scheduled payments. Failed, missed, disputed,
-              or cancelled payments may result in suspended access, cancelled access, collection activity,
-              or loss of bonuses, discounts, or payment plan privileges.
-            </p>
-          </section>
-
-          <section id="delivery">
-            <h2>7. Delivery and Access</h2>
-            <p>
-              Digital products are delivered electronically through email, download links, course platforms,
-              member areas, checkout pages, or other digital access methods.
-            </p>
-            <p>
-              Access details are sent to the email address provided at purchase. You are responsible for entering
-              a correct email address and keeping your login information secure.
-            </p>
-            <p>
-              If you do not receive access, contact:
-              <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
-            </p>
-            <p>
-              We are not responsible for delays caused by incorrect email addresses, spam filters, customer-side
-              technical issues, payment delays, internet outages, third-party platform issues, or failure to follow
-              access instructions.
+              Access may be delayed, suspended, or removed if payment fails, payment is reversed, fraud is suspected, access is abused,
+              account sharing occurs, or these Terms are violated.
             </p>
           </section>
 
           <section id="license">
-            <h2>8. License to Use Digital Products</h2>
+            <h2>7. Course License</h2>
             <p>
-              When you purchase a digital product, you are buying a limited license to use that product.
+              When you purchase the course, you receive a limited, non-exclusive, non-transferable, revocable license to access and use
+              the course materials for your own learning and internal estimating use.
             </p>
             <p>
-              You are not buying ownership of the product, formulas, designs, layouts, methods, content, course,
-              spreadsheet, calculator, guide, workbook, worksheet, transcript, video, document, intellectual property,
-              or source material.
-            </p>
-            <p>Unless otherwise stated in writing, your license is:</p>
-            <ul>
-              <li>Personal to you or internal to your business</li>
-              <li>Non-exclusive</li>
-              <li>Non-transferable</li>
-              <li>Non-resellable</li>
-              <li>Non-sublicensable</li>
-              <li>Limited to lawful use</li>
-              <li>Subject to these Terms and Conditions</li>
-            </ul>
-            <p>
-              You may use the purchased materials for your own learning, estimating, quoting, training,
-              or internal business use.
+              Unless a separate written business, team, or enterprise license is provided, one purchase is for one student only.
+              A company may not buy one copy and distribute it to multiple employees, locations, estimators, contractors, customers,
+              subcontractors, partners, or other users.
             </p>
             <p>
-              You may not sell, share, copy, publish, upload, redistribute, give away, repackage, duplicate, clone,
-              reverse engineer, or commercially exploit the materials.
+              No ownership rights are transferred to you. You are buying access and a license to use the materials, not ownership of
+              the course, content, formulas, spreadsheets, documents, layouts, designs, videos, teaching system, or intellectual property.
             </p>
-          </section>
-
-          <section id="no-theft">
-            <h2>9. Strict No Theft, No Resale, No Sharing Policy</h2>
-
-            <div class="warning-box">
-              <p>
-                <strong>Theft, copying, resale, unauthorized sharing, duplication, redistribution, uploading,
-                and misuse of our products will not be tolerated.</strong>
-              </p>
-            </div>
-
-            <p>You are strictly prohibited from doing any of the following:</p>
-            <ul>
-              <li>Sharing login details with another person</li>
-              <li>Giving someone else access to your account</li>
-              <li>Sending purchased files to another person</li>
-              <li>Uploading files to Facebook groups, forums, Discord, Slack, Telegram, Dropbox, Google Drive, file-sharing sites, marketplaces, or public websites</li>
-              <li>Reselling the products</li>
-              <li>Giving away the products</li>
-              <li>Copying the products</li>
-              <li>Rebranding the products</li>
-              <li>Claiming the products as your own</li>
-              <li>Recreating the products for sale</li>
-              <li>Using the products to build a competing product</li>
-              <li>Using the course, spreadsheets, calculators, formulas, templates, PDFs, guides, or worksheets to create a substantially similar offer</li>
-              <li>Selling modified versions of the products</li>
-              <li>Removing copyright notices, watermarks, branding, notices, or ownership information</li>
-              <li>Sharing screenshots, recordings, formulas, templates, or course content for commercial or public use</li>
-              <li>Recording course videos or protected content</li>
-              <li>Circumventing download limits, login protections, access controls, or security features</li>
-              <li>Using the materials in a way that harms Greg Sheldon, Metal Fabrication Power Tools, Legacy Seven Trust, other customers, or the integrity of the products</li>
-            </ul>
-            <p>
-              Any unauthorized copying, resale, sharing, distribution, duplication, or commercial misuse is a serious
-              violation of these Terms and Conditions.
-            </p>
-          </section>
-
-          <section id="damages">
-            <h2>10. Liquidated Damages for Theft, Resale, Sharing, or Misuse</h2>
-            <p>
-              The customer agrees that unauthorized copying, resale, redistribution, sharing, uploading, duplication,
-              rebranding, public posting, or commercial misuse of the products would cause serious harm to Greg Sheldon,
-              Metal Fabrication Power Tools, and Legacy Seven Trust.
-            </p>
-            <p>
-              The customer also agrees that the exact amount of damage may be difficult to calculate because unauthorized
-              sharing can result in lost sales, market confusion, loss of control over intellectual property, brand damage,
-              loss of customer trust, damage to protected trust property, and ongoing misuse of the materials.
-            </p>
-
-            <div class="strong-box">
-              <p>
-                For that reason, the customer agrees that if they violate the no theft, no resale, no sharing,
-                or intellectual property terms, they may be responsible for liquidated damages of
-                <span class="money">$10,000 USD per violation</span>, or the maximum amount allowed by law,
-                whichever is enforceable.
-              </p>
-            </div>
-
-            <p>This amount is intended as a reasonable pre-estimate of damages and not as a punishment.</p>
-
-            <p>
-              Greg Sheldon, Metal Fabrication Power Tools, Legacy Seven Trust, and any authorized representative reserve
-              the right to seek:
-            </p>
-            <ul>
-              <li>Actual damages</li>
-              <li>Lost profits</li>
-              <li>Liquidated damages</li>
-              <li>Injunctive relief</li>
-              <li>Removal of copied or stolen materials</li>
-              <li>Legal fees</li>
-              <li>Collection costs</li>
-              <li>Platform takedowns</li>
-              <li>Account termination</li>
-              <li>Any other remedy available by law</li>
-            </ul>
-            <p>
-              Each unauthorized sale, share, upload, copy, transfer, download, reproduction, redistribution,
-              public posting, or distribution may be treated as a separate violation.
-            </p>
-            <p>Access may be terminated immediately without refund if a customer violates this section.</p>
           </section>
 
           <section id="ip">
-            <h2>11. Intellectual Property Ownership</h2>
+            <h2>8. Intellectual Property</h2>
             <p>
-              All products, services, materials, systems, documents, videos, spreadsheets, calculators, templates,
-              PDFs, guides, cheat sheets, workbooks, worksheets, transcripts, examples, formulas, graphics, layouts,
-              designs, branding, training materials, course content, and related intellectual property are owned by
-              Greg Sheldon, Legacy Seven Trust, or are otherwise controlled, licensed, assigned, or protected for the benefit
-              of Legacy Seven Trust, unless otherwise stated in writing.
-            </p>
-            <p>All rights are reserved.</p>
-            <p>
-              Purchasing, downloading, accessing, viewing, receiving, or using a product or service does not give you
-              ownership of the intellectual property.
+              The course and all related materials are protected intellectual property. This includes, but is not limited to, videos,
+              scripts, transcripts, downloads, worksheets, PDFs, workbooks, spreadsheets, calculators, formulas, examples, checklists,
+              quote language, design, layout, branding, course structure, written content, and training methods.
             </p>
             <p>
-              The customer receives only a limited license to use the purchased materials for personal learning or
-              internal business use, subject to these Terms and Conditions.
-            </p>
-            <p>
-              The customer does not receive the right to copy, reproduce, publish, distribute, resell, sublicense,
-              rebrand, upload, transfer, share, reverse engineer, duplicate, modify for resale, create derivative
-              commercial products from, or commercially exploit any materials without written permission from
-              Greg Sheldon and, where applicable, Legacy Seven Trust.
-            </p>
-            <p>
-              Unauthorized use, theft, copying, resale, sharing, distribution, duplication, or commercial misuse is
-              strictly prohibited and may result in immediate termination of access, legal action, damages, takedown
-              requests, and enforcement by Greg Sheldon, Metal Fabrication Power Tools, Legacy Seven Trust, or any authorized
-              representative.
+              All rights are reserved by <strong>Greg Sheldon</strong>, <strong>Metal Fabrication Power Tools</strong>, and, where applicable,
+              <strong>Legacy Seven Trust</strong>. You may not claim ownership, remove ownership notices, copy the materials into your own product,
+              recreate the course, train others from the materials, or use the materials to build a competing product or course.
             </p>
           </section>
 
-          <section id="customer-protection">
-            <h2>12. Customer Protection and Fair Use</h2>
-            <p>
-              These Terms and Conditions are intended to protect both the customer and the seller.
-            </p>
-            <p>
-              Customers are entitled to receive access to the products or services they purchased, subject to payment,
-              technical availability, platform access, and compliance with these Terms and Conditions.
-            </p>
-            <p>
-              Customers may use purchased materials for their own personal education, internal business learning,
-              internal quoting, internal estimating, and internal workflow improvement.
-            </p>
-            <p>Customers may contact support if they have trouble accessing a purchased product.</p>
-            <p>
-              Customers may not be denied access unfairly, but access may be limited, suspended, or terminated if the
-              customer violates these Terms and Conditions.
-            </p>
-            <p>
-              Nothing in these Terms and Conditions is intended to remove customer rights that cannot legally be removed
-              under applicable consumer protection laws.
-            </p>
-          </section>
-
-          <section id="security">
-            <h2>13. Account Security</h2>
-            <p>You are responsible for keeping your account, password, download links, and access details secure.</p>
-            <p>You may not share your login details with anyone.</p>
-            <p>
-              If unauthorized access occurs because you shared your account, forwarded access links, exposed your password,
-              failed to protect your login information, or allowed another person to use your access, you may be responsible
-              for any resulting misuse.
-            </p>
-            <p>
-              We reserve the right to suspend or terminate access if unusual login activity, file sharing, excessive downloads,
-              account sharing, or suspected abuse is detected.
-            </p>
-          </section>
-
-          <section id="responsibilities">
-            <h2>14. Customer Responsibilities</h2>
-            <p>The customer agrees to use all products and services responsibly, honestly, and lawfully.</p>
-            <p>The customer is responsible for:</p>
+          <section id="no-sharing">
+            <h2>9. No Sharing, Resale, or Duplication</h2>
+            <div class="danger-box">
+              <p>
+                <strong>Do not duplicate:</strong> Course material may not be copied, duplicated, shared, resold, posted, uploaded,
+                distributed, reproduced, licensed, sublicensed, transferred, taught, repackaged, or made available to anyone else
+                without written permission.
+              </p>
+            </div>
+            <p>You may not:</p>
             <ul>
-              <li>Checking all calculations before use</li>
-              <li>Verifying formulas</li>
-              <li>Confirming labour rates</li>
-              <li>Confirming material prices</li>
-              <li>Confirming taxes</li>
-              <li>Confirming subcontractor costs</li>
-              <li>Reviewing scope and exclusions</li>
-              <li>Reviewing customer requirements</li>
-              <li>Making final business decisions</li>
-              <li>Backing up files</li>
-              <li>Using compatible software</li>
-              <li>Keeping login details secure</li>
-              <li>Following these Terms and Conditions</li>
+              <li>Share your login with another person</li>
+              <li>Post course videos, downloads, spreadsheets, worksheets, or transcripts online</li>
+              <li>Email the materials to people who did not purchase the course</li>
+              <li>Upload the course files to a public or private file-sharing location</li>
+              <li>Resell, rent, lease, sublicense, or distribute the course or downloads</li>
+              <li>Use the course to teach a paid or unpaid competing training</li>
+              <li>Copy the spreadsheets, formulas, templates, or course structure into your own commercial product</li>
+              <li>Remove copyright notices, ownership warnings, watermarks, or anti-duplication notices</li>
             </ul>
-            <p>The products are tools and training resources. They do not replace professional judgment.</p>
           </section>
 
-          <section id="results">
-            <h2>15. No Guaranteed Results</h2>
+          <section id="damages">
+            <h2>10. Unauthorized Use and Damages</h2>
             <p>
-              We do not guarantee that you will win jobs, close quotes, increase profit, make money, avoid losses,
-              avoid estimating mistakes, get customers, grow a business, or achieve any specific result.
+              Unauthorized copying, sharing, resale, uploading, posting, distribution, account sharing, or commercial misuse of the course
+              causes harm that may be difficult to calculate precisely. By using the course, you agree that unauthorized duplication,
+              distribution, resale, posting, or sharing may result in a liquidated damages claim of up to
+              <strong>$10,000 USD per violation</strong>, plus any additional losses, legal fees, investigation costs, platform fees,
+              enforcement costs, and remedies allowed by law.
             </p>
             <p>
-              Results depend on many factors outside our control, including your skill, market, pricing, execution,
-              labour, overhead, competition, suppliers, subcontractors, customer communication, and business decisions.
+              This amount is intended as a reasonable estimate of damage caused by theft, distribution, resale, and misuse of protected
+              course materials. It does not limit the right to seek injunctions, removal of copied material, account termination, or other remedies.
             </p>
-            <p>
-              Any examples, prices, estimates, formulas, rules of thumb, case studies, or sample numbers are for
-              educational purposes only.
-            </p>
-            <p>You are responsible for adjusting all information to your own business, market, job, and customer situation.</p>
           </section>
 
-          <section id="accuracy">
-            <h2>16. Accuracy of Materials</h2>
+          <section id="student-use">
+            <h2>11. Student Use and Fair Use</h2>
             <p>
-              We work to provide useful, practical, and accurate materials, but errors, outdated information, broken formulas,
-              typos, technical issues, or misunderstandings may occur.
-            </p>
-            <p>The customer is responsible for checking all information before relying on it.</p>
-            <p>
-              The customer should not rely blindly on any spreadsheet, calculator, formula, template, guide, course lesson,
-              example, or training material without reviewing it for their own situation.
+              You may use the course materials for your own learning and internal estimating workflow. You may apply the principles,
+              checklists, and spreadsheet outputs inside your own job estimates and quotes.
             </p>
             <p>
-              If you find an error or technical issue, contact:
-              <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
-            </p>
-            <p>
-              We may choose to correct, update, replace, or improve materials at our discretion, but we are not obligated
-              to provide lifetime updates unless specifically stated in writing.
+              You may not present the course content as your own training system, sell the downloads, distribute blank copies,
+              use the course as a client-facing product, or give other people access to the materials without written permission.
             </p>
           </section>
 
           <section id="refunds">
-            <h2>17. Refunds</h2>
+            <h2>12. Refunds</h2>
             <p>
-              Because many products are digital and can be accessed, downloaded, copied, or used immediately, all sales
-              are final unless a specific refund policy or guarantee is clearly stated on the sales page, checkout page,
-              invoice, or written agreement.
+              Refund terms are controlled by the specific checkout page, sales page, invoice, or written offer used at the time of purchase.
+              If a refund policy is not stated on the checkout or sales page, purchases of digital course access, downloads, spreadsheets,
+              calculators, and instant-access materials are considered final once access is delivered.
             </p>
-            <p>If a refund guarantee applies, the customer must follow the instructions and time limits of that guarantee.</p>
             <p>
-              Refund requests must be sent to:
-              <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
+              Refunds may be denied where the customer has downloaded materials, accessed a substantial portion of the course,
+              violated these Terms, shared access, abused the refund process, or attempted to keep the materials while reversing payment.
             </p>
-            <p>Refunds may be denied if:</p>
-            <ul>
-              <li>The refund period has expired</li>
-              <li>No refund guarantee applies</li>
-              <li>The customer accessed or downloaded the product</li>
-              <li>The customer violated these Terms and Conditions</li>
-              <li>The customer copied, shared, resold, or misused the product</li>
-              <li>The customer abused the refund policy</li>
-              <li>The purchase was for custom work or services already started</li>
-              <li>The customer failed to provide required information</li>
-              <li>The product was clearly sold as non-refundable</li>
-            </ul>
-            <p>If a refund is approved, access may be cancelled immediately.</p>
           </section>
 
           <section id="chargebacks">
-            <h2>18. Chargebacks and Payment Disputes</h2>
+            <h2>13. Chargebacks and Payment Disputes</h2>
             <p>
-              Before starting a chargeback or payment dispute, the customer agrees to contact:
-              <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
-              so the issue can be reviewed.
+              If you have a billing issue, contact <strong>gregwsheldon@gmail.com</strong> first so the issue can be reviewed. Filing a chargeback
+              after receiving course access, downloads, or services may result in immediate suspension of access.
             </p>
             <p>
-              False, abusive, or dishonest chargebacks may result in immediate account termination, cancelled access,
-              refusal of future purchases, and recovery of any fees, losses, or costs allowed by law.
+              Fraudulent or abusive chargebacks may be challenged with proof of purchase, access logs, delivery records, download records,
+              email records, account records, and these Terms.
             </p>
-            <p>A chargeback does not cancel the customer’s obligations under these Terms and Conditions.</p>
           </section>
 
-          <section id="services">
-            <h2>19. Services, Consulting, and Custom Work</h2>
+          <section id="no-guarantees">
+            <h2>14. No Guaranteed Results</h2>
             <p>
-              Services may include consulting, coaching, estimating support, spreadsheet builds, reviews, audits,
-              training, workshops, or custom work.
+              The course is designed to improve estimating thinking, quote structure, pricing awareness, scope control, and risk protection.
+              However, results depend on your skill, effort, shop rates, market, customers, drawings, cost data, operations, sales process,
+              quote accuracy, risk decisions, and business judgment.
             </p>
             <p>
-              The scope, price, timeline, and deliverables will be based on the written agreement, invoice, proposal,
-              sales page, or email confirmation.
+              No profit, revenue, job win, margin, closing rate, business result, or estimating outcome is guaranteed.
+            </p>
+          </section>
+
+          <section id="accuracy">
+            <h2>15. Accuracy and Student Responsibility</h2>
+            <p>
+              Course examples, numbers, formulas, scripts, sample quote language, and spreadsheet tools are for education and practical guidance.
+              You are responsible for verifying every estimate, quote, formula, material cost, labour rate, tax, markup, margin, assumption,
+              exclusion, and final price before using it in your business.
             </p>
             <p>
-              Unless otherwise stated in writing, service payments are non-refundable once time has been reserved,
-              work has started, or deliverables have been prepared.
+              You are also responsible for getting professional advice where needed, including legal, tax, accounting, engineering, safety,
+              insurance, or contract advice.
+            </p>
+          </section>
+
+          <section id="tools">
+            <h2>16. Spreadsheets and Calculators</h2>
+            <p>
+              Any spreadsheets, calculators, quote builders, labour tools, material tools, risk tools, or pricing tools included with the course
+              are provided as practical templates. They may require editing, checking, customization, maintenance, and verification before use.
             </p>
             <p>
-              Customer delays, missing information, inaccurate drawings, unclear scope, late responses, or incomplete
-              files may affect timelines and results.
+              You are responsible for ensuring that formulas, tax settings, rates, units, material pricing, labour rates, overhead, margin,
+              contingency, and final quote outputs are correct for your company, customer, project, and jurisdiction.
             </p>
             <p>
-              We reserve the right to refuse, pause, or terminate services if the customer is abusive, dishonest,
-              non-responsive, fails to pay, provides misleading information, requests work outside the agreed scope,
-              or violates these Terms and Conditions.
+              We are not responsible for losses caused by incorrect inputs, changed formulas, spreadsheet edits, software incompatibility,
+              local tax rules, outdated cost data, hidden scope, customer disputes, or business decisions based on unverified spreadsheet outputs.
+            </p>
+          </section>
+
+          <section id="support">
+            <h2>17. Support</h2>
+            <p>
+              Support may be provided by email or through the course platform when available. Support is limited to access issues,
+              course questions, file delivery, and reasonable help with included materials.
+            </p>
+            <p>
+              Unless specifically purchased separately, course support does not include custom estimating, legal review, quote review,
+              engineering, spreadsheet customization, one-on-one coaching, or done-for-you services.
+            </p>
+          </section>
+
+          <section id="accounts">
+            <h2>18. Account Security</h2>
+            <p>
+              You are responsible for keeping your login details secure. You may not share your username, password, download links,
+              course links, or private access information with anyone else.
+            </p>
+            <p>
+              Suspicious login activity, multiple-user access, excessive downloads, location abuse, or evidence of sharing may result in
+              account review, suspension, or termination.
             </p>
           </section>
 
           <section id="privacy">
-            <h2>20. Privacy and Personal Data</h2>
+            <h2>19. Privacy</h2>
             <p>
-              We collect and use customer information only as reasonably necessary to operate the business, process payments,
-              deliver products, provide services, communicate with customers, improve offers, protect the business,
-              and meet legal obligations.
-            </p>
-            <p>Personal information may include:</p>
-            <ul>
-              <li>Name</li>
-              <li>Email address</li>
-              <li>Billing information</li>
-              <li>Business information</li>
-              <li>Payment confirmation details</li>
-              <li>Course access activity</li>
-              <li>Download activity</li>
-              <li>Customer support messages</li>
-              <li>Information voluntarily submitted by the customer</li>
-            </ul>
-            <p>
-              We may use trusted third-party services for payment processing, email delivery, course hosting, website hosting,
-              downloads, analytics, customer support, and business operations.
-            </p>
-            <p>We do not sell customer personal information.</p>
-            <p>
-              For privacy questions, contact:
-              <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
+              Customer information is handled according to the Privacy Policy for the course. By purchasing or accessing the course,
+              you also agree that personal information may be processed as needed to deliver access, process payment, provide support,
+              protect the materials, enforce these Terms, and comply with legal obligations.
             </p>
           </section>
 
-          <section id="email">
-            <h2>21. Email Communication</h2>
+          <section id="limitation">
+            <h2>20. Limitation of Liability</h2>
             <p>
-              By purchasing a product, creating an account, downloading a resource, registering for a course,
-              subscribing to a newsletter, or entering your email address, you may receive transactional emails related
-              to your order, access, account, downloads, updates, support, and product delivery.
-            </p>
-            <p>You may also receive educational or promotional emails where permitted by law.</p>
-            <p>
-              You may unsubscribe from marketing emails at any time by clicking the unsubscribe link in the email or contacting:
-              <strong><a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a></strong>
+              To the maximum extent allowed by law, Greg Sheldon, Metal Fabrication Power Tools, and, where applicable, Legacy Seven Trust, are not liable for lost profits,
+              lost revenue, lost jobs, lost contracts, business interruption, estimating errors, spreadsheet errors, quoting mistakes,
+              customer disputes, legal disputes, tax issues, indirect damages, incidental damages, consequential damages, or special damages.
             </p>
             <p>
-              Unsubscribing from marketing emails does not stop important order, account, legal, security, or access-related messages.
+              To the maximum extent allowed by law, total liability related to the course is limited to the amount you paid for the course.
             </p>
-          </section>
-
-          <section id="technical">
-            <h2>22. Technical Requirements</h2>
-            <p>
-              The customer is responsible for having the equipment, software, browser, internet access, email access,
-              and technical ability required to use the products.
-            </p>
-            <p>Some spreadsheets, calculators, or templates may require Microsoft Excel, Google Sheets, or compatible software.</p>
-            <p>
-              Certain features, formulas, formatting, protections, or calculations may not work correctly in all software versions.
-            </p>
-            <p>
-              We are not responsible for issues caused by outdated software, incompatible programs, unsupported devices,
-              customer-side technical problems, lack of internet access, or unauthorized modification of files.
-            </p>
-          </section>
-
-          <section id="liability">
-            <h2>23. Limitation of Liability</h2>
-            <p>
-              To the maximum extent permitted by law, Greg Sheldon, Metal Fabrication Power Tools, Legacy Seven Trust,
-              and any authorized representative will not be liable for indirect, incidental, special, consequential,
-              punitive, or business-related losses.
-            </p>
-            <p>This includes, but is not limited to:</p>
-            <ul>
-              <li>Lost profits</li>
-              <li>Lost revenue</li>
-              <li>Lost contracts</li>
-              <li>Lost opportunities</li>
-              <li>Estimating errors</li>
-              <li>Pricing mistakes</li>
-              <li>Project losses</li>
-              <li>Customer disputes</li>
-              <li>Business interruption</li>
-              <li>Software issues</li>
-              <li>Incorrect use of spreadsheets or calculators</li>
-              <li>Failure to review or verify information before use</li>
-            </ul>
-            <p>The customer is responsible for reviewing and approving all final business decisions.</p>
-            <p>
-              To the maximum extent permitted by law, total liability for any claim related to a product or service will
-              not exceed the amount the customer paid for that specific product or service.
-            </p>
-            <p>Nothing in these Terms and Conditions limits liability that cannot legally be limited.</p>
           </section>
 
           <section id="indemnification">
-            <h2>24. Indemnification</h2>
+            <h2>21. Indemnification</h2>
             <p>
-              The customer agrees to defend, indemnify, and hold harmless Greg Sheldon, Metal Fabrication Power Tools,
-              Legacy Seven Trust, and any authorized representative from claims, losses, damages, costs, expenses,
-              or liabilities arising from:
+              You agree to protect, defend, and hold harmless Greg Sheldon, Metal Fabrication Power Tools, and, where applicable, Legacy Seven Trust, from claims, damages,
+              losses, costs, disputes, chargebacks, legal fees, and expenses arising from your misuse of the course, violation of these Terms,
+              unauthorized sharing, business decisions, customer disputes, quotes, estimates, projects, spreadsheet outputs, or submitted materials.
             </p>
-            <ul>
-              <li>The customer’s misuse of the products</li>
-              <li>The customer’s violation of these Terms and Conditions</li>
-              <li>The customer’s unauthorized sharing, copying, resale, or distribution of materials</li>
-              <li>The customer’s business decisions</li>
-              <li>The customer’s quotes, estimates, contracts, or customer submissions</li>
-              <li>The customer’s failure to verify calculations, pricing, or assumptions</li>
-              <li>The customer’s violation of another person’s rights or applicable law</li>
-              <li>The customer’s use of the products in a way that causes harm, loss, or dispute</li>
-            </ul>
           </section>
 
           <section id="termination">
-            <h2>25. Termination of Access</h2>
-            <p>We may suspend or terminate access at any time if a customer:</p>
-            <ul>
-              <li>Violates these Terms and Conditions</li>
-              <li>Shares login details</li>
-              <li>Copies or resells materials</li>
-              <li>Uploads or distributes materials</li>
-              <li>Starts an abusive or dishonest chargeback</li>
-              <li>Abuses support</li>
-              <li>Harasses or threatens anyone</li>
-              <li>Misuses the products</li>
-              <li>Attempts to bypass security or access controls</li>
-              <li>Uses the products to create a competing product</li>
-              <li>Acts in a way that harms Greg Sheldon, Metal Fabrication Power Tools, Legacy Seven Trust, other customers, or the products</li>
-            </ul>
-            <p>Termination may happen without refund.</p>
-          </section>
-
-          <section id="force-majeure">
-            <h2>26. Force Majeure</h2>
+            <h2>22. Termination of Access</h2>
             <p>
-              We are not responsible for delays, interruptions, failures, or non-performance caused by events outside reasonable control.
+              Access may be suspended or terminated if you violate these Terms, share access, duplicate materials, reverse payment,
+              abuse support, misuse the course, interfere with platforms, or use the materials in a way that harms the course, brand,
+              seller, students, or intellectual property.
             </p>
             <p>
-              This may include internet outages, platform failures, payment processor issues, power outages, natural disasters,
-              illness, cyberattacks, government restrictions, supplier issues, technical failures, or other events beyond reasonable control.
+              Termination does not remove your payment obligations, confidentiality obligations, intellectual property obligations,
+              anti-duplication obligations, or liability for prior violations.
             </p>
           </section>
 
           <section id="changes">
-            <h2>27. Changes to These Terms</h2>
-            <p>These Terms and Conditions may be updated at any time.</p>
+            <h2>23. Changes to These Terms</h2>
             <p>
-              The version that applies to a purchase is the version available or referenced at the time the order is placed,
-              unless a change is required by law or relates to ongoing access, security, platform rules, or service delivery.
+              These Terms may be updated from time to time to reflect course updates, platform changes, product changes, payment changes,
+              legal requirements, or business needs. The updated version will apply once posted or made available.
             </p>
-            <p>Customers are encouraged to review these Terms and Conditions periodically.</p>
-          </section>
-
-          <section id="severability">
-            <h2>28. Severability</h2>
-            <p>
-              If any part of these Terms and Conditions is found to be invalid, illegal, or unenforceable, the remaining
-              parts will continue in full force and effect.
-            </p>
-            <p>
-              If the $10,000 USD liquidated damages amount is reduced, limited, or not fully enforceable by a court or
-              authority, the remaining protections, remedies, and rights will still apply to the maximum extent allowed by law.
-            </p>
-          </section>
-
-          <section id="waiver">
-            <h2>29. No Waiver</h2>
-            <p>
-              If Greg Sheldon, Metal Fabrication Power Tools, Legacy Seven Trust, or any authorized representative does not
-              immediately enforce any part of these Terms and Conditions, that does not mean the right to enforce it later
-              has been waived.
-            </p>
-            <p>Any failure to enforce a right, rule, or remedy does not prevent future enforcement.</p>
           </section>
 
           <section id="law">
-            <h2>30. Applicable Law</h2>
+            <h2>24. Governing Law</h2>
             <p>
-              These Terms and Conditions and all transactions between the customer and Greg Sheldon are governed by applicable
-              laws in the United States and Canada, depending on the customer’s location, the nature of the transaction,
-              and any mandatory consumer protection laws that may apply.
-            </p>
-            <p>
-              Nothing in these Terms and Conditions is intended to remove rights that cannot legally be removed under
-              applicable consumer protection laws.
+              These Terms are intended to be interpreted and enforced under applicable law. If any part of these Terms is found unenforceable,
+              the remaining sections remain in effect to the fullest extent allowed by law.
             </p>
           </section>
 
           <section id="contact">
-            <h2>31. Contact</h2>
+            <h2>25. Contact</h2>
             <p>
-              For questions about these Terms and Conditions, orders, access, refunds, product support, privacy,
-              permissions, or intellectual property rights, contact:
+              For course access, billing, support, copyright, privacy, or Terms questions, contact:
+              <strong>gregwsheldon@gmail.com</strong>
             </p>
-
-            <div class="strong-box">
-              <p>
-                <strong>Greg Sheldon</strong><br />
-                Metal Fabrication Power Tools<br />
-                Legacy Seven Trust, where applicable<br />
-                <a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a>
-              </p>
+            <div class="back-panel">
+              <p><strong>Return to the previous page:</strong></p>
+              <button class="back-btn" type="button" onclick="goBackToPreviousPage()">Back to Previous Page</button>
+              <noscript><p>JavaScript is disabled. Use your browser back button to return to the previous page.</p></noscript>
             </div>
           </section>
         </article>
@@ -1201,16 +859,9 @@
 
   <footer>
     <div class="footer-inner">
-      <div>
-        Greg Sheldon | Metal Fabrication Power Tools
-      </div>
-      <div>
-        <a href="/metalfabexcel/">Home</a> |
-        <a href="/metalfabexcel/terms.html">Terms and Conditions</a> |
-        <a href="mailto:gregwsheldon@gmail.com">gregwsheldon@gmail.com</a>
-      </div>
+      <span>&copy; 2026 Metal Fabrication Power Tools. All rights reserved.</span>
+      <span>Fabrication Estimating Course | Greg Sheldon</span>
     </div>
   </footer>
 </body>
 </html>
-```
